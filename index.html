@@ -194,7 +194,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-17 17:38:57" itemprop="dateModified" datetime="2020-10-17T17:38:57+08:00">2020-10-17</time>
+                <time title="修改时间：2020-10-17 20:17:30" itemprop="dateModified" datetime="2020-10-17T20:17:30+08:00">2020-10-17</time>
               </span>
 
           
@@ -217,7 +217,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.5k</span>
+              <span>5.6k</span>
             </span>
 
         </div>
@@ -231,7 +231,7 @@
       
           <hr>
 <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><hr>
-<p>​        历时将近5天，小破站终于建成！只是跟随大佬的教程照抄的一些简单的功能，后续还会慢慢探索…..对于搭建过程网上教程很多 ,我的第一篇博客就简单记录搭建过程中遇到的一些问题还有近期笔记吧。。</p>
+<p>​        历时将近5天，小破站终于建成！😜只是跟随大佬的教程照抄的一些简单的功能，后续还会慢慢探索…..对于搭建过程网上教程很多 ,我的第一篇博客就简单记录搭建过程中遇到的一些问题还有近期笔记吧。。😂😂</p>
 <h1 id="Github搭建过程"><a href="#Github搭建过程" class="headerlink" title="Github搭建过程"></a>Github搭建过程</h1><ul>
 <li><p>安装nodeJS、git和Hexo，注册Github</p>
 </li>
@@ -253,25 +253,25 @@
 <ul>
 <li>但是可能会遇到卡住或安装慢的情况，可以先执行<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/57671550">淘宝镜像</a>：</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https:<span class="regexp">//</span>registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$npm</span> install -g cnpm --registry=https:<span class="regexp">//</span>registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 
 <p>同样下面的所有安装步骤都可使用</p>
 <h3 id="注册Github"><a href="#注册Github" class="headerlink" title="注册Github"></a>注册Github</h3><ul>
-<li>注册后在邮箱中认证，点击Start project或者下面的 new repository 创建一个新的仓库<br><img src="https://segmentfault.com/img/remote/1460000017990240?w=1028&h=620/view" alt="build 截图 "><ul>
-<li>特别注意！！Github 仅能使用一个同名仓库的代码托管一个静态站点<br><img src="https://segmentfault.com/img/remote/1460000017990241?w=747&h=623/view" alt="build 截图 "></li>
+<li>注册后在邮箱中认证，点击Start project或者下面的 new repository 创建一个新的仓库<br><img src="https://segmentfault.com/img/remote/1460000017990240?w=1028&h=620" alt="image"><ul>
+<li>特别注意！！Github 仅能使用一个同名仓库的代码托管一个静态站点<br><img src="https://segmentfault.com/img/remote/1460000017990241?w=747&h=623" alt="image"></li>
 </ul>
 </li>
 </ul>
 <h2 id="配置SSH-key"><a href="#配置SSH-key" class="headerlink" title="配置SSH key"></a>配置SSH key</h2><ul>
 <li>生成密钥 SSH key后，找到C盘个人账户文件夹/.ssh/id_rsa.pub,打开复制，登录 <a target="_blank" rel="noopener" href="https://github.com/">Github</a> 上添加刚刚生成的SSH key，按以下步骤添加：</li>
 </ul>
-<p><img src="https://segmentfault.com/img/remote/1460000017990248/view" alt="first 配置"></p>
-<p><img src="https://segmentfault.com/img/remote/1460000017990249?w=1019&h=441/view" alt="second 配置"></p>
+<p><img src="https://segmentfault.com/img/remote/1460000017990248" alt="image"></p>
+<p><img src="https://segmentfault.com/img/remote/1460000017990249?w=1019&h=441" alt="image"></p>
 <p>   这时会收到邮箱<strong>A new public key was added to your account</strong></p>
 <ul>
 <li>此外还需确认并添加主机到本机SSH可信列表</li>
 </ul>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ssh</span> -T git<span class="variable">@github</span>.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ssh -T git<span class="symbol">@github</span>.com</span><br></pre></td></tr></table></figure>
 
 <p>如果提示<code>Are you sure you want to continue connecting (yes/no)?</code></p>
 <p>输入yes，若返回 Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access. 内容，则证明添加成功。</p>
@@ -288,7 +288,7 @@
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Deployer not <span class="attr">found:</span> github 或者 Deployer not <span class="attr">found:</span> git</span><br></pre></td></tr></table></figure>
 
 <p>原因是还需要安装一个插件：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">$npm</span> install hexo-deployer-git --save</span></span><br></pre></td></tr></table></figure>
 
 <p>Tip:这里可以用淘宝镜像，见上。</p>
 <p>部署这个命令一定要用git bash，否则会提示<code>Permission denied (publickey).</code></p>
@@ -304,62 +304,6 @@
 </ol>
 </li>
 </ul>
-<h2 id="主题配置（next"><a href="#主题配置（next" class="headerlink" title="主题配置（next)"></a>主题配置（next)</h2><ul>
-<li><p>我使用的是next中的Gemini,所以就简单记录一些功能</p>
-<p>站点配置文件<code> _config.yml</code>中theme改为next，默认landscape</p>
-<p>首先区分站点配置文件_config.yml指Blog下的 <code> _config.yml</code></p>
-<p>另一个在<code>theme</code>下，所有的主题配置几乎都在这两个文件中</p>
-</li>
-</ul>
-<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><ul>
-<li><p>站点配置文件<code> _config.yml</code>下</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="comment"># 标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="comment">#副标</span></span><br><span class="line"><span class="attr">description:</span> <span class="comment">#个人描述</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span>   <span class="comment"># 作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 主题语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span> <span class="comment">#中国的时区，不要乱改城市</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://example。com</span> <span class="comment">#绑定域名</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span>  <span class="comment">#默认根路径，指向实际的source</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Directory</span></span><br><span class="line"><span class="attr">source_dir:</span> <span class="string">source</span></span><br><span class="line"><span class="attr">public_dir:</span> <span class="string">public</span></span><br><span class="line"><span class="attr">tag_dir:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">archive_dir:</span> <span class="string">archives</span></span><br><span class="line"><span class="attr">category_dir:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">code_dir:</span> <span class="string">downloads/code</span></span><br><span class="line"><span class="attr">i18n_dir:</span> <span class="string">:lang</span></span><br><span class="line"><span class="attr">skip_render:</span> <span class="string">README.md</span> <span class="comment"># 部署的时候不包含的文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Writing</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment"># 默认的新博文名称</span></span><br><span class="line"><span class="attr">default_layout:</span> <span class="string">post</span> <span class="comment"># 默认布局</span></span><br><span class="line"><span class="attr">titlecase:</span> <span class="literal">false</span> <span class="comment"># Transform title into titlecase</span></span><br><span class="line"><span class="attr">external_link:</span> <span class="literal">true</span> <span class="comment"># Open external links in new tab</span></span><br><span class="line"><span class="attr">filename_case:</span> <span class="number">0</span> <span class="comment">#把博客名称改成小写/大写（1,2）</span></span><br><span class="line"><span class="attr">render_drafts:</span> <span class="literal">false</span> <span class="comment"># 是否显示草稿</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">false</span> <span class="comment">#是否启用资源文件夹（用来存放相对路径图片或文件）</span></span><br><span class="line"><span class="attr">relative_link:</span> <span class="literal">false</span> <span class="comment"># 把链接改为与根目录的相对位址</span></span><br><span class="line"><span class="attr">future:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">highlight:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否开启代码高亮</span></span><br><span class="line">  <span class="attr">line_number:</span> <span class="literal">true</span> <span class="comment">#是否增加代码行号</span></span><br><span class="line">  <span class="attr">auto_detect:</span> <span class="literal">true</span> <span class="comment">#自动判断代码语言</span></span><br><span class="line">  <span class="attr">tab_replace:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Home page setting</span></span><br><span class="line"><span class="comment"># path: Root path for your blogs index page. (default = &#x27;&#x27;)</span></span><br><span class="line"><span class="comment"># per_page: Posts displayed per page. (0 = disable pagination)</span></span><br><span class="line"><span class="comment"># order_by: Posts order. (Order by date descending by default)</span></span><br><span class="line"><span class="attr">index_generator:</span> <span class="comment">#首页博客分布</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">&#x27;&#x27;</span> <span class="comment">#博客的默认路径</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="number">10</span> <span class="comment">#每页博客数量上限</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span> <span class="comment">#博客排序</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Date / Time format</span></span><br><span class="line"><span class="comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line"><span class="comment">## You can customize the date format as defined in</span></span><br><span class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line"><span class="attr">date_format:</span> <span class="string">YYYY-MM-DD</span> <span class="comment">#博客日期格式</span></span><br><span class="line"><span class="attr">time_format:</span> <span class="string">HH:mm:ss</span> <span class="comment">#博客时间格式</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Pagination</span></span><br><span class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">10</span> <span class="comment">#同上</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#归档页的分页设置</span></span><br><span class="line"><span class="attr">archive_generator:</span> <span class="comment">#归档页的配置</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="number">30</span> <span class="comment">#归档页每页博客数</span></span><br><span class="line">  <span class="attr">yearly:</span> <span class="literal">true</span> <span class="comment">#按年归档</span></span><br><span class="line">  <span class="attr">monthly:</span> <span class="literal">true</span> <span class="comment">#按月归档</span></span><br><span class="line"><span class="comment">#标签页的分页设置</span></span><br><span class="line"><span class="attr">tag_generator:</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="number">20</span> <span class="comment">#标签页每页博客数</span></span><br><span class="line"></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next6</span> <span class="comment">#选择博客主题，名字为themes中选择的主题文件夹名称</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span> <span class="comment">#博客部署</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="string">repo:git@github.com:yourname/yourname.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>next主题设置</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">override：false <span class="meta">#表示是否将主题置为默认样式</span></span><br><span class="line"><span class="symbol">cache:</span></span><br><span class="line"><span class="symbol">	enable:</span>true <span class="meta">#表示添加缓存功能，这样浏览器后续打开我们的博客网站会更快</span></span><br><span class="line"><span class="symbol">menu:</span> <span class="meta">#设置博客各个页面的相对路径，默认根路径是blog/source</span></span><br><span class="line"><span class="symbol">  home:</span> / || home</span><br><span class="line"><span class="symbol">  about:</span> <span class="meta-keyword">/about/</span> || user</span><br><span class="line"><span class="symbol">  tags:</span> <span class="meta-keyword">/tags/</span> || tags</span><br><span class="line"><span class="symbol">  categories:</span> <span class="meta-keyword">/categories/</span> || th</span><br><span class="line"><span class="symbol">  archives:</span> <span class="meta-keyword">/archives/</span> || archive</span><br><span class="line">  <span class="meta">#schedule: /schedule/ || calendar #日历</span></span><br><span class="line">  <span class="meta">#sitemap: /sitemap.xml || sitemap #站点地图，供搜索引擎爬取</span></span><br><span class="line">  <span class="meta">#commonweal: /404/ || heartbeat # 腾讯公益404</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># Enable/Disable menu icons / item badges.</span></span><br><span class="line"><span class="symbol">menu_settings:</span></span><br><span class="line"><span class="symbol">  icons:</span> true <span class="meta"># 是否显示各个页面的图标</span></span><br><span class="line"><span class="symbol">  badges:</span> true <span class="meta"># 是否显示分类/标签/归档页的内容量</span></span><br><span class="line"><span class="meta"># Schemes</span></span><br><span class="line"><span class="symbol">scheme:</span> Gemini</span><br></pre></td></tr></table></figure>
-<p>语句前加<code>#</code>即为注释或按钮关闭，而加注释时也要先一个空格，用<code>Sublime Text 3</code>体验会比较明显，操作错误不会有对应颜色变化。</p>
-</li>
-</ul>
-<h3 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h3><ul>
-<li><p>主题配置文件中搜索<code>valine</code>,改为<code>ture</code></p>
-</li>
-<li><p>注册登录[LeanCloud][LeanCloud]，创建应用-设置-应用Keys，分别复制AppID、AppKey到文件中对应位置即可    </p>
-</li>
-</ul>
-<h3 id="添加字数统计和阅读时长"><a href="#添加字数统计和阅读时长" class="headerlink" title="添加字数统计和阅读时长"></a>添加字数统计和阅读时长</h3><ul>
-<li><p>先安装插件（Bash耐心等待~）</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-symbols-<span class="keyword">count</span>-<span class="built_in">time</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>站点配置文件下添加</p>
-<p>  `#字数统计<br>   symbols_count_time:</p>
-<pre><code>symbols: true #是否统计字数
-time: false #是否统计阅读时长
-total_symbols: true #是否统计总字数
-total_time: ture #是否统计总阅读时长</code></pre>
-</li>
-<li><p>主题的配置文件下开启 symbols_count_time 字段</p>
-<p>执行“三步走”就可以看到了。。。</p>
-<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3></li>
-</ul>
-<p>新版本的NexT将每月发布。可以通过以下命令更新 NexT。</p>
-<p>安装最新版本的 npm：</p>
-<p><code>$ cd hexo-site</code><br><code>$ npm update hexo-theme-next</code><br>或更新到最新的主分支：</p>
-<p><code>$ cd themes/next</code><br><code>$ git pull</code></p>
-<h3 id="不显示全部内容"><a href="#不显示全部内容" class="headerlink" title="不显示全部内容"></a>不显示全部内容</h3><p>修改主题配置文件</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Automatically scroll page to section which is under &lt;!-- more --&gt; mark.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">scroll_to_more:</span> <span class="literal">true</span> <span class="comment">#选取博客正文&lt;!--more--&gt;前的内容</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Automatically saving scroll position on each post/page in cookies.</span></span><br><span class="line"><span class="attr">save_scroll:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Automatically excerpt description in homepage as preamble text.</span></span><br><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span> <span class="comment">#自动截取摘要</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Automatically Excerpt. Not recommend.</span></span><br><span class="line"><span class="comment"># Use &lt;!-- more --&gt; in the post to control excerpt accurately.</span></span><br><span class="line"><span class="attr">auto_excerpt:</span> </span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span> <span class="comment">#自动截取一定程度的摘要</span></span><br><span class="line">  <span class="attr">length:</span> <span class="number">150</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Read more button</span></span><br><span class="line"><span class="comment"># If true, the read more button would be displayed in excerpt section.</span></span><br><span class="line"><span class="attr">read_more_btn:</span> <span class="literal">true</span> <span class="comment">#显示阅读全文按钮</span></span><br></pre></td></tr></table></figure>
-
-<p>写文章时在合适的位置加上
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/10/16/My-First-Blog/#more" rel="contents">
