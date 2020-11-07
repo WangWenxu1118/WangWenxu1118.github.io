@@ -206,8 +206,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2020/10/28/Linux%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/" itemprop="url">
-            <span itemprop="name">Linux基础指令</span>
+          <a class="post-title-link" href="/2020/10/28/Linux%E5%91%BD%E4%BB%A4/" itemprop="url">
+            <span itemprop="name">Linux指令</span>
           </a>
       </div>
 
@@ -403,6 +403,34 @@
     <span title="站点阅读时长">8 分钟</span>
 </div>
 
+<span id="sitetime"></span>
+<script language=javascript>
+function siteTime(){
+window.setTimeout("siteTime()", 1000);
+var seconds = 1000;
+var minutes = seconds * 60;
+var hours = minutes * 60;
+var days = hours * 24;
+var years = days * 365;
+var today = new Date();
+var todayYear = today.getFullYear();
+var todayMonth = today.getMonth()+1;
+var todayDate = today.getDate();
+var todayHour = today.getHours();
+var todayMinute = today.getMinutes();
+var todaySecond = today.getSeconds();
+var t1 = Date.UTC(2020,,10,11,00,00); // 設置建立網站的時間
+var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+var diff = t2-t1;
+var diffYears = Math.floor(diff/years);
+var diffDays = Math.floor((diff/days)-diffYears*365);
+var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+document.getElementById("sitetime").innerHTML=" 已運行"+diffYears+" 年 "diffDays+" 天 "+diffHours+" 小時 "+diffMinutes+" 分鐘 "+diffSeconds+" 秒";
+}
+siteTime();
+</script>
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
