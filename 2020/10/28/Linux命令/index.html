@@ -48,7 +48,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2020/10/31/Bah1Qf.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/10/31/Bah8OS.png">
 <meta property="article:published_time" content="2020-10-27T21:54:11.000Z">
-<meta property="article:modified_time" content="2020-11-04T16:39:03.640Z">
+<meta property="article:modified_time" content="2020-11-11T16:14:37.264Z">
 <meta property="article:author" content="kerosene.W">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -143,7 +143,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -153,7 +153,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">5</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a>
 
   </li>
   </ul>
@@ -216,7 +216,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-05 00:39:03" itemprop="dateModified" datetime="2020-11-05T00:39:03+08:00">2020-11-05</time>
+                <time title="修改时间：2020-11-12 00:14:37" itemprop="dateModified" datetime="2020-11-12T00:14:37+08:00">2020-11-12</time>
               </span>
 
           
@@ -246,7 +246,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
+              <span>2.8k</span>
             </span>
 
         </div>
@@ -379,18 +379,126 @@
 
 <ul>
 <li>直接打开一个文件(无需退出)</li>
-<li>对文件进行合并【配合输出重定向使用】</li>
+<li>对文件进行合并【配合输出重定向使用】,源文件不会删除</li>
 </ul>
-<p>···················································································································································································</p>
+<p>····································································································································································</p>
 <ul>
 <li>选项均可连用，例：-la、 -rf 、-lah</li>
 </ul>
-<h1 id="进阶指令"><a href="#进阶指令" class="headerlink" title="进阶指令"></a>进阶指令</h1><h2 id="1-df"><a href="#1-df" class="headerlink" title="1.#df"></a>1.<code>#df</code></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="进阶指令"><a href="#进阶指令" class="headerlink" title="进阶指令"></a>进阶指令</h1><h2 id="1-df"><a href="#1-df" class="headerlink" title="1.#df"></a>1.<code>#df</code></h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">df</span> -h <span class="comment">#以较高可读性查看</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>查看磁盘空间</li>
 </ul>
+<p><code>df -h</code></p>
+<p>tu0</p>
 <hr>
+<h2 id="2-free"><a href="#2-free" class="headerlink" title="2.#free"></a>2.<code>#free</code></h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">free</span> -m <span class="comment">#以MB为单位进行查看</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看内存使用情况</li>
+</ul>
+<p><code>free -n</code></p>
+<p>tu1</p>
+<ul>
+<li><p>剩余真是可用为available</p>
+</li>
+<li><p>swap用于临时内存，当系统真是内存不够用时可以临时使用磁盘空间来充当内存</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-head"><a href="#3-head" class="headerlink" title="3.#head"></a>3.<code>#head</code></h2><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head -<span class="built_in">n</span> 文件路径 #查看一个文件的前<span class="built_in">n</span>行，默认<span class="number">10</span>行 [<span class="built_in">n</span>表示数字]</span><br></pre></td></tr></table></figure>
+
+<p>TU2</p>
+<h2 id="4-tail"><a href="#4-tail" class="headerlink" title="4.#tail"></a>4.<code>#tail</code></h2><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tail -<span class="built_in">n</span> 文件路径 #查看一个文件的末<span class="built_in">n</span>行，默认<span class="number">10</span>行 [<span class="built_in">n</span>表示数字]</span><br><span class="line">tail -f 文件路径 #查看一个文件的动态变化，配合输出重定向，按q键退出</span><br></pre></td></tr></table></figure>
+
+<p>TU3</p>
+<h2 id="5-less"><a href="#5-less" class="headerlink" title="5.#less"></a>5.<code>#less</code></h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">less</span> 文件路径 <span class="comment">#，查看文件,以较少内容输出，配合辅助功能键(数字+回车,空格翻页，上下键或回车换行)查看更多，q退出</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-wc"><a href="#6-wc" class="headerlink" title="6.#wc"></a>6.<code>#wc</code></h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wc -<span class="keyword">lwcm </span>文件路径 <span class="comment">#统计文件信息(-l行数，-w单词数，-c字节数,-m字符数)</span></span><br></pre></td></tr></table></figure>
+
+<p>tu4</p>
+<hr>
+<h2 id="7-date"><a href="#7-date" class="headerlink" title="7.#date"></a>7.<code>#date</code></h2><ul>
+<li>获取当前时间</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">date</span> #Tue Nov <span class="number">10</span> <span class="number">00</span>:<span class="number">02</span>:<span class="number">57</span> CST <span class="number">2020</span> 显示时间CST(当地时间) </span><br><span class="line"><span class="attribute">date</span> +%F #<span class="number">2020</span>-<span class="number">11</span>-<span class="number">10</span>(等价于#date <span class="string">&quot;%Y-%m-%d&quot;</span>)</span><br><span class="line"><span class="attribute">date</span> <span class="string">&quot;+%F %T&quot;</span> #<span class="number">2020</span>-<span class="number">11</span>-<span class="number">10</span> <span class="number">00</span>:<span class="number">02</span>:<span class="number">57</span>(等价于#date <span class="string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>)     </span><br></pre></td></tr></table></figure>
+
+<p>tu5</p>
+<ul>
+<li>获取之前或之后时间</li>
+</ul>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">date -d <span class="string">&quot;-1year&quot;</span> <span class="string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>一年前时间</span><br><span class="line">date -d <span class="string">&quot;+1year&quot;</span> <span class="string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>一年后时间</span><br></pre></td></tr></table></figure>
+
+<p>tu6</p>
+<ul>
+<li><p>单位的可选值：day、month、year无需考虑复数</p>
+<ul>
+<li>%m、%d、%H、%M、%S均带前导0</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="8-cal"><a href="#8-cal" class="headerlink" title="8.#cal"></a>8.#<code>cal</code></h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cal <span class="comment">#直接输出当前月份日历(等价于#cal -1)</span></span><br><span class="line">cal -<span class="number">3</span> <span class="comment">#上月+本月+下月</span></span><br><span class="line">cal -y2020 <span class="comment">#输出某年日历</span></span><br><span class="line">*cal -s<span class="regexp">/-m #周日为第一天/</span>周一为第一天</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>操作日历</p>
+<p>tu7 8</p>
+</li>
+</ul>
+<hr>
+<h2 id="9-clear-ctrl-L"><a href="#9-clear-ctrl-L" class="headerlink" title="9.#clear/ctrl + L"></a>9.#<code>clear/ctrl + L</code></h2><figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">clear</span></span><br><span class="line"><span class="variable">ctrl</span>+<span class="function"><span class="title">L</span>(快捷键)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>清除终端中已经存在的命令和结果</li>
+<li>并非清除信息，而是隐藏至上方，可滚动查看(不同于Windows中<code>cls</code>清屏)</li>
+</ul>
+<hr>
+<h2 id="10-管道"><a href="#10-管道" class="headerlink" title="10.管道"></a>10.管道</h2><ul>
+<li><p>管道符：<code>|</code></p>
+</li>
+<li><p>用于”过滤”，”特殊”，”扩展处理”,不能单独使用，配合其他命令，起辅助作用</p>
+</li>
+</ul>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">命令* | grep 过滤内容 <span class="comment">#过滤：所配合的命令必须有输出来作为管道的输入</span></span><br><span class="line"><span class="keyword">ls</span> |wc -l <span class="comment">#统计文档总个数(扩展处理)</span></span><br></pre></td></tr></table></figure>
+
+<p>tu9 </p>
+<hr>
+<h1 id="高级指令"><a href="#高级指令" class="headerlink" title="高级指令"></a>高级指令</h1><h2 id="1-hostname"><a href="#1-hostname" class="headerlink" title="1.#hostname"></a>1.#<code>hostname</code></h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hostname</span> <span class="comment">#输出主机名</span></span><br><span class="line">hostname -f <span class="comment">#输出当前主机名中的FQDN(全限定域名)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>操作服务器的主机名</li>
+</ul>
+<p>tu10</p>
+<h2 id="2-id"><a href="#2-id" class="headerlink" title="2.#id"></a>2.#<code>id</code></h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">id</span></span><br><span class="line"><span class="built_in">id</span> 用户名 <span class="comment">#指定用户</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看用户基本信息(用户id、用户组id、附加组id)，不指定默认当前用户</li>
+</ul>
+<hr>
+<h2 id="3-whoami"><a href="#3-whoami" class="headerlink" title="3.#whoami"></a>3.#<code>whoami</code></h2><ul>
+<li>“我是谁?”显示当前登录的用户名，一般用于shell脚本</li>
+</ul>
+<hr>
+<h2 id="4-ps-ef"><a href="#4-ps-ef" class="headerlink" title="4.#ps -ef"></a>4.#<code>ps -ef</code></h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef<span class="regexp">/-e/</span>-f</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看服务器进程信息</li>
+<li><code>-e</code>列出全部进程</li>
+<li><code>-f</code>列出全部的列(显示全字段)</li>
+</ul>
+<p>tu11</p>
+<p>TU12</p>
+<ul>
+<li>常配合过滤使用,搜索结果为两个才是有在运行的目标进程</li>
+</ul>
+<hr>
+<h2 id="5-top"><a href="#5-top" class="headerlink" title="5.#top"></a>5.#<code>top</code></h2><ul>
+<li>查看进程占用资源(动态显示)，按q退出</li>
+</ul>
+<p>Linux命令大全<a target="_blank" rel="noopener" href="https://man.linuxde.net/">https://man.linuxde.net</a></p>
 
     </div>
 
@@ -441,8 +549,8 @@
       <i class="fa fa-chevron-left"></i> Linux安装
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/10/31/bandit%E9%9D%B6%E5%9C%BA/" rel="next" title="bandit靶场">
-      bandit靶场 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/10/31/bandit%E9%9D%B6%E5%9C%BA(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/" rel="next" title="bandit靶场(持续更新中)">
+      bandit靶场(持续更新中) <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -503,7 +611,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4"><span class="nav-text">基础指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-ls"><span class="nav-text">1.#ls</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-pwd"><span class="nav-text">2.#pwd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-cd"><span class="nav-text">3.#cd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-mkdir"><span class="nav-text">4.#mkdir</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-touch"><span class="nav-text">5.#touch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-cp"><span class="nav-text">6.#cp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-mv"><span class="nav-text">7.#mv</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-rm"><span class="nav-text">8.#rm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-vim"><span class="nav-text">9.#vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-gt-gt-gt"><span class="nav-text">10.#&gt;&#x2F;&gt;&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-cat"><span class="nav-text">11.#cat</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6%E6%8C%87%E4%BB%A4"><span class="nav-text">进阶指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-df"><span class="nav-text">1.#df</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4"><span class="nav-text">基础指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-ls"><span class="nav-text">1.#ls</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-pwd"><span class="nav-text">2.#pwd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-cd"><span class="nav-text">3.#cd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-mkdir"><span class="nav-text">4.#mkdir</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-touch"><span class="nav-text">5.#touch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-cp"><span class="nav-text">6.#cp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-mv"><span class="nav-text">7.#mv</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-rm"><span class="nav-text">8.#rm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-vim"><span class="nav-text">9.#vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-gt-gt-gt"><span class="nav-text">10.#&gt;&#x2F;&gt;&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-cat"><span class="nav-text">11.#cat</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6%E6%8C%87%E4%BB%A4"><span class="nav-text">进阶指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-df"><span class="nav-text">1.#df</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-free"><span class="nav-text">2.#free</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-head"><span class="nav-text">3.#head</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-tail"><span class="nav-text">4.#tail</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-less"><span class="nav-text">5.#less</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-wc"><span class="nav-text">6.#wc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-date"><span class="nav-text">7.#date</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-cal"><span class="nav-text">8.#cal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-clear-ctrl-L"><span class="nav-text">9.#clear&#x2F;ctrl + L</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E7%AE%A1%E9%81%93"><span class="nav-text">10.管道</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E6%8C%87%E4%BB%A4"><span class="nav-text">高级指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-hostname"><span class="nav-text">1.#hostname</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-id"><span class="nav-text">2.#id</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-whoami"><span class="nav-text">3.#whoami</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-ps-ef"><span class="nav-text">4.#ps -ef</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-top"><span class="nav-text">5.#top</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -519,12 +627,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -585,13 +693,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">9k</span>
+    <span title="站点总字数">11k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8 分钟</span>
+    <span title="站点阅读时长">10 分钟</span>
 </div>
 
 <!-- 网站运行时间的设置 -->
