@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-11-11T07:39:58.564Z</updated>
+  <updated>2020-11-07T14:55:36.100Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,34 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Python笔记</title>
-    <link href="http://example.com/2020/11/11/Python%E7%AC%94%E8%AE%B0/"/>
-    <id>http://example.com/2020/11/11/Python%E7%AC%94%E8%AE%B0/</id>
-    <published>2020-11-11T07:25:08.000Z</published>
-    <updated>2020-11-11T07:39:58.564Z</updated>
-    
-    <content type="html"><![CDATA[<hr><hr><hr><hr><hr><hr><h5 id="1、查看内置函数名-dir-builtins-前后两个下划线"><a href="#1、查看内置函数名-dir-builtins-前后两个下划线" class="headerlink" title="1、查看内置函数名#dir(builtins)           前后两个下划线"></a>1、查看内置函数名#dir(<strong><strong>builtins</strong></strong>)           前后两个下划线</h5><p><img src="C:\Users\23135\AppData\Roaming\Typora\typora-user-images\image-20201111153648332.png" alt="image-20201111153648332"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;h5 id=&quot;1、查看内置函数名-dir-builtins-前后两个下划线&quot;&gt;&lt;a href=&quot;#1、查看内置函数名-dir-builtins-前后两个下划线&quot; class=&quot;headerlink&quot; title=&quot;1、</summary>
-      
-    
-    
-    
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-  </entry>
   
   <entry>
     <title>BugKu靶场之图片隐写(持续更新中)</title>
