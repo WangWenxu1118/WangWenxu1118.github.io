@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>BugKu靶场之图片隐写(持续更新中)</title>
+    <url>/2020/11/01/Bugku%E9%9D%B6%E5%9C%BA%E4%B9%8B%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <content><![CDATA[<h2 id="01"><a href="#01" class="headerlink" title="01."></a>01.</h2><ul>
+<li><p>题目为这是一张单纯的图片<a href="https://imgchr.com/i/B058hQ"><img src="https://s1.ax1x.com/2020/11/01/B058hQ.md.png" alt="B058hQ.md.png"></a></p>
+</li>
+<li><p>下载图片打开后找不出什么线索<a href="https://imgchr.com/i/B05xUS"><img src="https://s1.ax1x.com/2020/11/01/B05xUS.png" alt="B05xUS.png"></a></p>
+</li>
+<li><p>使用<code>010 Editor</code>打开，找到最后[^特殊序列]</p>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/B053tg"><img src="https://s1.ax1x.com/2020/11/01/B053tg.md.png" alt="B053tg.md.png"></a></p>
+<ul>
+<li><p>拷贝到<a href="http://tool.chinaz.com/tools/unicode.aspx">在线转换器</a>,Unicode 转 ASCII得到flag</p>
+<a id="more"></a>
+
+</li>
+</ul>
+<hr>
+<h2 id="02"><a href="#02" class="headerlink" title="02."></a>02.</h2><ul>
+<li><p>题目为隐写<a href="https://imgchr.com/i/B05M0f"><img src="https://s1.ax1x.com/2020/11/01/B05M0f.md.png" alt="B05M0f.md.png"></a></p>
+</li>
+<li><p>下载后打开，查看文件信息，尺寸为500✖420</p>
+</li>
+<li><p>这里需利用python脚本根据图片的crc校验计算图片真实的宽高，（暂时水平不够）</p>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/B05Q78"><img src="https://s1.ax1x.com/2020/11/01/B05Q78.md.png" alt="B05Q78.md.png"></a></p>
+<ul>
+<li>将高度中A4改为F4</li>
+</ul>
+<p><a href="https://imgchr.com/i/B05Jpj"><img src="https://s1.ax1x.com/2020/11/01/B05Jpj.md.png" alt="B05Jpj.md.png"></a></p>
+<p>这样就能看到flag</p>
+<hr>
+<h2 id="n"><a href="#n" class="headerlink" title="n."></a>n.</h2><p>······</p>
+<p>······</p>
+<p>[^特殊序列]: Unicode 编码</p>
+]]></content>
+      <tags>
+        <tag>Misc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux指令</title>
+    <url>/2020/10/28/Linux%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="基础指令"><a href="#基础指令" class="headerlink" title="基础指令"></a>基础指令</h1><h2 id="1-ls"><a href="#1-ls" class="headerlink" title="1.#ls"></a>1.<code>#ls</code></h2><figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ls</span> <span class="comment">#列出当前工作目录下的所有文件/文件夹的名称</span></span><br><span class="line"><span class="keyword">ls</span> 路径 <span class="comment">#列出指定路径下的所有文件/文件夹的名称</span></span><br><span class="line"><span class="keyword">ls</span> -l 路径 <span class="comment">#以详细列表形式展示指定路径下文件/文件夹</span></span><br><span class="line"><span class="keyword">ls</span> -la 路径 <span class="comment">#&quot;-l&quot;显示所有文件/文件夹,包含隐藏文件(.xxx)</span></span><br><span class="line"><span class="keyword">ls</span> -lh 路径 <span class="comment">#列出指定路径下文件/文件夹，以可读性较高的文件大小单位显示</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>相对路径：当前工作路径 #”./“:当前目录下    “../“:上一级目录下</li>
+<li>绝对路径：直接从根路径”/“开始寻找相应路径</li>
+<li>ls列出结果颜色说明:蓝色表示文件夹/黑色表示文件/绿色表示拥有所有权限</li>
+</ul>
+<a id="more"></a>
+
+<p><strong><code>-l</code></strong></p>
+<p><a href="https://imgchr.com/i/BafxZ4"><img src="https://s1.ax1x.com/2020/10/31/BafxZ4.png" alt="BafxZ4.png"></a></p>
+<p><strong><code>-la</code></strong></p>
+<p><a href="https://imgchr.com/i/BafjLF"><img src="https://s1.ax1x.com/2020/10/31/BafjLF.png" alt="BafjLF.png"></a></p>
+<ul>
+<li>上述列表第一列指文档类型，”<code>-</code>“表示文件；”<code>d</code>“表示文件夹</li>
+<li>隐藏文件格式为.xxx</li>
+</ul>
+<p><strong><code>-l(a)h</code></strong></p>
+<ul>
+<li><p><a href="https://imgchr.com/i/BafXsU"><img src="https://s1.ax1x.com/2020/10/31/BafXsU.png" alt="BafXsU.png"></a> </p>
+<p>初始大小4.0 k</p>
+</li>
+</ul>
+<hr>
+<h2 id="2-pwd"><a href="#2-pwd" class="headerlink" title="2.#pwd"></a>2.<code>#pwd</code></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pwd</span> <span class="comment">#打印当前目录</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><p>(print working directory)打印当前工作目录</p>
+<p>图5</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-cd"><a href="#3-cd" class="headerlink" title="3.#cd"></a>3.<code>#cd</code></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span>或者<span class="built_in">cd</span> ~ <span class="comment">#切换至当前用户家目录</span></span><br><span class="line"><span class="built_in">cd</span> 路径 <span class="comment">#切换至路径目录</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(change directory)改变目录</li>
+</ul>
+<p><code>cd/cd ~</code></p>
+<p><a href="https://imgchr.com/i/Bah9iR"><img src="https://s1.ax1x.com/2020/10/31/Bah9iR.png" alt="Bah9iR.png"></a></p>
+<p><code>cd 路径</code></p>
+<p><a href="https://imgchr.com/i/BahCJ1"><img src="https://s1.ax1x.com/2020/10/31/BahCJ1.png" alt="BahCJ1.png"></a></p>
+<hr>
+<h2 id="4-mkdir"><a href="#4-mkdir" class="headerlink" title="4.#mkdir"></a>4.<code>#mkdir</code></h2><figure class="highlight hsp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">mkdir</span> 路径 <span class="meta">#路径可以为新文件夹名称，也可包含新文件夹的完整路径</span></span><br><span class="line"><span class="keyword">mkdir</span> -p 路径 <span class="meta">#一次性创建多层新文件夹</span></span><br><span class="line"><span class="keyword">mkdir</span> 路径<span class="number">1</span> 路径<span class="number">2</span> 路径<span class="number">3</span> <span class="meta">#一次性创建多个新文件夹</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>(make directory)创建目录</p>
+</li>
+<li><ul>
+<li>建成功无提示,可用<code>ls</code>查看</li>
+</ul>
+</li>
+</ul>
+<p><code>mkdir  路径</code></p>
+<p><a href="https://imgchr.com/i/BahPRx"><img src="https://s1.ax1x.com/2020/10/31/BahPRx.png" alt="BahPRx.png"></a><code>mkdir -p 路径</code></p>
+<p><a href="https://imgchr.com/i/Bahiz6"><img src="https://s1.ax1x.com/2020/10/31/Bahiz6.png" alt="Bahiz6.png"></a></p>
+<p><code>mkdir 路径1 路径2 路径3</code></p>
+<p><a href="https://imgchr.com/i/BahkQK"><img src="https://s1.ax1x.com/2020/10/31/BahkQK.png" alt="BahkQK.png"></a></p>
+<hr>
+<h2 id="5-touch"><a href="#5-touch" class="headerlink" title="5.#touch"></a>5.<code>#touch</code></h2><figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line"><span class="section">touch</span> 文件路径 #创建文件</span><br><span class="line"><span class="section">touch</span> 路径<span class="number">1</span> 路径<span class="number">2</span> 路径<span class="number">3</span> #一次性创建多个文件(同mkdir)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建文件</li>
+</ul>
+<p><code>touch 路径1 路径2 路径3</code></p>
+<p><a href="https://imgchr.com/i/BahAsO"><img src="https://s1.ax1x.com/2020/10/31/BahAsO.png" alt="BahAsO.png"></a></p>
+<hr>
+<h2 id="6-cp"><a href="#6-cp" class="headerlink" title="6.#cp"></a>6.<code>#cp</code></h2><figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">cp</span> 被复制文档路径 目标路径 <span class="meta">#复制过程可对新文档重命名</span></span><br><span class="line"><span class="keyword">cp</span> -r 被复制文档路径 目标路径 <span class="meta">#递归复制(赋值文件夹时使用,复制整个文件夹)，否则文件夹将被略过</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(copy复制文件/文件夹)</li>
+</ul>
+<p><code>cp 被复制文档路径 目标路径</code></p>
+<p><a href="https://imgchr.com/i/BahELD"><img src="https://s1.ax1x.com/2020/10/31/BahELD.png" alt="BahELD.png"></a></p>
+<p><code>cp -r 被复制文档路径 目标路径</code></p>
+<p><a href="https://imgchr.com/i/BahZee"><img src="https://s1.ax1x.com/2020/10/31/BahZee.png" alt="BahZee.png"></a></p>
+<hr>
+<h2 id="7-mv"><a href="#7-mv" class="headerlink" title="7.#mv"></a>7.<code>#mv</code></h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> 待移动文档路径 目标路径 <span class="comment">#移动文档到新位置  移动文件夹同，无需-r</span></span><br><span class="line"><span class="built_in">mv</span> 原文件路径 重命名后路径（原地移动） <span class="comment">#重命名</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(move移动/剪切)</li>
+</ul>
+<p><code>mv 待移动文档路径 目标路径</code></p>
+<p><a href="https://imgchr.com/i/BahedH"><img src="https://s1.ax1x.com/2020/10/31/BahedH.png" alt="BahedH.png"></a></p>
+<hr>
+<h2 id="8-rm"><a href="#8-rm" class="headerlink" title="8.#rm"></a>8.<code>#rm</code></h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">rm</span> 需移除文档路径 <span class="comment">#移除/删除文档 提示是否删除</span></span><br><span class="line"><span class="built_in">rm</span> <span class="literal">-rf</span> 需移除文档路径 <span class="comment">#(force强制)无提示 -r同指递归</span></span><br><span class="line"><span class="built_in">rm</span> <span class="literal">-rf</span> 路径<span class="number">1</span> 路径<span class="number">2</span> <span class="comment">#同时删除多个文档    同类名*（通配符，可表示任意字符，一次性删除相同开头的名称）</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(remove,移除、删除)</li>
+</ul>
+<p><code>rm 需移除文件路径</code></p>
+<p><a href="https://imgchr.com/i/Bahmod"><img src="https://s1.ax1x.com/2020/10/31/Bahmod.png" alt="Bahmod.png"></a></p>
+<p><code>rm -rf 需移除文档路径</code></p>
+<p><a href="https://imgchr.com/i/BahuFA"><img src="https://s1.ax1x.com/2020/10/31/BahuFA.png" alt="BahuFA.png"></a></p>
+<hr>
+<h2 id="9-vim"><a href="#9-vim" class="headerlink" title="9.#vim"></a>9.<code>#vim</code></h2><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">vim</span> 文件路径 <span class="comment">#打开一个文件（可以是不存在的文件）</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>文本编辑器</p>
+</li>
+<li><p>退出文件：按shift+英文冒号<code>:</code>+<code>q</code>+<code>Enter</code></p>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/BahMWt"><img src="https://s1.ax1x.com/2020/10/31/BahMWt.png" alt="BahMWt.png"></a><a href="https://imgchr.com/i/BahlSP"><img src="https://s1.ax1x.com/2020/10/31/BahlSP.png" alt="BahlSP.png"></a></p>
+<hr>
+<h2 id="10-gt-gt-gt"><a href="#10-gt-gt-gt" class="headerlink" title="10.#&gt;/&gt;&gt;"></a>10.<code>#&gt;/&gt;&gt;</code></h2><figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line">指令 &gt;/&gt;&gt; 保存到文件路径 <span class="meta">#输出重定向 </span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>&gt;</code>:覆盖输出，覆盖原文内容</li>
+<li><code>&gt;&gt;</code>:追加输出，在原始内容末尾继续添加</li>
+</ul>
+<ul>
+<li>保存命令执行结果到文件，文件可以不存在，不存在则新建</li>
+</ul>
+<p><code>&gt;/&gt;&gt;</code></p>
+<p><a href="https://imgchr.com/i/Bah1Qf"><img src="https://s1.ax1x.com/2020/10/31/Bah1Qf.png" alt="Bah1Qf.png"></a><a href="https://imgchr.com/i/Bah8OS"><img src="https://s1.ax1x.com/2020/10/31/Bah8OS.png" alt="Bah8OS.png"></a></p>
+<h2 id="11-cat"><a href="#11-cat" class="headerlink" title="11.#cat"></a>11.<code>#cat</code></h2><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">cat 文件路径</span><br><span class="line">cat 待合并的文件<span class="number">1</span> 待合并的文件<span class="number">2.</span>.. &gt;合并后文件路径</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>直接打开一个文件(无需退出)</li>
+<li>对文件进行合并【配合输出重定向使用】,源文件不会删除</li>
+</ul>
+<p>····································································································································································</p>
+<ul>
+<li>选项均可连用，例：-la、 -rf 、-lah</li>
+</ul>
+<h1 id="进阶指令"><a href="#进阶指令" class="headerlink" title="进阶指令"></a>进阶指令</h1><h2 id="1-df"><a href="#1-df" class="headerlink" title="1.#df"></a>1.<code>#df</code></h2><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">df</span> -h <span class="comment">#以较高可读性查看</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看磁盘空间</li>
+</ul>
+<p><code>df -h</code></p>
+<p><a href="https://imgchr.com/i/DMHqij"><img src="https://s3.ax1x.com/2020/11/20/DMHqij.png" alt="DMHqij.png"></a></p>
+<h2 id="2-free"><a href="#2-free" class="headerlink" title="2.#free"></a>2.<code>#free</code></h2><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">free</span> -m <span class="comment">#以MB为单位进行查看</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看内存使用情况</li>
+</ul>
+<p><code>free -n</code></p>
+<ul>
+<li><p><a href="https://imgchr.com/i/DMH7dg"><img src="https://s3.ax1x.com/2020/11/20/DMH7dg.png" alt="DMH7dg.png"></a>剩余真是可用为available</p>
+</li>
+<li><p>swap用于临时内存，当系统真是内存不够用时可以临时使用磁盘空间来充当内存</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-head"><a href="#3-head" class="headerlink" title="3.#head"></a>3.<code>#head</code></h2><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">head -<span class="built_in">n</span> 文件路径 #查看一个文件的前<span class="built_in">n</span>行，默认<span class="number">10</span>行 [<span class="built_in">n</span>表示数字]</span><br></pre></td></tr></table></figure>
+
+<h2 id=""><a href="#" class="headerlink" title=""></a><a href="https://imgchr.com/i/DMHHoQ"><img src="https://s3.ax1x.com/2020/11/20/DMHHoQ.png" alt="DMHHoQ.png"></a></h2><h2 id="4-tail"><a href="#4-tail" class="headerlink" title="4.#tail"></a>4.<code>#tail</code></h2><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">tail -<span class="built_in">n</span> 文件路径 #查看一个文件的末<span class="built_in">n</span>行，默认<span class="number">10</span>行 [<span class="built_in">n</span>表示数字]</span><br><span class="line">tail -f 文件路径 #查看一个文件的动态变化，配合输出重定向，按q键退出</span><br></pre></td></tr></table></figure>
+
+<h2 id="-1"><a href="#-1" class="headerlink" title=""></a><a href="https://imgchr.com/i/DMHTeS"><img src="https://s3.ax1x.com/2020/11/20/DMHTeS.png" alt="DMHTeS.png"></a></h2><h2 id="5-less"><a href="#5-less" class="headerlink" title="5.#less"></a>5.<code>#less</code></h2><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">less</span> 文件路径 <span class="comment">#，查看文件,以较少内容输出，配合辅助功能键(数字+回车,空格翻页，上下键或回车换行)查看更多，q退出</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-wc"><a href="#6-wc" class="headerlink" title="6.#wc"></a>6.<code>#wc</code></h2><figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line">wc -<span class="keyword">lwcm </span>文件路径 <span class="comment">#统计文件信息(-l行数，-w单词数，-c字节数,-m字符数)</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/DMHIL8"><img src="https://s3.ax1x.com/2020/11/20/DMHIL8.png" alt="DMHIL8.png"></a></p>
+<hr>
+<h2 id="7-date"><a href="#7-date" class="headerlink" title="7.#date"></a>7.<code>#date</code></h2><ul>
+<li>获取当前时间</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">date</span> #Tue Nov <span class="number">10</span> <span class="number">00</span>:<span class="number">02</span>:<span class="number">57</span> CST <span class="number">2020</span> 显示时间CST(当地时间) </span><br><span class="line"><span class="attribute">date</span> +%F #<span class="number">2020</span>-<span class="number">11</span>-<span class="number">10</span>(等价于#date <span class="string">&quot;%Y-%m-%d&quot;</span>)</span><br><span class="line"><span class="attribute">date</span> <span class="string">&quot;+%F %T&quot;</span> #<span class="number">2020</span>-<span class="number">11</span>-<span class="number">10</span> <span class="number">00</span>:<span class="number">02</span>:<span class="number">57</span>(等价于#date <span class="string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>)     </span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/DMHLJs"><img src="https://s3.ax1x.com/2020/11/20/DMHLJs.png" alt="DMHLJs.png"></a></p>
+<ul>
+<li>获取之前或之后时间</li>
+</ul>
+<figure class="highlight perl"><table><tr><td class="code"><pre><span class="line">date -d <span class="string">&quot;-1year&quot;</span> <span class="string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>一年前时间</span><br><span class="line">date -d <span class="string">&quot;+1year&quot;</span> <span class="string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>一年后时间</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/DMHOWn"><img src="https://s3.ax1x.com/2020/11/20/DMHOWn.png" alt="DMHOWn.png"></a></p>
+<ul>
+<li><p>单位的可选值：day、month、year无需考虑复数</p>
+<ul>
+<li>%m、%d、%H、%M、%S均带前导0</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="8-cal"><a href="#8-cal" class="headerlink" title="8.#cal"></a>8.#<code>cal</code></h2><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">cal <span class="comment">#直接输出当前月份日历(等价于#cal -1)</span></span><br><span class="line">cal -<span class="number">3</span> <span class="comment">#上月+本月+下月</span></span><br><span class="line">cal -y2020 <span class="comment">#输出某年日历</span></span><br><span class="line">*cal -s<span class="regexp">/-m #周日为第一天/</span>周一为第一天</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>操作日历</p>
+<p><a href="https://imgchr.com/i/DMHXzq"><img src="https://s3.ax1x.com/2020/11/20/DMHXzq.png" alt="DMHXzq.png" style="zoom:80%;" /></a><a href="https://imgchr.com/i/DMHxyV"><img src="https://s3.ax1x.com/2020/11/20/DMHxyV.png" alt="DMHxyV.png" style="zoom:80%;" /></a></p>
+</li>
+</ul>
+<hr>
+<h2 id="9-clear-ctrl-L"><a href="#9-clear-ctrl-L" class="headerlink" title="9.#clear/ctrl + L"></a>9.#<code>clear/ctrl + L</code></h2><figure class="highlight isbl"><table><tr><td class="code"><pre><span class="line"><span class="variable">clear</span></span><br><span class="line"><span class="variable">ctrl</span>+<span class="function"><span class="title">L</span>(快捷键)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>清除终端中已经存在的命令和结果</li>
+<li>并非清除信息，而是隐藏至上方，可滚动查看(不同于Windows中<code>cls</code>清屏)</li>
+</ul>
+<hr>
+<h2 id="10-管道"><a href="#10-管道" class="headerlink" title="10.管道"></a>10.管道</h2><ul>
+<li><p>管道符：<code>|</code></p>
+</li>
+<li><p>用于”过滤”，”特殊”，”扩展处理”,不能单独使用，配合其他命令，起辅助作用</p>
+</li>
+</ul>
+<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line">命令* | grep 过滤内容 <span class="comment">#过滤：所配合的命令必须有输出来作为管道的输入</span></span><br><span class="line"><span class="keyword">ls</span> |wc -l <span class="comment">#统计文档总个数(扩展处理)</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/DMHvQ0"><img src="https://s3.ax1x.com/2020/11/20/DMHvQ0.png" alt="DMHvQ0.png"></a></p>
+<hr>
+<h1 id="高级指令"><a href="#高级指令" class="headerlink" title="高级指令"></a>高级指令</h1><h2 id="1-hostname"><a href="#1-hostname" class="headerlink" title="1.#hostname"></a>1.#<code>hostname</code></h2><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hostname</span> <span class="comment">#输出主机名</span></span><br><span class="line">hostname -f <span class="comment">#输出当前主机名中的FQDN(全限定域名)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>操作服务器的主机名</li>
+</ul>
+<p><a href="https://imgchr.com/i/DMHzLT"><img src="https://s3.ax1x.com/2020/11/20/DMHzLT.png" alt="DMHzLT.png"></a></p>
+<h2 id="2-id"><a href="#2-id" class="headerlink" title="2.#id"></a>2.#<code>id</code></h2><figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">id</span></span><br><span class="line"><span class="built_in">id</span> 用户名 <span class="comment">#指定用户</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看用户基本信息(用户id、用户组id、附加组id)，不指定默认当前用户</li>
+</ul>
+<hr>
+<h2 id="3-whoami"><a href="#3-whoami" class="headerlink" title="3.#whoami"></a>3.#<code>whoami</code></h2><ul>
+<li>“我是谁?”显示当前登录的用户名，一般用于shell脚本</li>
+</ul>
+<hr>
+<h2 id="4-ps-ef"><a href="#4-ps-ef" class="headerlink" title="4.#ps -ef"></a>4.#<code>ps -ef</code></h2><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">ps -ef<span class="regexp">/-e/</span>-f</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看服务器进程信息</li>
+<li><code>-e</code>列出全部进程</li>
+<li><code>-f</code>列出全部的列(显示全字段)</li>
+</ul>
+<p><a href="https://imgchr.com/i/DMbpeU"><img src="https://s3.ax1x.com/2020/11/20/DMbpeU.md.png" alt="DMbpeU.md.png"></a></p>
+<p><a href="https://imgchr.com/i/DMbiFJ"><img src="https://s3.ax1x.com/2020/11/20/DMbiFJ.md.png" alt="DMbiFJ.md.png"></a></p>
+<ul>
+<li>常配合过滤使用,搜索结果为两个才是有在运行的目标进程</li>
+</ul>
+<hr>
+<h2 id="5-top"><a href="#5-top" class="headerlink" title="5.#top"></a>5.#<code>top</code></h2><ul>
+<li>查看进程占用资源(动态显示)，按q退出</li>
+</ul>
+<p>Linux命令大全<a href="https://man.linuxde.net/">https://man.linuxde.net</a></p>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux安装</title>
+    <url>/2020/10/23/Linux%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><ul>
+<li><p>linux下载</p>
+<ul>
+<li>Kali Linux 官⽹下载：<a href="https://www.kali.org/downloads/">https://www.kali.org/downloads/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="虚拟机安装过程"><a href="#虚拟机安装过程" class="headerlink" title="虚拟机安装过程"></a>虚拟机安装过程</h2><ol>
+<li><p>创建新的虚拟机：<a href="https://imgchr.com/i/BVb0zV"><img src="https://s1.ax1x.com/2020/10/24/BVb0zV.png" alt="BVb0zV.png"></a></p>
+</li>
+<li><p>选择典型即推荐：<a href="https://imgchr.com/i/BVbwR0"><img src="https://s1.ax1x.com/2020/10/24/BVbwR0.png" alt="BVbwR0.png"></a></p>
+<a id="more"></a>
+</li>
+<li><p>安装程序光盘映像<a href="%E5%85%88%E4%B8%8B%E8%BD%BD%E7%9A%84Linux%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%9C%B0%E5%9D%80">^文件</a></p>
+</li>
+</ol>
+<p><a href="https://imgchr.com/i/BVbdGq"><img src="https://s1.ax1x.com/2020/10/24/BVbdGq.png" alt="BVbdGq.png"></a></p>
+<ul>
+<li>下方提示无法检测忽略</li>
+</ul>
+<ol start="4">
+<li><p>选择操作系统“linux”，版本是“Debian”：<a href="https://imgchr.com/i/BVbain"><img src="https://s1.ax1x.com/2020/10/24/BVbain.png" alt="BVbain.png"></a></p>
+</li>
+<li><p>取名，选择虚拟机文件存放位置：</p>
+<ul>
+<li><code>注意选择合适位置，这里需要存放几十G的虚拟磁盘文件</code></li>
+</ul>
+</li>
+</ol>
+<p><a href="https://imgchr.com/i/BVbNIs"><img src="https://s1.ax1x.com/2020/10/24/BVbNIs.png" alt="BVbNIs.png"></a></p>
+<ol start="6">
+<li><p>设置虚拟磁盘的大小，一般不能低于默认值，下面一般选择单个文件，方便后续使用：<a href="https://imgchr.com/i/BVbDMT"><img src="https://s1.ax1x.com/2020/10/24/BVbDMT.png" alt="BVbDMT.png"></a></p>
+<p><a href="https://imgchr.com/i/BVbrsU"><img src="https://s1.ax1x.com/2020/10/24/BVbrsU.png" alt="BVbrsU.png"></a></p>
+<ul>
+<li><p>还可进行硬件自定义<a href="https://imgchr.com/i/BVb6Z4"><img src="https://s1.ax1x.com/2020/10/24/BVb6Z4.png" alt="BVb6Z4.png"></a></p>
+<p><a href="https://imgchr.com/i/BVbsLF"><img src="https://s1.ax1x.com/2020/10/24/BVbsLF.png" alt="BVbsLF.png"></a></p>
+<p><strong>至此完成创建</strong></p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="Kali系统安装与配置"><a href="#Kali系统安装与配置" class="headerlink" title="Kali系统安装与配置"></a>Kali系统安装与配置</h2><ol>
+<li><p>点击开启此虚拟机进入安装界面</p>
+<p><code>Live</code> 开头的不是系统安装，类似于Windows PE，用于恢复系统，其他选项可以不用管，也暂时用不着。<br><strong>这里我们选择简单的图形化安装</strong> <code>Graphical install</code><br>此时鼠标无法操作，退出虚拟机操作界面将鼠标移出界面或使用 <code>ctrl + alt</code> 键。</p>
+<p><a href="https://imgchr.com/i/BVbcdJ"><img src="https://s1.ax1x.com/2020/10/24/BVbcdJ.png" alt="BVbcdJ.png"></a></p>
+<ol start="2">
+<li><p>选择简体中文<a href="https://imgchr.com/i/BZ0j6f"><img src="https://s1.ax1x.com/2020/10/24/BZ0j6f.png" alt="BZ0j6f.png"></a>         区域中国<a href="https://imgchr.com/i/BZ0qfI"><img src="https://s1.ax1x.com/2020/10/24/BZ0qfI.png" alt="BZ0qfI.png"></a>汉语<a href="https://imgchr.com/i/BZBS0g"><img src="https://s1.ax1x.com/2020/10/24/BZBS0g.png" alt="BZBS0g.png"></a>然后设置主机名<a href="https://imgchr.com/i/BZ0o0e"><img src="https://s1.ax1x.com/2020/10/24/BZ0o0e.png" alt="BZ0o0e.png"></a><a href="https://imgchr.com/i/BZBihn"><img src="https://s1.ax1x.com/2020/10/24/BZBihn.png" alt="BZBihn.png"></a></p>
+</li>
+<li><p>域名，可暂时跳过<a href="https://imgchr.com/i/BZBkpq"><img src="https://s1.ax1x.com/2020/10/24/BZBkpq.png" alt="BZBkpq.png"></a></p>
+</li>
+<li><p>设置用户和密码（<em>注意大小写</em>😂）<a href="https://imgchr.com/i/BZ0X1P"><img src="https://s1.ax1x.com/2020/10/24/BZ0X1P.png" alt="BZ0X1P.png"></a><a href="https://imgchr.com/i/BZ0znS"><img src="https://s1.ax1x.com/2020/10/24/BZ0znS.png" alt="BZ0znS.png"></a></p>
+</li>
+<li><p><strong>LVM</strong></p>
+<p>建议使用<a href="https://baike.baidu.com/item/LVM/6571177?fr=aladdin">LVM</a>(百度百科)，LVM是 Logical Volume Manager（逻辑<a href="https://baike.baidu.com/item/%E5%8D%B7%E7%AE%A1%E7%90%86">卷管理</a>）的简写，它是Linux环境下对<a href="https://baike.baidu.com/item/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/1521981">磁盘分区</a>进行管理的一种机制，它由Heinz Mauelshagen在Linux 2.4<a href="https://baike.baidu.com/item/%E5%86%85%E6%A0%B8/108410">内核</a>上实现，目前最新版本为：稳定版1.0.5，开发版 1.1.0-rc2，以及LVM2开发版。Linux用户安装<a href="https://baike.baidu.com/item/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">Linux操作系统</a>时遇到的一个常见的难以决定的问题就是如何正确地评估各分区大小，以分配合适的硬盘空间。</p>
+<p><a href="https://imgchr.com/i/BZBA10"><img src="https://s1.ax1x.com/2020/10/24/BZBA10.png" alt="BZBA10.png"></a><br><a href="https://imgchr.com/i/BZBEcV"><img src="https://s1.ax1x.com/2020/10/24/BZBEcV.png" alt="BZBEcV.png"></a>使用推荐<br><a href="https://imgchr.com/i/BZBVXT"><img src="https://s1.ax1x.com/2020/10/24/BZBVXT.png" alt="BZBVXT.png">s</a><br><a href="https://imgchr.com/i/BZBenU"><img src="https://s1.ax1x.com/2020/10/24/BZBenU.png" alt="BZBenU.png"></a><br><a href="https://imgchr.com/i/BZBmBF"><img src="https://s1.ax1x.com/2020/10/24/BZBmBF.png" alt="BZBmBF.png"></a><br><a href="https://imgchr.com/i/BZBn74"><img src="https://s1.ax1x.com/2020/10/24/BZBn74.png" alt="BZBn74.png"></a></p>
+</li>
+<li><p>等待一会······<a href="https://imgchr.com/i/BZBKAJ"><img src="https://s1.ax1x.com/2020/10/24/BZBKAJ.png" alt="BZBKAJ.png"></a><br><a href="https://imgchr.com/i/BZBMN9"><img src="https://s1.ax1x.com/2020/10/24/BZBMN9.png" alt="BZBMN9.png"></a><br><a href="https://imgchr.com/i/BZBQhR"><img src="https://s1.ax1x.com/2020/10/24/BZBQhR.png" alt="BZBQhR.png"></a>配置GRUB：<br><a href="https://imgchr.com/i/BZB191"><img src="https://s1.ax1x.com/2020/10/24/BZB191.png" alt="BZB191.png"></a><br><a href="https://imgchr.com/i/BZB31x"><img src="https://s1.ax1x.com/2020/10/24/BZB31x.png" alt="BZB31x.png"></a><br><a href="https://imgchr.com/i/BZB8c6"><img src="https://s1.ax1x.com/2020/10/24/BZB8c6.png" alt="BZB8c6.png"></a></p>
+</li>
+</ol>
+<ul>
+<li>到这里就完成了。</li>
+</ul>
+</li>
+</ol>
+<p>   选择启动，第二个选项是恢复模式：</p>
+<p>   <a href="https://imgchr.com/i/BZBGjK"><img src="https://s1.ax1x.com/2020/10/24/BZBGjK.jpg" alt="BZBGjK.jpg"></a><br>   输入账号密码<a href="https://imgchr.com/i/BZBaAH"><img src="https://s1.ax1x.com/2020/10/24/BZBaAH.png" alt="BZBaAH.png"></a><br>   <a href="https://imgchr.com/i/BZBYnO"><img src="https://s1.ax1x.com/2020/10/24/BZBYnO.png" alt="BZBYnO.png"></a><br>   <a href="https://imgchr.com/i/BZBNHe"><img src="https://s1.ax1x.com/2020/10/24/BZBNHe.png" alt="BZBNHe.png"></a></p>
+<hr>
+<h3 id="记个笔记："><a href="#记个笔记：" class="headerlink" title="记个笔记："></a>记个笔记：</h3><ul>
+<li><p>capcha code/代码       验证码</p>
+<hr>
+<p>感谢阅读☕☕☕~</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My First Blog</title>
+    <url>/2020/10/16/My-First-Blog/</url>
+    <content><![CDATA[<hr>
+<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><hr>
+<p>​        历时将近5天，小破站终于建成！😜只是跟随大佬的教程照抄的一些简单的功能，后续还会慢慢探索…..对于搭建过程网上教程很多 ,我的第一篇博客就简单记录搭建过程中遇到的一些问题还有近期笔记吧。。😂😂</p>
+<h1 id="Github搭建过程"><a href="#Github搭建过程" class="headerlink" title="Github搭建过程"></a>Github搭建过程</h1><ul>
+<li><p>安装nodeJS、git和Hexo，注册Github</p>
+</li>
+<li><p>配置SSH key</p>
+</li>
+<li><p>部署到Github</p>
+</li>
+<li><p>主题配置（next)</p>
+</li>
+<li><p>故障调试方法</p>
+<a id="more"></a>
+
+
+</li>
+</ul>
+<h2 id="安装nodeJS、git和Hexo，注册Github"><a href="#安装nodeJS、git和Hexo，注册Github" class="headerlink" title="安装nodeJS、git和Hexo，注册Github"></a>安装nodeJS、git和Hexo，注册Github</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
+<li>这里主要是Hexo安装时在CMD或Git Bash中执行以下指令：</li>
+</ul>
+<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">$npm</span> install -g hexo-cli</span></span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>但是可能会遇到卡住或安装慢的情况，可以先执行<a href="https://www.zhihu.com/question/57671550">淘宝镜像</a>：</li>
+</ul>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="variable">$npm</span> install -g cnpm --registry=https:<span class="regexp">//</span>registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>同样下面的所有安装步骤都可使用</p>
+<h3 id="注册Github"><a href="#注册Github" class="headerlink" title="注册Github"></a>注册Github</h3><ul>
+<li><p>注册后在邮箱中认证，点击Start project或者下面的 new repository 创建一个新的仓库<br><a href="https://imgchr.com/i/BC40Gn"><img src="https://s1.ax1x.com/2020/10/21/BC40Gn.jpg" alt="BC40Gn.jpg"></a></p>
+<ul>
+<li><p>特别注意！！Github 仅能使用一个同名仓库的代码托管一个静态站点</p>
+<p>[<img src="https://s1.ax1x.com/2020/10/21/BC4B2q.jpg" alt="BC4B2q.jpg"></p>
+</li>
+<li><p>然后打开仓库创建一个 index.html 文件，并随意先写点内容</p>
+<p><a href="https://imgchr.com/i/BC4Dx0"><img src="https://s1.ax1x.com/2020/10/21/BC4Dx0.jpg" alt="BC4Dx0.jpg"></a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/BC4a5j"><img src="https://s1.ax1x.com/2020/10/21/BC4a5j.jpg" alt="BC4a5j.jpg"></a></p>
+<hr>
+<h2 id="配置SSH-key"><a href="#配置SSH-key" class="headerlink" title="配置SSH key"></a>配置SSH key</h2><ul>
+<li><p>生成密钥 SSH key后，找到C盘个人账户文件夹/.ssh/id_rsa.pub,打开复制，登录 <a href="https://github.com/">Github</a> 上添加刚刚生成的SSH key，按以下步骤添加：</p>
+<p><a href="https://imgchr.com/i/BC4wPs"><img src="https://s1.ax1x.com/2020/10/21/BC4wPs.jpg" alt="BC4wPs.jpg"></a></p>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/BC4sMV"><img src="https://s1.ax1x.com/2020/10/21/BC4sMV.jpg" alt="BC4sMV.jpg"></a></p>
+<p>   这时会收到邮箱<strong>A new public key was added to your account</strong></p>
+<ul>
+<li>此外还需确认并添加主机到本机SSH可信列表</li>
+</ul>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">$ssh -T git<span class="symbol">@github</span>.com</span><br></pre></td></tr></table></figure>
+
+<p>如果提示<code>Are you sure you want to continue connecting (yes/no)?</code></p>
+<p>输入yes，若返回 Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access. 内容，则证明添加成功。</p>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><ul>
+<li>配置<code>_config.yml</code>中有关deploy的部分:</li>
+</ul>
+<p>正确写法：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:liuxianan/liuxianan.github.io.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
+
+<p>错误写法：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: github</span><br><span class="line">  <span class="attribute">repository</span>:<span class="attribute">https</span>:<span class="comment">//github.com/yourname/yourname.github.io.git</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
+
+<p>后面一种写法是hexo2.x的写法，现在已经不行了，无论是哪种写法，此时直接执行<code>hexo d</code>的话一般会报如下错误：</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">Deployer not <span class="attr">found:</span> github 或者 Deployer not <span class="attr">found:</span> git</span><br></pre></td></tr></table></figure>
+
+<p>原因是还需要安装一个插件：</p>
+<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">$npm</span> install hexo-deployer-git --save</span></span><br></pre></td></tr></table></figure>
+
+<p>Tip:这里可以用淘宝镜像，见上。</p>
+<p>部署这个命令一定要用git bash，否则会提示<code>Permission denied (publickey).</code></p>
+<ul>
+<li><p>必用”三步走”:</p>
+<ol>
+<li><p><code>hexo clean</code>    清除缓存文件 (db.json) 和已生成的静态文件</p>
+</li>
+<li><p><code>hexo g</code>             生成静态页面至public目录</p>
+</li>
+<li><p><code>hexo d</code>             部署到GitHub</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="主题配置（next"><a href="#主题配置（next" class="headerlink" title="主题配置（next)"></a>主题配置（next)</h2><ul>
+<li><p>我使用的是next中的Gemini,所以就简单记录一些功能</p>
+<p>站点配置文件<code> _config.yml</code>中theme改为next，默认landscape</p>
+<p>首先区分站点配置文件_config.yml指Blog下的 <code> _config.yml</code></p>
+<p>另一个在<code>theme</code>下，所有的主题配置几乎都在这两个文件中</p>
+</li>
+</ul>
+<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><ul>
+<li><p>站点配置文件<code> _config.yml</code>下</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line">  <span class="attr">title:</span> <span class="comment"># 标题</span></span><br><span class="line">  <span class="attr">subtitle:</span> <span class="comment">#副标</span></span><br><span class="line">  <span class="attr">description:</span> <span class="comment">#个人描述</span></span><br><span class="line">  <span class="attr">keywords:</span></span><br><span class="line">  <span class="attr">author:</span>   <span class="comment"># 作者</span></span><br><span class="line">  <span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 主题语言</span></span><br><span class="line">  <span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span> <span class="comment">#不要乱改城市，这里容易出故障，必要时可直接删除试试</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># URL</span></span><br><span class="line">  <span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">https://example。com</span> <span class="comment">#绑定域名</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">/</span>  <span class="comment">#默认根路径，指向实际的source</span></span><br><span class="line">  <span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line">  <span class="attr">permalink_defaults:</span></span><br><span class="line">  <span class="attr">pretty_urls:</span></span><br><span class="line">    <span class="attr">trailing_index:</span> <span class="literal">true</span> <span class="comment"># Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span></span><br><span class="line">    <span class="attr">trailing_html:</span> <span class="literal">true</span> <span class="comment"># Set to false to remove trailing &#x27;.html&#x27; from permalinks</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Directory</span></span><br><span class="line">  <span class="attr">source_dir:</span> <span class="string">source</span></span><br><span class="line">  <span class="attr">public_dir:</span> <span class="string">public</span></span><br><span class="line">  <span class="attr">tag_dir:</span> <span class="string">tags</span></span><br><span class="line">  <span class="attr">archive_dir:</span> <span class="string">archives</span></span><br><span class="line">  <span class="attr">category_dir:</span> <span class="string">categories</span></span><br><span class="line">  <span class="attr">code_dir:</span> <span class="string">downloads/code</span></span><br><span class="line">  <span class="attr">i18n_dir:</span> <span class="string">:lang</span></span><br><span class="line">  <span class="attr">skip_render:</span> <span class="string">README.md</span> <span class="comment">#部署的时候不包含的文件</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Writing</span></span><br><span class="line">  <span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment">#默认的新博文名称</span></span><br><span class="line">  <span class="attr">default_layout:</span> <span class="string">post</span> <span class="comment">#默认布局</span></span><br><span class="line">  <span class="attr">titlecase:</span> <span class="literal">false</span> <span class="comment">#Transform title into titlecase</span></span><br><span class="line">  <span class="attr">external_link:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#Open external links in new tab</span></span><br><span class="line">    <span class="attr">field:</span> <span class="string">site</span> <span class="comment">#Apply to the whole site</span></span><br><span class="line">    <span class="attr">exclude:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">filename_case:</span> <span class="number">0</span> <span class="comment">#把博客名称改成小写/大写（1,2）</span></span><br><span class="line">  <span class="attr">render_drafts:</span> <span class="literal">false</span> <span class="comment">#是否显示草稿</span></span><br><span class="line">  <span class="attr">post_asset_folder:</span> <span class="literal">false</span> <span class="comment">#是否启用资源文件夹（用来存放相对路径图片或文件）</span></span><br><span class="line">  <span class="attr">relative_link:</span> <span class="literal">false</span> <span class="comment"># 把链接改为与根目录的相对位址</span></span><br><span class="line">  <span class="attr">future:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">highlight:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否开启代码高亮</span></span><br><span class="line">    <span class="attr">line_number:</span> <span class="literal">true</span> <span class="comment">#是否增加代码行号</span></span><br><span class="line">    <span class="attr">auto_detect:</span> <span class="literal">true</span> <span class="comment">#自动判断代码语言</span></span><br><span class="line">    <span class="attr">tab_replace:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">wrap:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">hljs:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">prismjs:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">preprocess:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">line_number:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">tab_replace:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Home page setting</span></span><br><span class="line">  <span class="comment"># path: Root path for your blogs index page. (default = &#x27;&#x27;)</span></span><br><span class="line">  <span class="comment"># per_page: Posts displayed per page. (0 = disable pagination)</span></span><br><span class="line">  <span class="comment"># order_by: Posts order. (Order by date descending by default)</span></span><br><span class="line">  <span class="attr">index_generator:</span> <span class="comment">#首页博客分布</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">&#x27;&#x27;</span> <span class="comment">#博客的默认路径</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">10</span> <span class="comment">#每页博客数量上限</span></span><br><span class="line">    <span class="attr">order_by:</span> <span class="string">-date</span> <span class="comment">#博客排序</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Date / Time format</span></span><br><span class="line">  <span class="comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line">  <span class="comment">## You can customize the date format as defined in</span></span><br><span class="line">  <span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line">  <span class="attr">date_format:</span> <span class="string">YYYY-MM-DD</span> <span class="comment">#博客日期格式</span></span><br><span class="line">  <span class="attr">time_format:</span> <span class="string">HH:mm:ss</span> <span class="comment">#博客时间格式</span></span><br><span class="line">  <span class="comment">## updated_option supports &#x27;mtime&#x27;, &#x27;date&#x27;, &#x27;empty&#x27;</span></span><br><span class="line">  <span class="attr">updated_option:</span> <span class="string">&#x27;mtime&#x27;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Pagination</span></span><br><span class="line">  <span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="number">10</span> <span class="comment">#同上</span></span><br><span class="line">  <span class="attr">pagination_dir:</span> <span class="string">page</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">#归档页的分页设置</span></span><br><span class="line">  <span class="attr">archive_generator:</span> <span class="comment">#归档页的配置</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">30</span> <span class="comment">#归档页每页博客数</span></span><br><span class="line">    <span class="attr">yearly:</span> <span class="literal">true</span> <span class="comment">#按年归档</span></span><br><span class="line">    <span class="attr">monthly:</span> <span class="literal">true</span> <span class="comment">#按月归档</span></span><br><span class="line">  <span class="comment">#标签页的分页设置</span></span><br><span class="line">  <span class="attr">tag_generator:</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">20</span> <span class="comment">#标签页每页博客数</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Deployment</span></span><br><span class="line">  <span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">  <span class="attr">deploy:</span> <span class="comment">#博客部署</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="string">repo:git@github.com:yourname/yourname.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>next主题设置</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line">override：false <span class="meta">#表示是否将主题置为默认样式</span></span><br><span class="line"><span class="symbol">cache:</span></span><br><span class="line"><span class="symbol">	enable:</span>true <span class="meta">#表示添加缓存功能，这样浏览器后续打开我们的博客网站会更快</span></span><br><span class="line"><span class="symbol">menu:</span> <span class="meta">#设置博客各个页面的相对路径，默认根路径是blog/source</span></span><br><span class="line"><span class="symbol">  home:</span> / || home</span><br><span class="line"><span class="symbol">  about:</span> <span class="meta-keyword">/about/</span> || user</span><br><span class="line"><span class="symbol">  tags:</span> <span class="meta-keyword">/tags/</span> || tags</span><br><span class="line"><span class="symbol">  categories:</span> <span class="meta-keyword">/categories/</span> || th</span><br><span class="line"><span class="symbol">  archives:</span> <span class="meta-keyword">/archives/</span> || archive</span><br><span class="line">  <span class="meta">#schedule: /schedule/ || calendar #日历</span></span><br><span class="line">  <span class="meta">#sitemap: /sitemap.xml || sitemap #站点地图，供搜索引擎爬取</span></span><br><span class="line">  <span class="meta">#commonweal: /404/ || heartbeat # 腾讯公益404</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># Enable/Disable menu icons / item badges.</span></span><br><span class="line"><span class="symbol">menu_settings:</span></span><br><span class="line"><span class="symbol">  icons:</span> true <span class="meta"># 是否显示各个页面的图标</span></span><br><span class="line"><span class="symbol">  badges:</span> true <span class="meta"># 是否显示分类/标签/归档页的内容量</span></span><br><span class="line"><span class="meta"># Schemes</span></span><br><span class="line"><span class="symbol">scheme:</span> Gemini</span><br></pre></td></tr></table></figure>
+<p>语句前加<code>#</code>即为注释或按钮关闭，而加注释时也要先一个空格，用<code>Sublime Text 3</code>体验会比较明显，操作错误不会有对应颜色变化。</p>
+</li>
+</ul>
+<h3 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h3><ul>
+<li><p>主题配置文件中搜索<code>valine</code>,改为<code>ture</code></p>
+</li>
+<li><p>注册登录<a href="https://leancloud.cn/">LeanCloud</a>，创建应用-设置-应用Keys，分别复制AppID、AppKey到文件中对应位置即可    </p>
+</li>
+</ul>
+<h3 id="添加字数统计和阅读时长"><a href="#添加字数统计和阅读时长" class="headerlink" title="添加字数统计和阅读时长"></a>添加字数统计和阅读时长</h3><ul>
+<li><p>先安装插件（Bash耐心等待~）</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">$npm <span class="keyword">install</span> hexo-symbols-<span class="keyword">count</span>-<span class="built_in">time</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>站点配置文件下添加</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#字数统计</span></span><br><span class="line"> <span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment">#是否统计字数</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">false</span> <span class="comment">#是否统计阅读时长</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment">#是否统计总字数</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="string">ture</span> <span class="comment">#是否统计总阅读时长</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>主题的配置文件下开启 symbols_count_time 字段</p>
+<p>执行“三步走”就可以看到了。。。</p>
+</li>
+</ul>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>新版本的NexT将每月发布。可以通过以下命令更新 NexT。<br>安装最新版本的 npm：<br><code>$ cd hexo-site</code><br><code>$ npm update hexo-theme-next</code><br>或更新到最新的主分支：<br><code>$ cd themes/next</code><br><code>$ git pull</code></p>
+<h3 id="不显示全部内容"><a href="#不显示全部内容" class="headerlink" title="不显示全部内容"></a>不显示全部内容</h3><ul>
+<li>修改主题配置文件</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Automatically excerpt description in homepage as preamble text.</span></span><br><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span> <span class="comment">#自动截取摘要</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Read more button</span></span><br><span class="line"><span class="comment"># If true, the read more button would be displayed in excerpt section.</span></span><br><span class="line"><span class="attr">read_more_btn:</span> <span class="literal">true</span> <span class="comment">#显示阅读全文按钮</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>写文章时在合适的位置加上<code>&lt;!--more--&gt;</code>即可</li>
+</ul>
+<h3 id="添加博客自定义图标"><a href="#添加博客自定义图标" class="headerlink" title="添加博客自定义图标"></a>添加博客自定义图标</h3><p>默认为<code>Hexo</code>的标识，图标可以在<a href="https://www.easyicon.net/">easyicon</a>、<a href="http://www.bitbug.net/">bitbug</a>、<a href="https://www.iconfont.cn/plus/user/detail?uid=41718)">iconfont</a>等网站选择和制作，我是在<a href="https://www.iconfont.cn/plus/user/detail?uid=41718)">iconfont</a>上找的，下载放到blog/themes/next/sources/images目录下，并在主题配置文件更改：</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">favicon:</span></span><br><span class="line"><span class="symbol">  small:</span> <span class="meta-keyword">/images/</span>****.png <span class="meta">#对应一</span></span><br><span class="line"><span class="symbol">  medium:</span> <span class="meta-keyword">/images/</span>****.png <span class="meta">#二两个位置</span></span><br><span class="line"><span class="symbol">  apple_touch_icon:</span> <span class="meta-keyword">/images/</span><span class="number">128</span>x128.png</span><br><span class="line"><span class="symbol">  safari_pinned_tab:</span> <span class="meta-keyword">/images/</span>logo2.svg</span><br></pre></td></tr></table></figure>
+
+<h3 id="本地图片上传"><a href="#本地图片上传" class="headerlink" title="本地图片上传"></a>本地图片上传</h3><ul>
+<li><p>先将图片上传至<a href="https://imgchr.com/">路过图床</a>或其他图床</p>
+</li>
+<li><p>在name.md中使用<code>![名称](**)</code>      **拷贝图片链接</p>
+</li>
+</ul>
+<hr>
+<h2 id="故障调试方法"><a href="#故障调试方法" class="headerlink" title="故障调试方法"></a>故障调试方法</h2><ul>
+<li>我主要是使用很传统的方法，即下载一份原始主题，若出现Error（看不懂）可以对应退回几步，从原文件拷贝复原</li>
+<li>还有一个备份方法，还没学会·····在路上去😊</li>
+</ul>
+<hr>
+<p>等等等等，还有很多，当然主要参考[<a href="https://blog.csdn.net/nightmare_dimple/article/details/86661502]">https://blog.csdn.net/nightmare_dimple/article/details/86661502]</a></p>
+<p>[<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html]">https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html]</a></p>
+<p>[<a href="https://segmentfault.com/a/1190000017986794]">https://segmentfault.com/a/1190000017986794]</a></p>
+<p>感谢大佬细致的菜鸟教程，我get了好多干货<del>·</del>·~</p>
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><ul>
+<li><p>时间紧，任务重，能力有限，但一直没有停下的心，就想我的Subtitle一样，<strong>追求源于热爱！！</strong></p>
+</li>
+<li><p>My description：我们努力奔跑，只为追上那个曾被寄予厚望的自己。</p>
+</li>
+</ul>
+<p>另外左侧link推广大佬···😁</p>
+<p><strong>感谢光顾</strong>👏</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>bandit靶场(持续更新中)</title>
+    <url>/2020/10/31/bandit%E9%9D%B6%E5%9C%BA(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <content><![CDATA[<h2 id="Level-0"><a href="#Level-0" class="headerlink" title="Level 0"></a>Level 0</h2><ul>
+<li>连接</li>
+</ul>
+<p><a href="https://imgchr.com/i/BahJeg"><img src="https://s1.ax1x.com/2020/10/31/BahJeg.png" alt="BahJeg.png" style="zoom:50%;" /></a><a href="https://imgchr.com/i/BahYwQ"><img src="https://s1.ax1x.com/2020/10/31/BahYwQ.png" alt="BahYwQ.png" style="zoom:50%;" /></a></p>
+<hr>
+<a id="more"></a>
+
+<h2 id="Level-0-➡Level-1"><a href="#Level-0-➡Level-1" class="headerlink" title="Level 0 ➡Level 1"></a>Level 0 ➡Level 1</h2><ul>
+<li>先使用<code>ls</code>指令查看目录，再<code>cat</code>打开<code>readme</code>文件</li>
+</ul>
+<p><a href="https://imgchr.com/i/Bahtoj"><img src="https://s1.ax1x.com/2020/10/31/Bahtoj.png" alt="Bahtoj.png" style="zoom: 80%;" /></a></p>
+<hr>
+<h2 id="Level-1-➡Level-2"><a href="#Level-1-➡Level-2" class="headerlink" title="Level 1 ➡Level 2"></a>Level 1 ➡Level 2</h2><ul>
+<li>这里先查看当下目录，只有<code>-</code>文件，而如果直接使用<code>cat -</code>会涉及指令选项的歧义，因此使用<code>cat ./-</code></li>
+<li><ul>
+<li><code>./</code>相对路径的当前路径</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/BahUFs"><img src="https://s1.ax1x.com/2020/10/31/BahUFs.png" alt="BahUFs.png" style="zoom:80%;" /></a></p>
+<hr>
+<h2 id="Level-2-➡Level-3"><a href="#Level-2-➡Level-3" class="headerlink" title="Level 2 ➡Level 3"></a>Level 2 ➡Level 3</h2><ul>
+<li>同样是先查看，就是通关提示<code>spaces in this filename</code>文件，而直接<code>cat</code>+文件名则意味着打开4个文件，因此这里使用<code>cat</code>+<code>Tab</code>直接自动补齐文件名。</li>
+<li><ul>
+<li>这里Tab可直接用，原因是只有一个文件；若多个文件则需输入开头几个字母即可，懒人必会！！</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/BahdWq"><img src="https://s1.ax1x.com/2020/10/31/BahdWq.png" alt="BahdWq.png" style="zoom:80%;" /></a></p>
+<hr>
+<h2 id="Level-3-➡Level-4"><a href="#Level-3-➡Level-4" class="headerlink" title="Level 3 ➡Level 4"></a>Level 3 ➡Level 4</h2><p>The password for the next level is stored in a hidden file in the <strong>inhere</strong> directory.</p>
+<ul>
+<li>首先在<code>inhere</code>内的隐藏文件，使用<code>cd inhere</code>切换至<code>inhere</code>目录下,<code>ls -la</code>列出文件目录，</li>
+</ul>
+<p><code>cat .hidden</code>打开查看密码</p>
+<p><a href="https://imgchr.com/i/BahBlV"><img src="https://s1.ax1x.com/2020/10/31/BahBlV.png" alt="BahBlV.png" style="zoom:80%;" /></a><a href="https://imgchr.com/i/Bah0S0"><img src="https://s1.ax1x.com/2020/10/31/Bah0S0.png" alt="Bah0S0.png" style="zoom:80%;" /></a></p>
+<hr>
+<h2 id="Level-4-➡Level-5"><a href="#Level-4-➡Level-5" class="headerlink" title="Level 4 ➡Level 5"></a>Level 4 ➡Level 5</h2><ul>
+<li>同上一关到查看目录，发现很多文件，这时通过<code>file</code>查看文件类型，找出密码</li>
+</ul>
+<p><a href="https://imgchr.com/i/BahDyT"><img src="https://s1.ax1x.com/2020/10/31/BahDyT.png" alt="BahDyT.png" style="zoom:80%;" /></a></p>
+<hr>
+<h2 id="Level-5➡Level-6"><a href="#Level-5➡Level-6" class="headerlink" title="Level 5➡Level 6"></a>Level 5➡Level 6</h2><ul>
+<li><a href="https://imgchr.com/i/DMb9wF"><img src="https://s3.ax1x.com/2020/11/20/DMb9wF.md.png" alt="DMb9wF.md.png"></a></li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="built_in">find</span> 路径 -<span class="built_in">type</span> f -<span class="built_in">size</span> <span class="number">1033</span>c</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用<code>find</code>命令查找1033字节的文件</li>
+</ul>
+<p><a href="https://imgchr.com/i/DMbCo4"><img src="https://s3.ax1x.com/2020/11/20/DMbCo4.md.png" alt="DMbCo4.md.png"></a></p>
+<p>-type f：指定普通文件<br>-size 1033c：指定为1033字节</p>
+<p>附find参数解析<br>-size n[cwbkMG] : 档案大小 为 n 个由后缀决定的数据块。其中后缀含义为：<br>b: 代表 512 位元组的区块（如果用户没有指定后缀，则默认为 b）<br>c: 表示字节数<br>k: 表示 kilo bytes （1024字节）<br>w: 字 （2字节）<br>M:兆字节（1048576字节）<br>G: 千兆字节 （1073741824字节）<br>-type c : 档案类型是 c 。<br>d: 目录<br>c: 字型装置档案<br>b: 区块装置档案<br>p: 具名贮列<br>f: 一般档案<br>l: 符号连结<br>s: socket</p>
+<hr>
+<h2 id="Level-6-➡Level-7"><a href="#Level-6-➡Level-7" class="headerlink" title="Level 6 ➡Level 7"></a>Level 6 ➡Level 7</h2><ul>
+<li>The password for the next level is stored <strong>somewhere on the server</strong> and has all of the following properties:<ul>
+<li>owned by user bandit7</li>
+<li>owned by group bandit6</li>
+<li>33 bytes in size</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/DMbFY9"><img src="https://s3.ax1x.com/2020/11/20/DMbFY9.md.png" alt="DMbFY9.md.png"></a></p>
+<p>-user：指定user组<br>-group： 指定group组<br>-size：指定大小<br>后面的2&gt;/dev/null，是因为find命令在根目录下查找会经常有一些权限的报错信息所以通常使用这种方式将错误信息重定位。</p>
+<hr>
+<h2 id="Level-7-➡Level-8"><a href="#Level-7-➡Level-8" class="headerlink" title="Level 7 ➡Level 8"></a>Level 7 ➡Level 8</h2><p>The password for the next level is stored in the file <strong>data.txt</strong> next to the word <strong>millionth</strong></p>
+<ul>
+<li>当前目录下确实是<code>data.txt</code>,但直接用<code>cat</code>打开无法确定flag，使用<code>| grep</code>管道筛选关键词<code>millionth</code></li>
+</ul>
+<p><a href="https://imgchr.com/i/DMbkWR"><img src="https://s3.ax1x.com/2020/11/20/DMbkWR.png" alt="DMbkWR.png"></a></p>
+<hr>
+<h2 id="Level-8➡Level-9"><a href="#Level-8➡Level-9" class="headerlink" title="Level 8➡Level 9"></a>Level 8➡Level 9</h2><p>The password for the next level is stored in the file <strong>data.txt</strong> and is the only line of text that occurs only once</p>
+<ul>
+<li>本题flag只出现一行，使用<code>uniq -u</code>直接获取或<code>uniq -c</code>列出次数找到出现一次的line</li>
+</ul>
+<p><a href="https://imgchr.com/i/DMbVQx"><img src="https://s3.ax1x.com/2020/11/20/DMbVQx.png" alt="DMbVQx.png"></a></p>
+<p><a href="https://imgchr.com/i/DMbES1"><img src="https://s3.ax1x.com/2020/11/20/DMbES1.png" alt="DMbES1.png"></a></p>
+<hr>
+<h2 id="Level-9➡Level-10"><a href="#Level-9➡Level-10" class="headerlink" title="Level 9➡Level 10"></a>Level 9➡Level 10</h2><p>The password for the next level is stored in the file <strong>data.txt</strong> in one of the few human-readable strings, preceded by several ‘=’ characters.</p>
+<ul>
+<li>password是以若干个‘=’开头，使用<code>strings</code>命令查看文件字符串</li>
+</ul>
+<p><a href="https://imgchr.com/i/DMbZy6"><img src="https://s3.ax1x.com/2020/11/20/DMbZy6.png" alt="DMbZy6.png"></a></p>
+<p><a href="https://imgchr.com/i/DMbeOK"><img src="https://s3.ax1x.com/2020/11/20/DMbeOK.png" alt="DMbeOK.png"></a></p>
+<hr>
+<h2 id="Level-10➡Level-11"><a href="#Level-10➡Level-11" class="headerlink" title="Level 10➡Level 11"></a>Level 10➡Level 11</h2><p>The password for the next level is stored in the file <strong>data.txt</strong>, which contains base64 encoded data</p>
+<ul>
+<li>使用<code>base64</code>解码，<code>base64 -d data.txt</code></li>
+</ul>
+<p><a href="https://imgchr.com/i/DMbneO"><img src="https://s3.ax1x.com/2020/11/20/DMbneO.png" alt="DMbneO.png"></a></p>
+<hr>
+<h2 id="Level-11➡Level-12"><a href="#Level-11➡Level-12" class="headerlink" title="Level 11➡Level 12"></a>Level 11➡Level 12</h2><p>The password for the next level is stored in the file <strong>data.txt</strong>, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions</p>
+<ul>
+<li>本题为字符转换，a-z以及A-Z被后移了13个位置，即对应n-z a-m N-Z A-M.</li>
+</ul>
+<p>使用<code>tr</code>配合管道转换得到password</p>
+<p><a href="https://imgchr.com/i/DMbuwD"><img src="https://s3.ax1x.com/2020/11/20/DMbuwD.png" alt="DMbuwD.png"></a></p>
+<h2 id="Level-➡Level-1"><a href="#Level-➡Level-1" class="headerlink" title="Level * ➡Level * +1"></a>Level * ➡Level * +1</h2><p>···</p>
+<p>···</p>
+<p>···</p>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>简易邮箱登录界面HCJ</title>
+    <url>/2020/11/25/%E7%AE%80%E6%98%93%E9%82%AE%E7%AE%B1%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2HCJ/</url>
+    <content><![CDATA[<h3 id="为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！"><a href="#为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！" class="headerlink" title="为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！"></a>为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！</h3><p>m1</p>
+<hr>
+<p>源码如下：</p>
+<ul>
+<li>Html：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>QQ邮箱登录<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    	img &#123;</span><br><span class="line">    		position: absolute;</span><br><span class="line">    		margin-left: 35%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	form&#123;</span><br><span class="line">    		margin-left: 10%;</span><br><span class="line">    		margin-top: 10%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	button &#123;</span><br><span class="line">    		margin-left: 4%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	a&#123;</span><br><span class="line">    		margin-left: 10%;</span><br><span class="line">    	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js/inter.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;imgs/QQ截图20201125150933.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;登录配置图片&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;demo/welcome.php&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span><br><span class="line">        账号：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;account&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;支持QQ号/邮箱/手机号登录&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">id</span>=<span class="string">&quot;passwd&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;QQ密码&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;fnLogin()&quot;</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;cancel&quot;</span>&gt;</span>取消<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;error_box&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://mail.qq.com/?ocid=MSNCNLG10-2/&quot;</span>&gt;</span>官方入口!!!<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>js:</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fnLogin</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"> <span class="keyword">var</span> oUacnt = <span class="built_in">document</span>.getElementById(<span class="string">&quot;account&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> oUpswd = <span class="built_in">document</span>.getElementById(<span class="string">&quot;passwd&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> oError = <span class="built_in">document</span>.getElementById(<span class="string">&quot;error_box&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> isError = <span class="literal">true</span>;</span><br><span class="line"> <span class="keyword">if</span> (oUacnt.value.length &gt; <span class="number">20</span> || oUacnt.value.length &lt; <span class="number">5</span>) &#123;</span><br><span class="line">  oError.innerHTML = <span class="string">&quot;请输入正确账号&quot;</span>;</span><br><span class="line">  isError = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">if</span> (oUpswd.value.length &gt; <span class="number">18</span> || oUpswd.value.length &lt; <span class="number">6</span>) &#123;</span><br><span class="line">  oError.innerHTML = <span class="string">&quot;密码请输入6-18位字符&quot;</span></span><br><span class="line">  isError = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="built_in">window</span>.alert(<span class="string">&quot;呵*_*,,,任务完成。。。&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&#x27;html&#x27;</span>).onclick= <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">&#x27;啊就这...&#x27;</span>);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="记个笔记"><a href="#记个笔记" class="headerlink" title="记个笔记"></a>记个笔记</h3><h4 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h4><ol>
+<li>H5时代开头简洁明了</li>
+</ol>
+<p><code>&lt;!DOCTYPE html&gt;</code></p>
+<ol start="2">
+<li>基本结构</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>一个人完整元素=开始标签<code>&lt;p&gt;</code>+内容+结束标签<code>&lt;/p&gt;</code></li>
+<li>注意所有符号使用英文</li>
+<li>标签属性添加至开始标签末尾<code>&gt;</code>前 &lt;元素 属性=””&gt;内容&lt;/元素&gt;       </li>
+<li>元素与属性间，属性与属性间必须有一个括号</li>
+<li>Sublime Text中敲出<code>&lt;h</code>选中html即可直接给出结构</li>
+</ul>
+<ol start="3">
+<li><code>meta</code>标签+<code>charset</code>属性，指定 HTML 文档的编码</li>
+</ol>
+<p><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
+<ul>
+<li>网页尺寸实现自适应</li>
+</ul>
+<p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></p>
+<ol start="4">
+<li><code>img</code>标签 ：</li>
+</ol>
+<p><code>&lt;img src=&quot;imgs/QQ截图20201125150933.png&quot; alt=&quot;登录配置图片&quot;&gt;</code></p>
+<ul>
+<li>属性src的值为图片路径，alt指文本信息</li>
+<li>另外还有width、height属性来设置图片宽度和高度（单位px或%）</li>
+</ul>
+<ol start="5">
+<li><code>br</code>换行</li>
+<li><code>input</code>标签：</li>
+</ol>
+<p>用于搜集用户信息，即为输入</p>
+<ul>
+<li>type属性规定元素类型，例如<code>type=&quot;passwd&quot;</code>即可实现密码隐藏的效果</li>
+<li>placeholder属性表示占据文本，值为text</li>
+</ul>
+<ol start="7">
+<li><code>button</code>标签：</li>
+</ol>
+<p>可点击按钮</p>
+<ul>
+<li>按钮名称放于两尖括号之间</li>
+<li>记得为其指定type属性（button、reset、submit）</li>
+</ul>
+<ol start="8">
+<li><code>a</code>标签：</li>
+</ol>
+<p>超链接</p>
+]]></content>
+      <tags>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+</search>
