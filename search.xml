@@ -1,48 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>BugKu靶场之图片隐写(持续更新中)</title>
-    <url>/2020/11/01/Bugku%E9%9D%B6%E5%9C%BA%E4%B9%8B%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
-    <content><![CDATA[<h2 id="01"><a href="#01" class="headerlink" title="01."></a>01.</h2><ul>
-<li><p>题目为这是一张单纯的图片<a href="https://imgchr.com/i/B058hQ"><img src="https://s1.ax1x.com/2020/11/01/B058hQ.md.png" alt="B058hQ.md.png"></a></p>
-</li>
-<li><p>下载图片打开后找不出什么线索<a href="https://imgchr.com/i/B05xUS"><img src="https://s1.ax1x.com/2020/11/01/B05xUS.png" alt="B05xUS.png"></a></p>
-</li>
-<li><p>使用<code>010 Editor</code>打开，找到最后[^特殊序列]</p>
-</li>
-</ul>
-<p><a href="https://imgchr.com/i/B053tg"><img src="https://s1.ax1x.com/2020/11/01/B053tg.md.png" alt="B053tg.md.png"></a></p>
-<ul>
-<li><p>拷贝到<a href="http://tool.chinaz.com/tools/unicode.aspx">在线转换器</a>,Unicode 转 ASCII得到flag</p>
-<a id="more"></a>
-
-</li>
-</ul>
-<hr>
-<h2 id="02"><a href="#02" class="headerlink" title="02."></a>02.</h2><ul>
-<li><p>题目为隐写<a href="https://imgchr.com/i/B05M0f"><img src="https://s1.ax1x.com/2020/11/01/B05M0f.md.png" alt="B05M0f.md.png"></a></p>
-</li>
-<li><p>下载后打开，查看文件信息，尺寸为500✖420</p>
-</li>
-<li><p>这里需利用python脚本根据图片的crc校验计算图片真实的宽高，（暂时水平不够）</p>
-</li>
-</ul>
-<p><a href="https://imgchr.com/i/B05Q78"><img src="https://s1.ax1x.com/2020/11/01/B05Q78.md.png" alt="B05Q78.md.png"></a></p>
-<ul>
-<li>将高度中A4改为F4</li>
-</ul>
-<p><a href="https://imgchr.com/i/B05Jpj"><img src="https://s1.ax1x.com/2020/11/01/B05Jpj.md.png" alt="B05Jpj.md.png"></a></p>
-<p>这样就能看到flag</p>
-<hr>
-<h2 id="n"><a href="#n" class="headerlink" title="n."></a>n.</h2><p>······</p>
-<p>······</p>
-<p>[^特殊序列]: Unicode 编码</p>
-]]></content>
-      <tags>
-        <tag>Misc</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux指令</title>
     <url>/2020/10/28/Linux%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="基础指令"><a href="#基础指令" class="headerlink" title="基础指令"></a>基础指令</h1><h2 id="1-ls"><a href="#1-ls" class="headerlink" title="1.#ls"></a>1.<code>#ls</code></h2><figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ls</span> <span class="comment">#列出当前工作目录下的所有文件/文件夹的名称</span></span><br><span class="line"><span class="keyword">ls</span> 路径 <span class="comment">#列出指定路径下的所有文件/文件夹的名称</span></span><br><span class="line"><span class="keyword">ls</span> -l 路径 <span class="comment">#以详细列表形式展示指定路径下文件/文件夹</span></span><br><span class="line"><span class="keyword">ls</span> -la 路径 <span class="comment">#&quot;-l&quot;显示所有文件/文件夹,包含隐藏文件(.xxx)</span></span><br><span class="line"><span class="keyword">ls</span> -lh 路径 <span class="comment">#列出指定路径下文件/文件夹，以可读性较高的文件大小单位显示</span></span><br></pre></td></tr></table></figure>
@@ -468,6 +426,48 @@
       </tags>
   </entry>
   <entry>
+    <title>BugKu靶场之图片隐写(持续更新中)</title>
+    <url>/2020/11/01/Bugku%E9%9D%B6%E5%9C%BA%E4%B9%8B%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <content><![CDATA[<h2 id="01"><a href="#01" class="headerlink" title="01."></a>01.</h2><ul>
+<li><p>题目为这是一张单纯的图片<a href="https://imgchr.com/i/B058hQ"><img src="https://s1.ax1x.com/2020/11/01/B058hQ.md.png" alt="B058hQ.md.png"></a></p>
+</li>
+<li><p>下载图片打开后找不出什么线索<a href="https://imgchr.com/i/B05xUS"><img src="https://s1.ax1x.com/2020/11/01/B05xUS.png" alt="B05xUS.png"></a></p>
+</li>
+<li><p>使用<code>010 Editor</code>打开，找到最后[^特殊序列]</p>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/B053tg"><img src="https://s1.ax1x.com/2020/11/01/B053tg.md.png" alt="B053tg.md.png"></a></p>
+<ul>
+<li><p>拷贝到<a href="http://tool.chinaz.com/tools/unicode.aspx">在线转换器</a>,Unicode 转 ASCII得到flag</p>
+<a id="more"></a>
+
+</li>
+</ul>
+<hr>
+<h2 id="02"><a href="#02" class="headerlink" title="02."></a>02.</h2><ul>
+<li><p>题目为隐写<a href="https://imgchr.com/i/B05M0f"><img src="https://s1.ax1x.com/2020/11/01/B05M0f.md.png" alt="B05M0f.md.png"></a></p>
+</li>
+<li><p>下载后打开，查看文件信息，尺寸为500✖420</p>
+</li>
+<li><p>这里需利用python脚本根据图片的crc校验计算图片真实的宽高，（暂时水平不够）</p>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/B05Q78"><img src="https://s1.ax1x.com/2020/11/01/B05Q78.md.png" alt="B05Q78.md.png"></a></p>
+<ul>
+<li>将高度中A4改为F4</li>
+</ul>
+<p><a href="https://imgchr.com/i/B05Jpj"><img src="https://s1.ax1x.com/2020/11/01/B05Jpj.md.png" alt="B05Jpj.md.png"></a></p>
+<p>这样就能看到flag</p>
+<hr>
+<h2 id="n"><a href="#n" class="headerlink" title="n."></a>n.</h2><p>······</p>
+<p>······</p>
+<p>[^特殊序列]: Unicode 编码</p>
+]]></content>
+      <tags>
+        <tag>Misc</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux安装</title>
     <url>/2020/10/23/Linux%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><ul>
@@ -546,6 +546,81 @@
 ]]></content>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>简易邮箱登录界面HCJ</title>
+    <url>/2020/11/25/%E7%AE%80%E6%98%93%E9%82%AE%E7%AE%B1%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2HCJ/</url>
+    <content><![CDATA[<h3 id="为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！"><a href="#为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！" class="headerlink" title="为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！"></a>为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！</h3><p>m1</p>
+<hr>
+<p>源码如下：</p>
+<ul>
+<li>Html：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>QQ邮箱登录<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    	img &#123;</span><br><span class="line">    		position: absolute;</span><br><span class="line">    		margin-left: 35%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	form&#123;</span><br><span class="line">    		margin-left: 10%;</span><br><span class="line">    		margin-top: 10%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	button &#123;</span><br><span class="line">    		margin-left: 4%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	a&#123;</span><br><span class="line">    		margin-left: 10%;</span><br><span class="line">    	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js/inter.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;imgs/QQ截图20201125150933.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;登录配置图片&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;demo/welcome.php&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span><br><span class="line">        账号：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;account&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;支持QQ号/邮箱/手机号登录&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">id</span>=<span class="string">&quot;passwd&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;QQ密码&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;fnLogin()&quot;</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;cancel&quot;</span>&gt;</span>取消<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;error_box&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://mail.qq.com/?ocid=MSNCNLG10-2/&quot;</span>&gt;</span>官方入口!!!<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>js:</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fnLogin</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"> <span class="keyword">var</span> oUacnt = <span class="built_in">document</span>.getElementById(<span class="string">&quot;account&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> oUpswd = <span class="built_in">document</span>.getElementById(<span class="string">&quot;passwd&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> oError = <span class="built_in">document</span>.getElementById(<span class="string">&quot;error_box&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> isError = <span class="literal">true</span>;</span><br><span class="line"> <span class="keyword">if</span> (oUacnt.value.length &gt; <span class="number">20</span> || oUacnt.value.length &lt; <span class="number">5</span>) &#123;</span><br><span class="line">  oError.innerHTML = <span class="string">&quot;请输入正确账号&quot;</span>;</span><br><span class="line">  isError = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">if</span> (oUpswd.value.length &gt; <span class="number">18</span> || oUpswd.value.length &lt; <span class="number">6</span>) &#123;</span><br><span class="line">  oError.innerHTML = <span class="string">&quot;密码请输入6-18位字符&quot;</span></span><br><span class="line">  isError = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="built_in">window</span>.alert(<span class="string">&quot;呵*_*,,,任务完成。。。&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&#x27;html&#x27;</span>).onclick= <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">&#x27;啊就这...&#x27;</span>);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="记个笔记"><a href="#记个笔记" class="headerlink" title="记个笔记"></a>记个笔记</h3><h4 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h4><ol>
+<li>H5时代开头简洁明了</li>
+</ol>
+<p><code>&lt;!DOCTYPE html&gt;</code></p>
+<ol start="2">
+<li>基本结构</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>一个人完整元素=开始标签<code>&lt;p&gt;</code>+内容+结束标签<code>&lt;/p&gt;</code></li>
+<li>注意所有符号使用英文</li>
+<li>标签属性添加至开始标签末尾<code>&gt;</code>前 &lt;元素 属性=””&gt;内容&lt;/元素&gt;       </li>
+<li>元素与属性间，属性与属性间必须有一个括号</li>
+<li>Sublime Text中敲出<code>&lt;h</code>选中html即可直接给出结构</li>
+</ul>
+<ol start="3">
+<li><code>meta</code>标签+<code>charset</code>属性，指定 HTML 文档的编码</li>
+</ol>
+<p><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
+<ul>
+<li>网页尺寸实现自适应</li>
+</ul>
+<p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></p>
+<ol start="4">
+<li><code>img</code>标签 ：</li>
+</ol>
+<p><code>&lt;img src=&quot;imgs/QQ截图20201125150933.png&quot; alt=&quot;登录配置图片&quot;&gt;</code></p>
+<ul>
+<li>属性src的值为图片路径，alt指文本信息</li>
+<li>另外还有width、height属性来设置图片宽度和高度（单位px或%）</li>
+</ul>
+<ol start="5">
+<li><code>br</code>换行</li>
+<li><code>input</code>标签：</li>
+</ol>
+<p>用于搜集用户信息，即为输入</p>
+<ul>
+<li>type属性规定元素类型，例如<code>type=&quot;passwd&quot;</code>即可实现密码隐藏的效果</li>
+<li>placeholder属性表示占据文本，值为text</li>
+</ul>
+<ol start="7">
+<li><code>button</code>标签：</li>
+</ol>
+<p>可点击按钮</p>
+<ul>
+<li>按钮名称放于两尖括号之间</li>
+<li>记得为其指定type属性（button、reset、submit）</li>
+</ul>
+<ol start="8">
+<li><code>a</code>标签：</li>
+</ol>
+<p>超链接</p>
+]]></content>
+      <tags>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -654,81 +729,6 @@
 ]]></content>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>简易邮箱登录界面HCJ</title>
-    <url>/2020/11/25/%E7%AE%80%E6%98%93%E9%82%AE%E7%AE%B1%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2HCJ/</url>
-    <content><![CDATA[<h3 id="为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！"><a href="#为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！" class="headerlink" title="为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！"></a>为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！</h3><p>m1</p>
-<hr>
-<p>源码如下：</p>
-<ul>
-<li>Html：</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>QQ邮箱登录<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    	img &#123;</span><br><span class="line">    		position: absolute;</span><br><span class="line">    		margin-left: 35%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	form&#123;</span><br><span class="line">    		margin-left: 10%;</span><br><span class="line">    		margin-top: 10%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	button &#123;</span><br><span class="line">    		margin-left: 4%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	a&#123;</span><br><span class="line">    		margin-left: 10%;</span><br><span class="line">    	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js/inter.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;imgs/QQ截图20201125150933.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;登录配置图片&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;demo/welcome.php&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span><br><span class="line">        账号：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;account&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;支持QQ号/邮箱/手机号登录&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">id</span>=<span class="string">&quot;passwd&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;QQ密码&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;fnLogin()&quot;</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;cancel&quot;</span>&gt;</span>取消<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;error_box&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://mail.qq.com/?ocid=MSNCNLG10-2/&quot;</span>&gt;</span>官方入口!!!<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>js:</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fnLogin</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"> <span class="keyword">var</span> oUacnt = <span class="built_in">document</span>.getElementById(<span class="string">&quot;account&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> oUpswd = <span class="built_in">document</span>.getElementById(<span class="string">&quot;passwd&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> oError = <span class="built_in">document</span>.getElementById(<span class="string">&quot;error_box&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> isError = <span class="literal">true</span>;</span><br><span class="line"> <span class="keyword">if</span> (oUacnt.value.length &gt; <span class="number">20</span> || oUacnt.value.length &lt; <span class="number">5</span>) &#123;</span><br><span class="line">  oError.innerHTML = <span class="string">&quot;请输入正确账号&quot;</span>;</span><br><span class="line">  isError = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">if</span> (oUpswd.value.length &gt; <span class="number">18</span> || oUpswd.value.length &lt; <span class="number">6</span>) &#123;</span><br><span class="line">  oError.innerHTML = <span class="string">&quot;密码请输入6-18位字符&quot;</span></span><br><span class="line">  isError = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="built_in">window</span>.alert(<span class="string">&quot;呵*_*,,,任务完成。。。&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&#x27;html&#x27;</span>).onclick= <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">&#x27;啊就这...&#x27;</span>);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="记个笔记"><a href="#记个笔记" class="headerlink" title="记个笔记"></a>记个笔记</h3><h4 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h4><ol>
-<li>H5时代开头简洁明了</li>
-</ol>
-<p><code>&lt;!DOCTYPE html&gt;</code></p>
-<ol start="2">
-<li>基本结构</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>一个人完整元素=开始标签<code>&lt;p&gt;</code>+内容+结束标签<code>&lt;/p&gt;</code></li>
-<li>注意所有符号使用英文</li>
-<li>标签属性添加至开始标签末尾<code>&gt;</code>前 &lt;元素 属性=””&gt;内容&lt;/元素&gt;       </li>
-<li>元素与属性间，属性与属性间必须有一个括号</li>
-<li>Sublime Text中敲出<code>&lt;h</code>选中html即可直接给出结构</li>
-</ul>
-<ol start="3">
-<li><code>meta</code>标签+<code>charset</code>属性，指定 HTML 文档的编码</li>
-</ol>
-<p><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
-<ul>
-<li>网页尺寸实现自适应</li>
-</ul>
-<p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></p>
-<ol start="4">
-<li><code>img</code>标签 ：</li>
-</ol>
-<p><code>&lt;img src=&quot;imgs/QQ截图20201125150933.png&quot; alt=&quot;登录配置图片&quot;&gt;</code></p>
-<ul>
-<li>属性src的值为图片路径，alt指文本信息</li>
-<li>另外还有width、height属性来设置图片宽度和高度（单位px或%）</li>
-</ul>
-<ol start="5">
-<li><code>br</code>换行</li>
-<li><code>input</code>标签：</li>
-</ol>
-<p>用于搜集用户信息，即为输入</p>
-<ul>
-<li>type属性规定元素类型，例如<code>type=&quot;passwd&quot;</code>即可实现密码隐藏的效果</li>
-<li>placeholder属性表示占据文本，值为text</li>
-</ul>
-<ol start="7">
-<li><code>button</code>标签：</li>
-</ol>
-<p>可点击按钮</p>
-<ul>
-<li>按钮名称放于两尖括号之间</li>
-<li>记得为其指定type属性（button、reset、submit）</li>
-</ul>
-<ol start="8">
-<li><code>a</code>标签：</li>
-</ol>
-<p>超链接</p>
-]]></content>
-      <tags>
-        <tag>Web</tag>
       </tags>
   </entry>
 </search>
