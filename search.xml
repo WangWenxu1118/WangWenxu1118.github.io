@@ -43,267 +43,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux安装</title>
-    <url>/2020/10/23/Linux%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><ul>
-<li><p>linux下载</p>
-<ul>
-<li>Kali Linux 官⽹下载：<a href="https://www.kali.org/downloads/">https://www.kali.org/downloads/</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="虚拟机安装过程"><a href="#虚拟机安装过程" class="headerlink" title="虚拟机安装过程"></a>虚拟机安装过程</h2><ol>
-<li><p>创建新的虚拟机：<a href="https://imgchr.com/i/BVb0zV"><img src="https://s1.ax1x.com/2020/10/24/BVb0zV.png" alt="BVb0zV.png"></a></p>
-</li>
-<li><p>选择典型即推荐：<a href="https://imgchr.com/i/BVbwR0"><img src="https://s1.ax1x.com/2020/10/24/BVbwR0.png" alt="BVbwR0.png"></a></p>
-<a id="more"></a>
-</li>
-<li><p>安装程序光盘映像<a href="%E5%85%88%E4%B8%8B%E8%BD%BD%E7%9A%84Linux%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%9C%B0%E5%9D%80">^文件</a></p>
-</li>
-</ol>
-<p><a href="https://imgchr.com/i/BVbdGq"><img src="https://s1.ax1x.com/2020/10/24/BVbdGq.png" alt="BVbdGq.png"></a></p>
-<ul>
-<li>下方提示无法检测忽略</li>
-</ul>
-<ol start="4">
-<li><p>选择操作系统“linux”，版本是“Debian”：<a href="https://imgchr.com/i/BVbain"><img src="https://s1.ax1x.com/2020/10/24/BVbain.png" alt="BVbain.png"></a></p>
-</li>
-<li><p>取名，选择虚拟机文件存放位置：</p>
-<ul>
-<li><code>注意选择合适位置，这里需要存放几十G的虚拟磁盘文件</code></li>
-</ul>
-</li>
-</ol>
-<p><a href="https://imgchr.com/i/BVbNIs"><img src="https://s1.ax1x.com/2020/10/24/BVbNIs.png" alt="BVbNIs.png"></a></p>
-<ol start="6">
-<li><p>设置虚拟磁盘的大小，一般不能低于默认值，下面一般选择单个文件，方便后续使用：<a href="https://imgchr.com/i/BVbDMT"><img src="https://s1.ax1x.com/2020/10/24/BVbDMT.png" alt="BVbDMT.png"></a></p>
-<p><a href="https://imgchr.com/i/BVbrsU"><img src="https://s1.ax1x.com/2020/10/24/BVbrsU.png" alt="BVbrsU.png"></a></p>
-<ul>
-<li><p>还可进行硬件自定义<a href="https://imgchr.com/i/BVb6Z4"><img src="https://s1.ax1x.com/2020/10/24/BVb6Z4.png" alt="BVb6Z4.png"></a></p>
-<p><a href="https://imgchr.com/i/BVbsLF"><img src="https://s1.ax1x.com/2020/10/24/BVbsLF.png" alt="BVbsLF.png"></a></p>
-<p><strong>至此完成创建</strong></p>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="Kali系统安装与配置"><a href="#Kali系统安装与配置" class="headerlink" title="Kali系统安装与配置"></a>Kali系统安装与配置</h2><ol>
-<li><p>点击开启此虚拟机进入安装界面</p>
-<p><code>Live</code> 开头的不是系统安装，类似于Windows PE，用于恢复系统，其他选项可以不用管，也暂时用不着。<br><strong>这里我们选择简单的图形化安装</strong> <code>Graphical install</code><br>此时鼠标无法操作，退出虚拟机操作界面将鼠标移出界面或使用 <code>ctrl + alt</code> 键。</p>
-<p><a href="https://imgchr.com/i/BVbcdJ"><img src="https://s1.ax1x.com/2020/10/24/BVbcdJ.png" alt="BVbcdJ.png"></a></p>
-<ol start="2">
-<li><p>选择简体中文<a href="https://imgchr.com/i/BZ0j6f"><img src="https://s1.ax1x.com/2020/10/24/BZ0j6f.png" alt="BZ0j6f.png"></a>         区域中国<a href="https://imgchr.com/i/BZ0qfI"><img src="https://s1.ax1x.com/2020/10/24/BZ0qfI.png" alt="BZ0qfI.png"></a>汉语<a href="https://imgchr.com/i/BZBS0g"><img src="https://s1.ax1x.com/2020/10/24/BZBS0g.png" alt="BZBS0g.png"></a>然后设置主机名<a href="https://imgchr.com/i/BZ0o0e"><img src="https://s1.ax1x.com/2020/10/24/BZ0o0e.png" alt="BZ0o0e.png"></a><a href="https://imgchr.com/i/BZBihn"><img src="https://s1.ax1x.com/2020/10/24/BZBihn.png" alt="BZBihn.png"></a></p>
-</li>
-<li><p>域名，可暂时跳过<a href="https://imgchr.com/i/BZBkpq"><img src="https://s1.ax1x.com/2020/10/24/BZBkpq.png" alt="BZBkpq.png"></a></p>
-</li>
-<li><p>设置用户和密码（<em>注意大小写</em>😂）<a href="https://imgchr.com/i/BZ0X1P"><img src="https://s1.ax1x.com/2020/10/24/BZ0X1P.png" alt="BZ0X1P.png"></a><a href="https://imgchr.com/i/BZ0znS"><img src="https://s1.ax1x.com/2020/10/24/BZ0znS.png" alt="BZ0znS.png"></a></p>
-</li>
-<li><p><strong>LVM</strong></p>
-<p>建议使用<a href="https://baike.baidu.com/item/LVM/6571177?fr=aladdin">LVM</a>(百度百科)，LVM是 Logical Volume Manager（逻辑<a href="https://baike.baidu.com/item/%E5%8D%B7%E7%AE%A1%E7%90%86">卷管理</a>）的简写，它是Linux环境下对<a href="https://baike.baidu.com/item/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/1521981">磁盘分区</a>进行管理的一种机制，它由Heinz Mauelshagen在Linux 2.4<a href="https://baike.baidu.com/item/%E5%86%85%E6%A0%B8/108410">内核</a>上实现，目前最新版本为：稳定版1.0.5，开发版 1.1.0-rc2，以及LVM2开发版。Linux用户安装<a href="https://baike.baidu.com/item/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">Linux操作系统</a>时遇到的一个常见的难以决定的问题就是如何正确地评估各分区大小，以分配合适的硬盘空间。</p>
-<p><a href="https://imgchr.com/i/BZBA10"><img src="https://s1.ax1x.com/2020/10/24/BZBA10.png" alt="BZBA10.png"></a><br><a href="https://imgchr.com/i/BZBEcV"><img src="https://s1.ax1x.com/2020/10/24/BZBEcV.png" alt="BZBEcV.png"></a>使用推荐<br><a href="https://imgchr.com/i/BZBVXT"><img src="https://s1.ax1x.com/2020/10/24/BZBVXT.png" alt="BZBVXT.png">s</a><br><a href="https://imgchr.com/i/BZBenU"><img src="https://s1.ax1x.com/2020/10/24/BZBenU.png" alt="BZBenU.png"></a><br><a href="https://imgchr.com/i/BZBmBF"><img src="https://s1.ax1x.com/2020/10/24/BZBmBF.png" alt="BZBmBF.png"></a><br><a href="https://imgchr.com/i/BZBn74"><img src="https://s1.ax1x.com/2020/10/24/BZBn74.png" alt="BZBn74.png"></a></p>
-</li>
-<li><p>等待一会······<a href="https://imgchr.com/i/BZBKAJ"><img src="https://s1.ax1x.com/2020/10/24/BZBKAJ.png" alt="BZBKAJ.png"></a><br><a href="https://imgchr.com/i/BZBMN9"><img src="https://s1.ax1x.com/2020/10/24/BZBMN9.png" alt="BZBMN9.png"></a><br><a href="https://imgchr.com/i/BZBQhR"><img src="https://s1.ax1x.com/2020/10/24/BZBQhR.png" alt="BZBQhR.png"></a>配置GRUB：<br><a href="https://imgchr.com/i/BZB191"><img src="https://s1.ax1x.com/2020/10/24/BZB191.png" alt="BZB191.png"></a><br><a href="https://imgchr.com/i/BZB31x"><img src="https://s1.ax1x.com/2020/10/24/BZB31x.png" alt="BZB31x.png"></a><br><a href="https://imgchr.com/i/BZB8c6"><img src="https://s1.ax1x.com/2020/10/24/BZB8c6.png" alt="BZB8c6.png"></a></p>
-</li>
-</ol>
-<ul>
-<li>到这里就完成了。</li>
-</ul>
-</li>
-</ol>
-<p>   选择启动，第二个选项是恢复模式：</p>
-<p>   <a href="https://imgchr.com/i/BZBGjK"><img src="https://s1.ax1x.com/2020/10/24/BZBGjK.jpg" alt="BZBGjK.jpg"></a><br>   输入账号密码<a href="https://imgchr.com/i/BZBaAH"><img src="https://s1.ax1x.com/2020/10/24/BZBaAH.png" alt="BZBaAH.png"></a><br>   <a href="https://imgchr.com/i/BZBYnO"><img src="https://s1.ax1x.com/2020/10/24/BZBYnO.png" alt="BZBYnO.png"></a><br>   <a href="https://imgchr.com/i/BZBNHe"><img src="https://s1.ax1x.com/2020/10/24/BZBNHe.png" alt="BZBNHe.png"></a></p>
-<hr>
-<h3 id="记个笔记："><a href="#记个笔记：" class="headerlink" title="记个笔记："></a>记个笔记：</h3><ul>
-<li><p>capcha code/代码       验证码</p>
-<hr>
-<p>感谢阅读☕☕☕~</p>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>My First Blog</title>
-    <url>/2020/10/16/My-First-Blog/</url>
-    <content><![CDATA[<hr>
-<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><hr>
-<p>​        历时将近5天，小破站终于建成！😜只是跟随大佬的教程照抄的一些简单的功能，后续还会慢慢探索…..对于搭建过程网上教程很多 ,我的第一篇博客就简单记录搭建过程中遇到的一些问题还有近期笔记吧。。😂😂</p>
-<h1 id="Github搭建过程"><a href="#Github搭建过程" class="headerlink" title="Github搭建过程"></a>Github搭建过程</h1><ul>
-<li><p>安装nodeJS、git和Hexo，注册Github</p>
-</li>
-<li><p>配置SSH key</p>
-</li>
-<li><p>部署到Github</p>
-</li>
-<li><p>主题配置（next)</p>
-</li>
-<li><p>故障调试方法</p>
-<a id="more"></a>
-
-
-</li>
-</ul>
-<h2 id="安装nodeJS、git和Hexo，注册Github"><a href="#安装nodeJS、git和Hexo，注册Github" class="headerlink" title="安装nodeJS、git和Hexo，注册Github"></a>安装nodeJS、git和Hexo，注册Github</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
-<li>这里主要是Hexo安装时在CMD或Git Bash中执行以下指令：</li>
-</ul>
-<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">$npm</span> install -g hexo-cli</span></span><br></pre></td></tr></table></figure>
-
-
-<ul>
-<li>但是可能会遇到卡住或安装慢的情况，可以先执行<a href="https://www.zhihu.com/question/57671550">淘宝镜像</a>：</li>
-</ul>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="variable">$npm</span> install -g cnpm --registry=https:<span class="regexp">//</span>registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>同样下面的所有安装步骤都可使用</p>
-<h3 id="注册Github"><a href="#注册Github" class="headerlink" title="注册Github"></a>注册Github</h3><ul>
-<li><p>注册后在邮箱中认证，点击Start project或者下面的 new repository 创建一个新的仓库<br><a href="https://imgchr.com/i/BC40Gn"><img src="https://s1.ax1x.com/2020/10/21/BC40Gn.jpg" alt="BC40Gn.jpg"></a></p>
-<ul>
-<li><p>特别注意！！Github 仅能使用一个同名仓库的代码托管一个静态站点</p>
-<p>[<img src="https://s1.ax1x.com/2020/10/21/BC4B2q.jpg" alt="BC4B2q.jpg"></p>
-</li>
-<li><p>然后打开仓库创建一个 index.html 文件，并随意先写点内容</p>
-<p><a href="https://imgchr.com/i/BC4Dx0"><img src="https://s1.ax1x.com/2020/10/21/BC4Dx0.jpg" alt="BC4Dx0.jpg"></a></p>
-</li>
-</ul>
-</li>
-</ul>
-<p><a href="https://imgchr.com/i/BC4a5j"><img src="https://s1.ax1x.com/2020/10/21/BC4a5j.jpg" alt="BC4a5j.jpg"></a></p>
-<hr>
-<h2 id="配置SSH-key"><a href="#配置SSH-key" class="headerlink" title="配置SSH key"></a>配置SSH key</h2><ul>
-<li><p>生成密钥 SSH key后，找到C盘个人账户文件夹/.ssh/id_rsa.pub,打开复制，登录 <a href="https://github.com/">Github</a> 上添加刚刚生成的SSH key，按以下步骤添加：</p>
-<p><a href="https://imgchr.com/i/BC4wPs"><img src="https://s1.ax1x.com/2020/10/21/BC4wPs.jpg" alt="BC4wPs.jpg"></a></p>
-</li>
-</ul>
-<p><a href="https://imgchr.com/i/BC4sMV"><img src="https://s1.ax1x.com/2020/10/21/BC4sMV.jpg" alt="BC4sMV.jpg"></a></p>
-<p>   这时会收到邮箱<strong>A new public key was added to your account</strong></p>
-<ul>
-<li>此外还需确认并添加主机到本机SSH可信列表</li>
-</ul>
-<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">$ssh -T git<span class="symbol">@github</span>.com</span><br></pre></td></tr></table></figure>
-
-<p>如果提示<code>Are you sure you want to continue connecting (yes/no)?</code></p>
-<p>输入yes，若返回 Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access. 内容，则证明添加成功。</p>
-<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><ul>
-<li>配置<code>_config.yml</code>中有关deploy的部分:</li>
-</ul>
-<p>正确写法：</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:liuxianan/liuxianan.github.io.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
-
-<p>错误写法：</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: github</span><br><span class="line">  <span class="attribute">repository</span>:<span class="attribute">https</span>:<span class="comment">//github.com/yourname/yourname.github.io.git</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
-
-<p>后面一种写法是hexo2.x的写法，现在已经不行了，无论是哪种写法，此时直接执行<code>hexo d</code>的话一般会报如下错误：</p>
-<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">Deployer not <span class="attr">found:</span> github 或者 Deployer not <span class="attr">found:</span> git</span><br></pre></td></tr></table></figure>
-
-<p>原因是还需要安装一个插件：</p>
-<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">$npm</span> install hexo-deployer-git --save</span></span><br></pre></td></tr></table></figure>
-
-<p>Tip:这里可以用淘宝镜像，见上。</p>
-<p>部署这个命令一定要用git bash，否则会提示<code>Permission denied (publickey).</code></p>
-<ul>
-<li><p>必用”三步走”:</p>
-<ol>
-<li><p><code>hexo clean</code>    清除缓存文件 (db.json) 和已生成的静态文件</p>
-</li>
-<li><p><code>hexo g</code>             生成静态页面至public目录</p>
-</li>
-<li><p><code>hexo d</code>             部署到GitHub</p>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="主题配置（next"><a href="#主题配置（next" class="headerlink" title="主题配置（next)"></a>主题配置（next)</h2><ul>
-<li><p>我使用的是next中的Gemini,所以就简单记录一些功能</p>
-<p>站点配置文件<code> _config.yml</code>中theme改为next，默认landscape</p>
-<p>首先区分站点配置文件_config.yml指Blog下的 <code> _config.yml</code></p>
-<p>另一个在<code>theme</code>下，所有的主题配置几乎都在这两个文件中</p>
-</li>
-</ul>
-<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><ul>
-<li><p>站点配置文件<code> _config.yml</code>下</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line">  <span class="attr">title:</span> <span class="comment"># 标题</span></span><br><span class="line">  <span class="attr">subtitle:</span> <span class="comment">#副标</span></span><br><span class="line">  <span class="attr">description:</span> <span class="comment">#个人描述</span></span><br><span class="line">  <span class="attr">keywords:</span></span><br><span class="line">  <span class="attr">author:</span>   <span class="comment"># 作者</span></span><br><span class="line">  <span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 主题语言</span></span><br><span class="line">  <span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span> <span class="comment">#不要乱改城市，这里容易出故障，必要时可直接删除试试</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># URL</span></span><br><span class="line">  <span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">https://example。com</span> <span class="comment">#绑定域名</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">/</span>  <span class="comment">#默认根路径，指向实际的source</span></span><br><span class="line">  <span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line">  <span class="attr">permalink_defaults:</span></span><br><span class="line">  <span class="attr">pretty_urls:</span></span><br><span class="line">    <span class="attr">trailing_index:</span> <span class="literal">true</span> <span class="comment"># Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span></span><br><span class="line">    <span class="attr">trailing_html:</span> <span class="literal">true</span> <span class="comment"># Set to false to remove trailing &#x27;.html&#x27; from permalinks</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Directory</span></span><br><span class="line">  <span class="attr">source_dir:</span> <span class="string">source</span></span><br><span class="line">  <span class="attr">public_dir:</span> <span class="string">public</span></span><br><span class="line">  <span class="attr">tag_dir:</span> <span class="string">tags</span></span><br><span class="line">  <span class="attr">archive_dir:</span> <span class="string">archives</span></span><br><span class="line">  <span class="attr">category_dir:</span> <span class="string">categories</span></span><br><span class="line">  <span class="attr">code_dir:</span> <span class="string">downloads/code</span></span><br><span class="line">  <span class="attr">i18n_dir:</span> <span class="string">:lang</span></span><br><span class="line">  <span class="attr">skip_render:</span> <span class="string">README.md</span> <span class="comment">#部署的时候不包含的文件</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Writing</span></span><br><span class="line">  <span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment">#默认的新博文名称</span></span><br><span class="line">  <span class="attr">default_layout:</span> <span class="string">post</span> <span class="comment">#默认布局</span></span><br><span class="line">  <span class="attr">titlecase:</span> <span class="literal">false</span> <span class="comment">#Transform title into titlecase</span></span><br><span class="line">  <span class="attr">external_link:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#Open external links in new tab</span></span><br><span class="line">    <span class="attr">field:</span> <span class="string">site</span> <span class="comment">#Apply to the whole site</span></span><br><span class="line">    <span class="attr">exclude:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">filename_case:</span> <span class="number">0</span> <span class="comment">#把博客名称改成小写/大写（1,2）</span></span><br><span class="line">  <span class="attr">render_drafts:</span> <span class="literal">false</span> <span class="comment">#是否显示草稿</span></span><br><span class="line">  <span class="attr">post_asset_folder:</span> <span class="literal">false</span> <span class="comment">#是否启用资源文件夹（用来存放相对路径图片或文件）</span></span><br><span class="line">  <span class="attr">relative_link:</span> <span class="literal">false</span> <span class="comment"># 把链接改为与根目录的相对位址</span></span><br><span class="line">  <span class="attr">future:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">highlight:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否开启代码高亮</span></span><br><span class="line">    <span class="attr">line_number:</span> <span class="literal">true</span> <span class="comment">#是否增加代码行号</span></span><br><span class="line">    <span class="attr">auto_detect:</span> <span class="literal">true</span> <span class="comment">#自动判断代码语言</span></span><br><span class="line">    <span class="attr">tab_replace:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">wrap:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">hljs:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">prismjs:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">preprocess:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">line_number:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">tab_replace:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Home page setting</span></span><br><span class="line">  <span class="comment"># path: Root path for your blogs index page. (default = &#x27;&#x27;)</span></span><br><span class="line">  <span class="comment"># per_page: Posts displayed per page. (0 = disable pagination)</span></span><br><span class="line">  <span class="comment"># order_by: Posts order. (Order by date descending by default)</span></span><br><span class="line">  <span class="attr">index_generator:</span> <span class="comment">#首页博客分布</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">&#x27;&#x27;</span> <span class="comment">#博客的默认路径</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">10</span> <span class="comment">#每页博客数量上限</span></span><br><span class="line">    <span class="attr">order_by:</span> <span class="string">-date</span> <span class="comment">#博客排序</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Date / Time format</span></span><br><span class="line">  <span class="comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line">  <span class="comment">## You can customize the date format as defined in</span></span><br><span class="line">  <span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line">  <span class="attr">date_format:</span> <span class="string">YYYY-MM-DD</span> <span class="comment">#博客日期格式</span></span><br><span class="line">  <span class="attr">time_format:</span> <span class="string">HH:mm:ss</span> <span class="comment">#博客时间格式</span></span><br><span class="line">  <span class="comment">## updated_option supports &#x27;mtime&#x27;, &#x27;date&#x27;, &#x27;empty&#x27;</span></span><br><span class="line">  <span class="attr">updated_option:</span> <span class="string">&#x27;mtime&#x27;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Pagination</span></span><br><span class="line">  <span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="number">10</span> <span class="comment">#同上</span></span><br><span class="line">  <span class="attr">pagination_dir:</span> <span class="string">page</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">#归档页的分页设置</span></span><br><span class="line">  <span class="attr">archive_generator:</span> <span class="comment">#归档页的配置</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">30</span> <span class="comment">#归档页每页博客数</span></span><br><span class="line">    <span class="attr">yearly:</span> <span class="literal">true</span> <span class="comment">#按年归档</span></span><br><span class="line">    <span class="attr">monthly:</span> <span class="literal">true</span> <span class="comment">#按月归档</span></span><br><span class="line">  <span class="comment">#标签页的分页设置</span></span><br><span class="line">  <span class="attr">tag_generator:</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">20</span> <span class="comment">#标签页每页博客数</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Deployment</span></span><br><span class="line">  <span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">  <span class="attr">deploy:</span> <span class="comment">#博客部署</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="string">repo:git@github.com:yourname/yourname.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>next主题设置</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line">override：false <span class="meta">#表示是否将主题置为默认样式</span></span><br><span class="line"><span class="symbol">cache:</span></span><br><span class="line"><span class="symbol">	enable:</span>true <span class="meta">#表示添加缓存功能，这样浏览器后续打开我们的博客网站会更快</span></span><br><span class="line"><span class="symbol">menu:</span> <span class="meta">#设置博客各个页面的相对路径，默认根路径是blog/source</span></span><br><span class="line"><span class="symbol">  home:</span> / || home</span><br><span class="line"><span class="symbol">  about:</span> <span class="meta-keyword">/about/</span> || user</span><br><span class="line"><span class="symbol">  tags:</span> <span class="meta-keyword">/tags/</span> || tags</span><br><span class="line"><span class="symbol">  categories:</span> <span class="meta-keyword">/categories/</span> || th</span><br><span class="line"><span class="symbol">  archives:</span> <span class="meta-keyword">/archives/</span> || archive</span><br><span class="line">  <span class="meta">#schedule: /schedule/ || calendar #日历</span></span><br><span class="line">  <span class="meta">#sitemap: /sitemap.xml || sitemap #站点地图，供搜索引擎爬取</span></span><br><span class="line">  <span class="meta">#commonweal: /404/ || heartbeat # 腾讯公益404</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># Enable/Disable menu icons / item badges.</span></span><br><span class="line"><span class="symbol">menu_settings:</span></span><br><span class="line"><span class="symbol">  icons:</span> true <span class="meta"># 是否显示各个页面的图标</span></span><br><span class="line"><span class="symbol">  badges:</span> true <span class="meta"># 是否显示分类/标签/归档页的内容量</span></span><br><span class="line"><span class="meta"># Schemes</span></span><br><span class="line"><span class="symbol">scheme:</span> Gemini</span><br></pre></td></tr></table></figure>
-<p>语句前加<code>#</code>即为注释或按钮关闭，而加注释时也要先一个空格，用<code>Sublime Text 3</code>体验会比较明显，操作错误不会有对应颜色变化。</p>
-</li>
-</ul>
-<h3 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h3><ul>
-<li><p>主题配置文件中搜索<code>valine</code>,改为<code>ture</code></p>
-</li>
-<li><p>注册登录<a href="https://leancloud.cn/">LeanCloud</a>，创建应用-设置-应用Keys，分别复制AppID、AppKey到文件中对应位置即可    </p>
-</li>
-</ul>
-<h3 id="添加字数统计和阅读时长"><a href="#添加字数统计和阅读时长" class="headerlink" title="添加字数统计和阅读时长"></a>添加字数统计和阅读时长</h3><ul>
-<li><p>先安装插件（Bash耐心等待~）</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">$npm <span class="keyword">install</span> hexo-symbols-<span class="keyword">count</span>-<span class="built_in">time</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>站点配置文件下添加</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#字数统计</span></span><br><span class="line"> <span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment">#是否统计字数</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">false</span> <span class="comment">#是否统计阅读时长</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment">#是否统计总字数</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="string">ture</span> <span class="comment">#是否统计总阅读时长</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>主题的配置文件下开启 symbols_count_time 字段</p>
-<p>执行“三步走”就可以看到了。。。</p>
-</li>
-</ul>
-<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>新版本的NexT将每月发布。可以通过以下命令更新 NexT。<br>安装最新版本的 npm：<br><code>$ cd hexo-site</code><br><code>$ npm update hexo-theme-next</code><br>或更新到最新的主分支：<br><code>$ cd themes/next</code><br><code>$ git pull</code></p>
-<h3 id="不显示全部内容"><a href="#不显示全部内容" class="headerlink" title="不显示全部内容"></a>不显示全部内容</h3><ul>
-<li>修改主题配置文件</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Automatically excerpt description in homepage as preamble text.</span></span><br><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span> <span class="comment">#自动截取摘要</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Read more button</span></span><br><span class="line"><span class="comment"># If true, the read more button would be displayed in excerpt section.</span></span><br><span class="line"><span class="attr">read_more_btn:</span> <span class="literal">true</span> <span class="comment">#显示阅读全文按钮</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>写文章时在合适的位置加上<code>&lt;!--more--&gt;</code>即可</li>
-</ul>
-<h3 id="添加博客自定义图标"><a href="#添加博客自定义图标" class="headerlink" title="添加博客自定义图标"></a>添加博客自定义图标</h3><p>默认为<code>Hexo</code>的标识，图标可以在<a href="https://www.easyicon.net/">easyicon</a>、<a href="http://www.bitbug.net/">bitbug</a>、<a href="https://www.iconfont.cn/plus/user/detail?uid=41718)">iconfont</a>等网站选择和制作，我是在<a href="https://www.iconfont.cn/plus/user/detail?uid=41718)">iconfont</a>上找的，下载放到blog/themes/next/sources/images目录下，并在主题配置文件更改：</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">favicon:</span></span><br><span class="line"><span class="symbol">  small:</span> <span class="meta-keyword">/images/</span>****.png <span class="meta">#对应一</span></span><br><span class="line"><span class="symbol">  medium:</span> <span class="meta-keyword">/images/</span>****.png <span class="meta">#二两个位置</span></span><br><span class="line"><span class="symbol">  apple_touch_icon:</span> <span class="meta-keyword">/images/</span><span class="number">128</span>x128.png</span><br><span class="line"><span class="symbol">  safari_pinned_tab:</span> <span class="meta-keyword">/images/</span>logo2.svg</span><br></pre></td></tr></table></figure>
-
-<h3 id="本地图片上传"><a href="#本地图片上传" class="headerlink" title="本地图片上传"></a>本地图片上传</h3><ul>
-<li><p>先将图片上传至<a href="https://imgchr.com/">路过图床</a>或其他图床</p>
-</li>
-<li><p>在name.md中使用<code>![名称](**)</code>      **拷贝图片链接</p>
-</li>
-</ul>
-<hr>
-<h2 id="故障调试方法"><a href="#故障调试方法" class="headerlink" title="故障调试方法"></a>故障调试方法</h2><ul>
-<li>我主要是使用很传统的方法，即下载一份原始主题，若出现Error（看不懂）可以对应退回几步，从原文件拷贝复原</li>
-<li>还有一个备份方法，还没学会·····在路上去😊</li>
-</ul>
-<hr>
-<p>等等等等，还有很多，当然主要参考[<a href="https://blog.csdn.net/nightmare_dimple/article/details/86661502]">https://blog.csdn.net/nightmare_dimple/article/details/86661502]</a></p>
-<p>[<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html]">https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html]</a></p>
-<p>[<a href="https://segmentfault.com/a/1190000017986794]">https://segmentfault.com/a/1190000017986794]</a></p>
-<p>感谢大佬细致的菜鸟教程，我get了好多干货<del>·</del>·~</p>
-<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><ul>
-<li><p>时间紧，任务重，能力有限，但一直没有停下的心，就想我的Subtitle一样，<strong>追求源于热爱！！</strong></p>
-</li>
-<li><p>My description：我们努力奔跑，只为追上那个曾被寄予厚望的自己。</p>
-</li>
-</ul>
-<p>另外左侧link推广大佬···😁</p>
-<p><strong>感谢光顾</strong>👏</p>
-<hr>
-]]></content>
-      <tags>
-        <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux指令</title>
     <url>/2020/10/28/Linux%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="基础指令"><a href="#基础指令" class="headerlink" title="基础指令"></a>基础指令</h1><h2 id="1-ls"><a href="#1-ls" class="headerlink" title="1.#ls"></a>1.<code>#ls</code></h2><figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ls</span> <span class="comment">#列出当前工作目录下的所有文件/文件夹的名称</span></span><br><span class="line"><span class="keyword">ls</span> 路径 <span class="comment">#列出指定路径下的所有文件/文件夹的名称</span></span><br><span class="line"><span class="keyword">ls</span> -l 路径 <span class="comment">#以详细列表形式展示指定路径下文件/文件夹</span></span><br><span class="line"><span class="keyword">ls</span> -la 路径 <span class="comment">#&quot;-l&quot;显示所有文件/文件夹,包含隐藏文件(.xxx)</span></span><br><span class="line"><span class="keyword">ls</span> -lh 路径 <span class="comment">#列出指定路径下文件/文件夹，以可读性较高的文件大小单位显示</span></span><br></pre></td></tr></table></figure>
@@ -538,6 +277,7 @@
 <ul>
 <li>常配合过滤使用,搜索结果为两个才是有在运行的目标进程</li>
 </ul>
+<p><code>ps -ef|grep 进行名称</code></p>
 <hr>
 <h2 id="5-top"><a href="#5-top" class="headerlink" title="5.#top"></a>5.#<code>top</code></h2><ul>
 <li>查看进程占用资源(动态显示)，按q退出</li>
@@ -549,78 +289,264 @@
       </tags>
   </entry>
   <entry>
-    <title>简易邮箱登录界面HCJ</title>
-    <url>/2020/11/25/%E7%AE%80%E6%98%93%E9%82%AE%E7%AE%B1%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2HCJ/</url>
-    <content><![CDATA[<h3 id="为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！"><a href="#为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！" class="headerlink" title="为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！"></a>为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！</h3><p>m1</p>
+    <title>My First Blog</title>
+    <url>/2020/10/16/My-First-Blog/</url>
+    <content><![CDATA[<hr>
+<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><hr>
+<p>​        历时将近5天，小破站终于建成！😜只是跟随大佬的教程照抄的一些简单的功能，后续还会慢慢探索…..对于搭建过程网上教程很多 ,我的第一篇博客就简单记录搭建过程中遇到的一些问题还有近期笔记吧。。😂😂</p>
+<h1 id="Github搭建过程"><a href="#Github搭建过程" class="headerlink" title="Github搭建过程"></a>Github搭建过程</h1><ul>
+<li><p>安装nodeJS、git和Hexo，注册Github</p>
+</li>
+<li><p>配置SSH key</p>
+</li>
+<li><p>部署到Github</p>
+</li>
+<li><p>主题配置（next)</p>
+</li>
+<li><p>故障调试方法</p>
+<a id="more"></a>
+
+
+</li>
+</ul>
+<h2 id="安装nodeJS、git和Hexo，注册Github"><a href="#安装nodeJS、git和Hexo，注册Github" class="headerlink" title="安装nodeJS、git和Hexo，注册Github"></a>安装nodeJS、git和Hexo，注册Github</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
+<li>这里主要是Hexo安装时在CMD或Git Bash中执行以下指令：</li>
+</ul>
+<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">$npm</span> install -g hexo-cli</span></span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>但是可能会遇到卡住或安装慢的情况，可以先执行<a href="https://www.zhihu.com/question/57671550">淘宝镜像</a>：</li>
+</ul>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="variable">$npm</span> install -g cnpm --registry=https:<span class="regexp">//</span>registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>同样下面的所有安装步骤都可使用</p>
+<h3 id="注册Github"><a href="#注册Github" class="headerlink" title="注册Github"></a>注册Github</h3><ul>
+<li><p>注册后在邮箱中认证，点击Start project或者下面的 new repository 创建一个新的仓库<br><a href="https://imgchr.com/i/BC40Gn"><img src="https://s1.ax1x.com/2020/10/21/BC40Gn.jpg" alt="BC40Gn.jpg"></a></p>
+<ul>
+<li><p>特别注意！！Github 仅能使用一个同名仓库的代码托管一个静态站点</p>
+<p>[<img src="https://s1.ax1x.com/2020/10/21/BC4B2q.jpg" alt="BC4B2q.jpg"></p>
+</li>
+<li><p>然后打开仓库创建一个 index.html 文件，并随意先写点内容</p>
+<p><a href="https://imgchr.com/i/BC4Dx0"><img src="https://s1.ax1x.com/2020/10/21/BC4Dx0.jpg" alt="BC4Dx0.jpg"></a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/BC4a5j"><img src="https://s1.ax1x.com/2020/10/21/BC4a5j.jpg" alt="BC4a5j.jpg"></a></p>
 <hr>
-<p>源码如下：</p>
-<ul>
-<li>Html：</li>
+<h2 id="配置SSH-key"><a href="#配置SSH-key" class="headerlink" title="配置SSH key"></a>配置SSH key</h2><ul>
+<li><p>生成密钥 SSH key后，找到C盘个人账户文件夹/.ssh/id_rsa.pub,打开复制，登录 <a href="https://github.com/">Github</a> 上添加刚刚生成的SSH key，按以下步骤添加：</p>
+<p><a href="https://imgchr.com/i/BC4wPs"><img src="https://s1.ax1x.com/2020/10/21/BC4wPs.jpg" alt="BC4wPs.jpg"></a></p>
+</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>QQ邮箱登录<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    	img &#123;</span><br><span class="line">    		position: absolute;</span><br><span class="line">    		margin-left: 35%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	form&#123;</span><br><span class="line">    		margin-left: 10%;</span><br><span class="line">    		margin-top: 10%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	button &#123;</span><br><span class="line">    		margin-left: 4%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	a&#123;</span><br><span class="line">    		margin-left: 10%;</span><br><span class="line">    	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js/inter.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;imgs/QQ截图20201125150933.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;登录配置图片&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;demo/welcome.php&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span><br><span class="line">        账号：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;account&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;支持QQ号/邮箱/手机号登录&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">id</span>=<span class="string">&quot;passwd&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;QQ密码&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;fnLogin()&quot;</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;cancel&quot;</span>&gt;</span>取消<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;error_box&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://mail.qq.com/?ocid=MSNCNLG10-2/&quot;</span>&gt;</span>官方入口!!!<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<p><a href="https://imgchr.com/i/BC4sMV"><img src="https://s1.ax1x.com/2020/10/21/BC4sMV.jpg" alt="BC4sMV.jpg"></a></p>
+<p>   这时会收到邮箱<strong>A new public key was added to your account</strong></p>
 <ul>
-<li>js:</li>
+<li>此外还需确认并添加主机到本机SSH可信列表</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fnLogin</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"> <span class="keyword">var</span> oUacnt = <span class="built_in">document</span>.getElementById(<span class="string">&quot;account&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> oUpswd = <span class="built_in">document</span>.getElementById(<span class="string">&quot;passwd&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> oError = <span class="built_in">document</span>.getElementById(<span class="string">&quot;error_box&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> isError = <span class="literal">true</span>;</span><br><span class="line"> <span class="keyword">if</span> (oUacnt.value.length &gt; <span class="number">20</span> || oUacnt.value.length &lt; <span class="number">5</span>) &#123;</span><br><span class="line">  oError.innerHTML = <span class="string">&quot;请输入正确账号&quot;</span>;</span><br><span class="line">  isError = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">if</span> (oUpswd.value.length &gt; <span class="number">18</span> || oUpswd.value.length &lt; <span class="number">6</span>) &#123;</span><br><span class="line">  oError.innerHTML = <span class="string">&quot;密码请输入6-18位字符&quot;</span></span><br><span class="line">  isError = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="built_in">window</span>.alert(<span class="string">&quot;呵*_*,,,任务完成。。。&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&#x27;html&#x27;</span>).onclick= <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">&#x27;啊就这...&#x27;</span>);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">$ssh -T git<span class="symbol">@github</span>.com</span><br></pre></td></tr></table></figure>
 
+<p>如果提示<code>Are you sure you want to continue connecting (yes/no)?</code></p>
+<p>输入yes，若返回 Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access. 内容，则证明添加成功。</p>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><ul>
+<li>配置<code>_config.yml</code>中有关deploy的部分:</li>
+</ul>
+<p>正确写法：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:liuxianan/liuxianan.github.io.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
+
+<p>错误写法：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: github</span><br><span class="line">  <span class="attribute">repository</span>:<span class="attribute">https</span>:<span class="comment">//github.com/yourname/yourname.github.io.git</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
+
+<p>后面一种写法是hexo2.x的写法，现在已经不行了，无论是哪种写法，此时直接执行<code>hexo d</code>的话一般会报如下错误：</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">Deployer not <span class="attr">found:</span> github 或者 Deployer not <span class="attr">found:</span> git</span><br></pre></td></tr></table></figure>
+
+<p>原因是还需要安装一个插件：</p>
+<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">$npm</span> install hexo-deployer-git --save</span></span><br></pre></td></tr></table></figure>
+
+<p>Tip:这里可以用淘宝镜像，见上。</p>
+<p>部署这个命令一定要用git bash，否则会提示<code>Permission denied (publickey).</code></p>
+<ul>
+<li><p>必用”三步走”:</p>
+<ol>
+<li><p><code>hexo clean</code>    清除缓存文件 (db.json) 和已生成的静态文件</p>
+</li>
+<li><p><code>hexo g</code>             生成静态页面至public目录</p>
+</li>
+<li><p><code>hexo d</code>             部署到GitHub</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="主题配置（next"><a href="#主题配置（next" class="headerlink" title="主题配置（next)"></a>主题配置（next)</h2><ul>
+<li><p>我使用的是next中的Gemini,所以就简单记录一些功能</p>
+<p>站点配置文件<code> _config.yml</code>中theme改为next，默认landscape</p>
+<p>首先区分站点配置文件_config.yml指Blog下的 <code> _config.yml</code></p>
+<p>另一个在<code>theme</code>下，所有的主题配置几乎都在这两个文件中</p>
+</li>
+</ul>
+<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><ul>
+<li><p>站点配置文件<code> _config.yml</code>下</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line">  <span class="attr">title:</span> <span class="comment"># 标题</span></span><br><span class="line">  <span class="attr">subtitle:</span> <span class="comment">#副标</span></span><br><span class="line">  <span class="attr">description:</span> <span class="comment">#个人描述</span></span><br><span class="line">  <span class="attr">keywords:</span></span><br><span class="line">  <span class="attr">author:</span>   <span class="comment"># 作者</span></span><br><span class="line">  <span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 主题语言</span></span><br><span class="line">  <span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span> <span class="comment">#不要乱改城市，这里容易出故障，必要时可直接删除试试</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># URL</span></span><br><span class="line">  <span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">https://example。com</span> <span class="comment">#绑定域名</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">/</span>  <span class="comment">#默认根路径，指向实际的source</span></span><br><span class="line">  <span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line">  <span class="attr">permalink_defaults:</span></span><br><span class="line">  <span class="attr">pretty_urls:</span></span><br><span class="line">    <span class="attr">trailing_index:</span> <span class="literal">true</span> <span class="comment"># Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span></span><br><span class="line">    <span class="attr">trailing_html:</span> <span class="literal">true</span> <span class="comment"># Set to false to remove trailing &#x27;.html&#x27; from permalinks</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Directory</span></span><br><span class="line">  <span class="attr">source_dir:</span> <span class="string">source</span></span><br><span class="line">  <span class="attr">public_dir:</span> <span class="string">public</span></span><br><span class="line">  <span class="attr">tag_dir:</span> <span class="string">tags</span></span><br><span class="line">  <span class="attr">archive_dir:</span> <span class="string">archives</span></span><br><span class="line">  <span class="attr">category_dir:</span> <span class="string">categories</span></span><br><span class="line">  <span class="attr">code_dir:</span> <span class="string">downloads/code</span></span><br><span class="line">  <span class="attr">i18n_dir:</span> <span class="string">:lang</span></span><br><span class="line">  <span class="attr">skip_render:</span> <span class="string">README.md</span> <span class="comment">#部署的时候不包含的文件</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Writing</span></span><br><span class="line">  <span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment">#默认的新博文名称</span></span><br><span class="line">  <span class="attr">default_layout:</span> <span class="string">post</span> <span class="comment">#默认布局</span></span><br><span class="line">  <span class="attr">titlecase:</span> <span class="literal">false</span> <span class="comment">#Transform title into titlecase</span></span><br><span class="line">  <span class="attr">external_link:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#Open external links in new tab</span></span><br><span class="line">    <span class="attr">field:</span> <span class="string">site</span> <span class="comment">#Apply to the whole site</span></span><br><span class="line">    <span class="attr">exclude:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">filename_case:</span> <span class="number">0</span> <span class="comment">#把博客名称改成小写/大写（1,2）</span></span><br><span class="line">  <span class="attr">render_drafts:</span> <span class="literal">false</span> <span class="comment">#是否显示草稿</span></span><br><span class="line">  <span class="attr">post_asset_folder:</span> <span class="literal">false</span> <span class="comment">#是否启用资源文件夹（用来存放相对路径图片或文件）</span></span><br><span class="line">  <span class="attr">relative_link:</span> <span class="literal">false</span> <span class="comment"># 把链接改为与根目录的相对位址</span></span><br><span class="line">  <span class="attr">future:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">highlight:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否开启代码高亮</span></span><br><span class="line">    <span class="attr">line_number:</span> <span class="literal">true</span> <span class="comment">#是否增加代码行号</span></span><br><span class="line">    <span class="attr">auto_detect:</span> <span class="literal">true</span> <span class="comment">#自动判断代码语言</span></span><br><span class="line">    <span class="attr">tab_replace:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">wrap:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">hljs:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">prismjs:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">preprocess:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">line_number:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">tab_replace:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Home page setting</span></span><br><span class="line">  <span class="comment"># path: Root path for your blogs index page. (default = &#x27;&#x27;)</span></span><br><span class="line">  <span class="comment"># per_page: Posts displayed per page. (0 = disable pagination)</span></span><br><span class="line">  <span class="comment"># order_by: Posts order. (Order by date descending by default)</span></span><br><span class="line">  <span class="attr">index_generator:</span> <span class="comment">#首页博客分布</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">&#x27;&#x27;</span> <span class="comment">#博客的默认路径</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">10</span> <span class="comment">#每页博客数量上限</span></span><br><span class="line">    <span class="attr">order_by:</span> <span class="string">-date</span> <span class="comment">#博客排序</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Date / Time format</span></span><br><span class="line">  <span class="comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line">  <span class="comment">## You can customize the date format as defined in</span></span><br><span class="line">  <span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line">  <span class="attr">date_format:</span> <span class="string">YYYY-MM-DD</span> <span class="comment">#博客日期格式</span></span><br><span class="line">  <span class="attr">time_format:</span> <span class="string">HH:mm:ss</span> <span class="comment">#博客时间格式</span></span><br><span class="line">  <span class="comment">## updated_option supports &#x27;mtime&#x27;, &#x27;date&#x27;, &#x27;empty&#x27;</span></span><br><span class="line">  <span class="attr">updated_option:</span> <span class="string">&#x27;mtime&#x27;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Pagination</span></span><br><span class="line">  <span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="number">10</span> <span class="comment">#同上</span></span><br><span class="line">  <span class="attr">pagination_dir:</span> <span class="string">page</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">#归档页的分页设置</span></span><br><span class="line">  <span class="attr">archive_generator:</span> <span class="comment">#归档页的配置</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">30</span> <span class="comment">#归档页每页博客数</span></span><br><span class="line">    <span class="attr">yearly:</span> <span class="literal">true</span> <span class="comment">#按年归档</span></span><br><span class="line">    <span class="attr">monthly:</span> <span class="literal">true</span> <span class="comment">#按月归档</span></span><br><span class="line">  <span class="comment">#标签页的分页设置</span></span><br><span class="line">  <span class="attr">tag_generator:</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">20</span> <span class="comment">#标签页每页博客数</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Deployment</span></span><br><span class="line">  <span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">  <span class="attr">deploy:</span> <span class="comment">#博客部署</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="string">repo:git@github.com:yourname/yourname.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>next主题设置</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line">override：false <span class="meta">#表示是否将主题置为默认样式</span></span><br><span class="line"><span class="symbol">cache:</span></span><br><span class="line"><span class="symbol">	enable:</span>true <span class="meta">#表示添加缓存功能，这样浏览器后续打开我们的博客网站会更快</span></span><br><span class="line"><span class="symbol">menu:</span> <span class="meta">#设置博客各个页面的相对路径，默认根路径是blog/source</span></span><br><span class="line"><span class="symbol">  home:</span> / || home</span><br><span class="line"><span class="symbol">  about:</span> <span class="meta-keyword">/about/</span> || user</span><br><span class="line"><span class="symbol">  tags:</span> <span class="meta-keyword">/tags/</span> || tags</span><br><span class="line"><span class="symbol">  categories:</span> <span class="meta-keyword">/categories/</span> || th</span><br><span class="line"><span class="symbol">  archives:</span> <span class="meta-keyword">/archives/</span> || archive</span><br><span class="line">  <span class="meta">#schedule: /schedule/ || calendar #日历</span></span><br><span class="line">  <span class="meta">#sitemap: /sitemap.xml || sitemap #站点地图，供搜索引擎爬取</span></span><br><span class="line">  <span class="meta">#commonweal: /404/ || heartbeat # 腾讯公益404</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># Enable/Disable menu icons / item badges.</span></span><br><span class="line"><span class="symbol">menu_settings:</span></span><br><span class="line"><span class="symbol">  icons:</span> true <span class="meta"># 是否显示各个页面的图标</span></span><br><span class="line"><span class="symbol">  badges:</span> true <span class="meta"># 是否显示分类/标签/归档页的内容量</span></span><br><span class="line"><span class="meta"># Schemes</span></span><br><span class="line"><span class="symbol">scheme:</span> Gemini</span><br></pre></td></tr></table></figure>
+<p>语句前加<code>#</code>即为注释或按钮关闭，而加注释时也要先一个空格，用<code>Sublime Text 3</code>体验会比较明显，操作错误不会有对应颜色变化。</p>
+</li>
+</ul>
+<h3 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h3><ul>
+<li><p>主题配置文件中搜索<code>valine</code>,改为<code>ture</code></p>
+</li>
+<li><p>注册登录<a href="https://leancloud.cn/">LeanCloud</a>，创建应用-设置-应用Keys，分别复制AppID、AppKey到文件中对应位置即可    </p>
+</li>
+</ul>
+<h3 id="添加字数统计和阅读时长"><a href="#添加字数统计和阅读时长" class="headerlink" title="添加字数统计和阅读时长"></a>添加字数统计和阅读时长</h3><ul>
+<li><p>先安装插件（Bash耐心等待~）</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">$npm <span class="keyword">install</span> hexo-symbols-<span class="keyword">count</span>-<span class="built_in">time</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>站点配置文件下添加</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#字数统计</span></span><br><span class="line"> <span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment">#是否统计字数</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">false</span> <span class="comment">#是否统计阅读时长</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment">#是否统计总字数</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="string">ture</span> <span class="comment">#是否统计总阅读时长</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>主题的配置文件下开启 symbols_count_time 字段</p>
+<p>执行“三步走”就可以看到了。。。</p>
+</li>
+</ul>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>新版本的NexT将每月发布。可以通过以下命令更新 NexT。<br>安装最新版本的 npm：<br><code>$ cd hexo-site</code><br><code>$ npm update hexo-theme-next</code><br>或更新到最新的主分支：<br><code>$ cd themes/next</code><br><code>$ git pull</code></p>
+<h3 id="不显示全部内容"><a href="#不显示全部内容" class="headerlink" title="不显示全部内容"></a>不显示全部内容</h3><ul>
+<li>修改主题配置文件</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Automatically excerpt description in homepage as preamble text.</span></span><br><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span> <span class="comment">#自动截取摘要</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Read more button</span></span><br><span class="line"><span class="comment"># If true, the read more button would be displayed in excerpt section.</span></span><br><span class="line"><span class="attr">read_more_btn:</span> <span class="literal">true</span> <span class="comment">#显示阅读全文按钮</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>写文章时在合适的位置加上<code>&lt;!--more--&gt;</code>即可</li>
+</ul>
+<h3 id="添加博客自定义图标"><a href="#添加博客自定义图标" class="headerlink" title="添加博客自定义图标"></a>添加博客自定义图标</h3><p>默认为<code>Hexo</code>的标识，图标可以在<a href="https://www.easyicon.net/">easyicon</a>、<a href="http://www.bitbug.net/">bitbug</a>、<a href="https://www.iconfont.cn/plus/user/detail?uid=41718)">iconfont</a>等网站选择和制作，我是在<a href="https://www.iconfont.cn/plus/user/detail?uid=41718)">iconfont</a>上找的，下载放到blog/themes/next/sources/images目录下，并在主题配置文件更改：</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">favicon:</span></span><br><span class="line"><span class="symbol">  small:</span> <span class="meta-keyword">/images/</span>****.png <span class="meta">#对应一</span></span><br><span class="line"><span class="symbol">  medium:</span> <span class="meta-keyword">/images/</span>****.png <span class="meta">#二两个位置</span></span><br><span class="line"><span class="symbol">  apple_touch_icon:</span> <span class="meta-keyword">/images/</span><span class="number">128</span>x128.png</span><br><span class="line"><span class="symbol">  safari_pinned_tab:</span> <span class="meta-keyword">/images/</span>logo2.svg</span><br></pre></td></tr></table></figure>
+
+<h3 id="本地图片上传"><a href="#本地图片上传" class="headerlink" title="本地图片上传"></a>本地图片上传</h3><ul>
+<li><p>先将图片上传至<a href="https://imgchr.com/">路过图床</a>或其他图床</p>
+</li>
+<li><p>在name.md中使用<code>![名称](**)</code>      **拷贝图片链接</p>
+</li>
+</ul>
 <hr>
-<h3 id="记个笔记"><a href="#记个笔记" class="headerlink" title="记个笔记"></a>记个笔记</h3><h4 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h4><ol>
-<li>H5时代开头简洁明了</li>
-</ol>
-<p><code>&lt;!DOCTYPE html&gt;</code></p>
-<ol start="2">
-<li>基本结构</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>一个人完整元素=开始标签<code>&lt;p&gt;</code>+内容+结束标签<code>&lt;/p&gt;</code></li>
-<li>注意所有符号使用英文</li>
-<li>标签属性添加至开始标签末尾<code>&gt;</code>前 &lt;元素 属性=””&gt;内容&lt;/元素&gt;       </li>
-<li>元素与属性间，属性与属性间必须有一个括号</li>
-<li>Sublime Text中敲出<code>&lt;h</code>选中html即可直接给出结构</li>
+<h2 id="故障调试方法"><a href="#故障调试方法" class="headerlink" title="故障调试方法"></a>故障调试方法</h2><ul>
+<li>我主要是使用很传统的方法，即下载一份原始主题，若出现Error（看不懂）可以对应退回几步，从原文件拷贝复原</li>
+<li>还有一个备份方法，还没学会·····在路上去😊</li>
 </ul>
-<ol start="3">
-<li><code>meta</code>标签+<code>charset</code>属性，指定 HTML 文档的编码</li>
-</ol>
-<p><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
-<ul>
-<li>网页尺寸实现自适应</li>
+<hr>
+<p>等等等等，还有很多，当然主要参考[<a href="https://blog.csdn.net/nightmare_dimple/article/details/86661502]">https://blog.csdn.net/nightmare_dimple/article/details/86661502]</a></p>
+<p>[<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html]">https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html]</a></p>
+<p>[<a href="https://segmentfault.com/a/1190000017986794]">https://segmentfault.com/a/1190000017986794]</a></p>
+<p>感谢大佬细致的菜鸟教程，我get了好多干货<del>·</del>·~</p>
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><ul>
+<li><p>时间紧，任务重，能力有限，但一直没有停下的心，就想我的Subtitle一样，<strong>追求源于热爱！！</strong></p>
+</li>
+<li><p>My description：我们努力奔跑，只为追上那个曾被寄予厚望的自己。</p>
+</li>
 </ul>
-<p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></p>
-<ol start="4">
-<li><code>img</code>标签 ：</li>
-</ol>
-<p><code>&lt;img src=&quot;imgs/QQ截图20201125150933.png&quot; alt=&quot;登录配置图片&quot;&gt;</code></p>
-<ul>
-<li>属性src的值为图片路径，alt指文本信息</li>
-<li>另外还有width、height属性来设置图片宽度和高度（单位px或%）</li>
-</ul>
-<ol start="5">
-<li><code>br</code>换行</li>
-<li><code>input</code>标签：</li>
-</ol>
-<p>用于搜集用户信息，即为输入</p>
-<ul>
-<li>type属性规定元素类型，例如<code>type=&quot;passwd&quot;</code>即可实现密码隐藏的效果</li>
-<li>placeholder属性表示占据文本，值为text</li>
-</ul>
-<ol start="7">
-<li><code>button</code>标签：</li>
-</ol>
-<p>可点击按钮</p>
-<ul>
-<li>按钮名称放于两尖括号之间</li>
-<li>记得为其指定type属性（button、reset、submit）</li>
-</ul>
-<ol start="8">
-<li><code>a</code>标签：</li>
-</ol>
-<p>超链接</p>
+<p>另外左侧link推广大佬···😁</p>
+<p><strong>感谢光顾</strong>👏</p>
+<hr>
 ]]></content>
       <tags>
-        <tag>Web</tag>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux安装</title>
+    <url>/2020/10/23/Linux%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><ul>
+<li><p>linux下载</p>
+<ul>
+<li>Kali Linux 官⽹下载：<a href="https://www.kali.org/downloads/">https://www.kali.org/downloads/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="虚拟机安装过程"><a href="#虚拟机安装过程" class="headerlink" title="虚拟机安装过程"></a>虚拟机安装过程</h2><ol>
+<li><p>创建新的虚拟机：<a href="https://imgchr.com/i/BVb0zV"><img src="https://s1.ax1x.com/2020/10/24/BVb0zV.png" alt="BVb0zV.png"></a></p>
+</li>
+<li><p>选择典型即推荐：<a href="https://imgchr.com/i/BVbwR0"><img src="https://s1.ax1x.com/2020/10/24/BVbwR0.png" alt="BVbwR0.png"></a></p>
+<a id="more"></a>
+</li>
+<li><p>安装程序光盘映像<a href="%E5%85%88%E4%B8%8B%E8%BD%BD%E7%9A%84Linux%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%9C%B0%E5%9D%80">^文件</a></p>
+</li>
+</ol>
+<p><a href="https://imgchr.com/i/BVbdGq"><img src="https://s1.ax1x.com/2020/10/24/BVbdGq.png" alt="BVbdGq.png"></a></p>
+<ul>
+<li>下方提示无法检测忽略</li>
+</ul>
+<ol start="4">
+<li><p>选择操作系统“linux”，版本是“Debian”：<a href="https://imgchr.com/i/BVbain"><img src="https://s1.ax1x.com/2020/10/24/BVbain.png" alt="BVbain.png"></a></p>
+</li>
+<li><p>取名，选择虚拟机文件存放位置：</p>
+<ul>
+<li><code>注意选择合适位置，这里需要存放几十G的虚拟磁盘文件</code></li>
+</ul>
+</li>
+</ol>
+<p><a href="https://imgchr.com/i/BVbNIs"><img src="https://s1.ax1x.com/2020/10/24/BVbNIs.png" alt="BVbNIs.png"></a></p>
+<ol start="6">
+<li><p>设置虚拟磁盘的大小，一般不能低于默认值，下面一般选择单个文件，方便后续使用：<a href="https://imgchr.com/i/BVbDMT"><img src="https://s1.ax1x.com/2020/10/24/BVbDMT.png" alt="BVbDMT.png"></a></p>
+<p><a href="https://imgchr.com/i/BVbrsU"><img src="https://s1.ax1x.com/2020/10/24/BVbrsU.png" alt="BVbrsU.png"></a></p>
+<ul>
+<li><p>还可进行硬件自定义<a href="https://imgchr.com/i/BVb6Z4"><img src="https://s1.ax1x.com/2020/10/24/BVb6Z4.png" alt="BVb6Z4.png"></a></p>
+<p><a href="https://imgchr.com/i/BVbsLF"><img src="https://s1.ax1x.com/2020/10/24/BVbsLF.png" alt="BVbsLF.png"></a></p>
+<p><strong>至此完成创建</strong></p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="Kali系统安装与配置"><a href="#Kali系统安装与配置" class="headerlink" title="Kali系统安装与配置"></a>Kali系统安装与配置</h2><ol>
+<li><p>点击开启此虚拟机进入安装界面</p>
+<p><code>Live</code> 开头的不是系统安装，类似于Windows PE，用于恢复系统，其他选项可以不用管，也暂时用不着。<br><strong>这里我们选择简单的图形化安装</strong> <code>Graphical install</code><br>此时鼠标无法操作，退出虚拟机操作界面将鼠标移出界面或使用 <code>ctrl + alt</code> 键。</p>
+<p><a href="https://imgchr.com/i/BVbcdJ"><img src="https://s1.ax1x.com/2020/10/24/BVbcdJ.png" alt="BVbcdJ.png"></a></p>
+<ol start="2">
+<li><p>选择简体中文<a href="https://imgchr.com/i/BZ0j6f"><img src="https://s1.ax1x.com/2020/10/24/BZ0j6f.png" alt="BZ0j6f.png"></a>         区域中国<a href="https://imgchr.com/i/BZ0qfI"><img src="https://s1.ax1x.com/2020/10/24/BZ0qfI.png" alt="BZ0qfI.png"></a>汉语<a href="https://imgchr.com/i/BZBS0g"><img src="https://s1.ax1x.com/2020/10/24/BZBS0g.png" alt="BZBS0g.png"></a>然后设置主机名<a href="https://imgchr.com/i/BZ0o0e"><img src="https://s1.ax1x.com/2020/10/24/BZ0o0e.png" alt="BZ0o0e.png"></a><a href="https://imgchr.com/i/BZBihn"><img src="https://s1.ax1x.com/2020/10/24/BZBihn.png" alt="BZBihn.png"></a></p>
+</li>
+<li><p>域名，可暂时跳过<a href="https://imgchr.com/i/BZBkpq"><img src="https://s1.ax1x.com/2020/10/24/BZBkpq.png" alt="BZBkpq.png"></a></p>
+</li>
+<li><p>设置用户和密码（<em>注意大小写</em>😂）<a href="https://imgchr.com/i/BZ0X1P"><img src="https://s1.ax1x.com/2020/10/24/BZ0X1P.png" alt="BZ0X1P.png"></a><a href="https://imgchr.com/i/BZ0znS"><img src="https://s1.ax1x.com/2020/10/24/BZ0znS.png" alt="BZ0znS.png"></a></p>
+</li>
+<li><p><strong>LVM</strong></p>
+<p>建议使用<a href="https://baike.baidu.com/item/LVM/6571177?fr=aladdin">LVM</a>(百度百科)，LVM是 Logical Volume Manager（逻辑<a href="https://baike.baidu.com/item/%E5%8D%B7%E7%AE%A1%E7%90%86">卷管理</a>）的简写，它是Linux环境下对<a href="https://baike.baidu.com/item/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/1521981">磁盘分区</a>进行管理的一种机制，它由Heinz Mauelshagen在Linux 2.4<a href="https://baike.baidu.com/item/%E5%86%85%E6%A0%B8/108410">内核</a>上实现，目前最新版本为：稳定版1.0.5，开发版 1.1.0-rc2，以及LVM2开发版。Linux用户安装<a href="https://baike.baidu.com/item/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">Linux操作系统</a>时遇到的一个常见的难以决定的问题就是如何正确地评估各分区大小，以分配合适的硬盘空间。</p>
+<p><a href="https://imgchr.com/i/BZBA10"><img src="https://s1.ax1x.com/2020/10/24/BZBA10.png" alt="BZBA10.png"></a><br><a href="https://imgchr.com/i/BZBEcV"><img src="https://s1.ax1x.com/2020/10/24/BZBEcV.png" alt="BZBEcV.png"></a>使用推荐<br><a href="https://imgchr.com/i/BZBVXT"><img src="https://s1.ax1x.com/2020/10/24/BZBVXT.png" alt="BZBVXT.png">s</a><br><a href="https://imgchr.com/i/BZBenU"><img src="https://s1.ax1x.com/2020/10/24/BZBenU.png" alt="BZBenU.png"></a><br><a href="https://imgchr.com/i/BZBmBF"><img src="https://s1.ax1x.com/2020/10/24/BZBmBF.png" alt="BZBmBF.png"></a><br><a href="https://imgchr.com/i/BZBn74"><img src="https://s1.ax1x.com/2020/10/24/BZBn74.png" alt="BZBn74.png"></a></p>
+</li>
+<li><p>等待一会······<a href="https://imgchr.com/i/BZBKAJ"><img src="https://s1.ax1x.com/2020/10/24/BZBKAJ.png" alt="BZBKAJ.png"></a><br><a href="https://imgchr.com/i/BZBMN9"><img src="https://s1.ax1x.com/2020/10/24/BZBMN9.png" alt="BZBMN9.png"></a><br><a href="https://imgchr.com/i/BZBQhR"><img src="https://s1.ax1x.com/2020/10/24/BZBQhR.png" alt="BZBQhR.png"></a>配置GRUB：<br><a href="https://imgchr.com/i/BZB191"><img src="https://s1.ax1x.com/2020/10/24/BZB191.png" alt="BZB191.png"></a><br><a href="https://imgchr.com/i/BZB31x"><img src="https://s1.ax1x.com/2020/10/24/BZB31x.png" alt="BZB31x.png"></a><br><a href="https://imgchr.com/i/BZB8c6"><img src="https://s1.ax1x.com/2020/10/24/BZB8c6.png" alt="BZB8c6.png"></a></p>
+</li>
+</ol>
+<ul>
+<li>到这里就完成了。</li>
+</ul>
+</li>
+</ol>
+<p>   选择启动，第二个选项是恢复模式：</p>
+<p>   <a href="https://imgchr.com/i/BZBGjK"><img src="https://s1.ax1x.com/2020/10/24/BZBGjK.jpg" alt="BZBGjK.jpg"></a><br>   输入账号密码<a href="https://imgchr.com/i/BZBaAH"><img src="https://s1.ax1x.com/2020/10/24/BZBaAH.png" alt="BZBaAH.png"></a><br>   <a href="https://imgchr.com/i/BZBYnO"><img src="https://s1.ax1x.com/2020/10/24/BZBYnO.png" alt="BZBYnO.png"></a><br>   <a href="https://imgchr.com/i/BZBNHe"><img src="https://s1.ax1x.com/2020/10/24/BZBNHe.png" alt="BZBNHe.png"></a></p>
+<hr>
+<h3 id="记个笔记："><a href="#记个笔记：" class="headerlink" title="记个笔记："></a>记个笔记：</h3><ul>
+<li><p>capcha code/代码       验证码</p>
+<hr>
+<p>感谢阅读☕☕☕~</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -729,6 +655,138 @@
 ]]></content>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>简易邮箱登录界面HCJ</title>
+    <url>/2020/11/25/%E7%AE%80%E6%98%93%E9%82%AE%E7%AE%B1%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2HCJ/</url>
+    <content><![CDATA[<h3 id="为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！"><a href="#为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！" class="headerlink" title="为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！"></a>为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！</h3><p><a href="https://imgchr.com/i/DXASuF"><img src="https://s3.ax1x.com/2020/12/06/DXASuF.md.png" alt="DXASuF.md.png"></a></p>
+<hr>
+<p>源码如下：</p>
+<ul>
+<li>Html：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>QQ邮箱登录<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    	img &#123;</span><br><span class="line">    		position: absolute;</span><br><span class="line">    		margin-left: 35%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	form&#123;</span><br><span class="line">    		margin-left: 10%;</span><br><span class="line">    		margin-top: 10%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	button &#123;</span><br><span class="line">    		margin-left: 4%;</span><br><span class="line">    	&#125;</span><br><span class="line">    	a&#123;</span><br><span class="line">    		margin-left: 10%;</span><br><span class="line">    	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js/inter.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;imgs/QQ截图20201125150933.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;登录配置图片&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;demo/welcome.php&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span><br><span class="line">        账号：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;account&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;支持QQ号/邮箱/手机号登录&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">id</span>=<span class="string">&quot;passwd&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;QQ密码&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;fnLogin()&quot;</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;cancel&quot;</span>&gt;</span>取消<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;error_box&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://mail.qq.com/?ocid=MSNCNLG10-2/&quot;</span>&gt;</span>官方入口!!!<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>js:</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fnLogin</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"> <span class="keyword">var</span> oUacnt = <span class="built_in">document</span>.getElementById(<span class="string">&quot;account&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> oUpswd = <span class="built_in">document</span>.getElementById(<span class="string">&quot;passwd&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> oError = <span class="built_in">document</span>.getElementById(<span class="string">&quot;error_box&quot;</span>)</span><br><span class="line"> <span class="keyword">var</span> isError = <span class="literal">true</span>;</span><br><span class="line"> <span class="keyword">if</span> (oUacnt.value.length &gt; <span class="number">20</span> || oUacnt.value.length &lt; <span class="number">5</span>) &#123;</span><br><span class="line">  oError.innerHTML = <span class="string">&quot;请输入正确账号&quot;</span>;</span><br><span class="line">  isError = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">if</span> (oUpswd.value.length &gt; <span class="number">18</span> || oUpswd.value.length &lt; <span class="number">6</span>) &#123;</span><br><span class="line">  oError.innerHTML = <span class="string">&quot;密码请输入6-18位字符&quot;</span></span><br><span class="line">  isError = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="built_in">window</span>.alert(<span class="string">&quot;呵*_*,,,任务完成。。。&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&#x27;html&#x27;</span>).onclick= <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">&#x27;啊就这...&#x27;</span>);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="记个笔记"><a href="#记个笔记" class="headerlink" title="记个笔记"></a>记个笔记</h3><h4 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h4><ol>
+<li>H5时代开头简洁明了</li>
+</ol>
+<p><code>&lt;!DOCTYPE html&gt;</code></p>
+<ol start="2">
+<li>基本结构</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>一个人完整元素=开始标签<code>&lt;p&gt;</code>+内容+结束标签<code>&lt;/p&gt;</code></li>
+<li>注意所有符号使用英文</li>
+<li>标签属性添加至开始标签末尾<code>&gt;</code>前 &lt;元素 属性=””&gt;内容&lt;/元素&gt;       </li>
+<li>元素与属性间，属性与属性间必须有一个括号</li>
+<li>Sublime Text中敲出<code>&lt;h</code>选中html即可直接给出结构</li>
+</ul>
+<ol start="3">
+<li><code>meta</code>标签+<code>charset</code>属性，指定 HTML 文档的编码</li>
+</ol>
+<p><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
+<ul>
+<li>网页尺寸实现自适应</li>
+</ul>
+<p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></p>
+<ol start="4">
+<li><code>img</code>标签 ：</li>
+</ol>
+<p><code>&lt;img src=&quot;imgs/QQ截图20201125150933.png&quot; alt=&quot;登录配置图片&quot;&gt;</code></p>
+<ul>
+<li>属性src的值为图片路径，alt指文本信息</li>
+<li>另外还有width、height属性来设置图片宽度和高度（单位px或%）</li>
+</ul>
+<ol start="5">
+<li><code>br</code>换行</li>
+<li><code>input</code>标签：</li>
+</ol>
+<p>用于搜集用户信息，即为输入</p>
+<ul>
+<li>type属性规定元素类型，例如<code>type=&quot;passwd&quot;</code>即可实现密码隐藏的效果</li>
+<li>placeholder属性表示占据文本，值为text</li>
+</ul>
+<ol start="7">
+<li><code>button</code>标签：</li>
+</ol>
+<p>可点击按钮</p>
+<ul>
+<li>按钮名称放于两尖括号之间</li>
+<li>记得为其指定type属性（button、reset、submit）</li>
+</ul>
+<ol start="8">
+<li><code>a</code>标签：</li>
+</ol>
+<p>超链接</p>
+<ul>
+<li>href属性的值为链接URL，两对尖括号间添加可点击文字</li>
+<li>target属性指定在何处打开超链接</li>
+<li><ul>
+<li>_blank：在新窗口中打开</li>
+<li>_parent：在当前的父窗口中打开，如果不存在父窗口，此选项的行为方式与 _self 等同</li>
+<li>_self：当前窗口打开（默认）</li>
+<li>_top：在整个窗口中打开</li>
+<li>framename：在指定的框架中打开</li>
+</ul>
+</li>
+</ul>
+<h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><ol>
+<li>选择器{属性:属性的值;}</li>
+</ol>
+<p>选择器指HTML元素的名称</p>
+<ol start="2">
+<li><p>常见属性:</p>
+<p>背景</p>
+<p><a href="https://man.ilovefishc.com/pageCSS3/background-color.html">background-color</a>、<a href="https://man.ilovefishc.com/pageCSS3/background-image.html">background-image</a></p>
+<p><a href="https://man.ilovefishc.com/pageCSS3/background-origin.html">background-origin</a>、<a href="https://man.ilovefishc.com/pageCSS3/background-position.html">background-position</a>、<a href="https://man.ilovefishc.com/pageCSS3/background-repeat.html">background-repeat</a>、<a href="https://man.ilovefishc.com/pageCSS3/background-size.html">background-size</a></p>
+<h4 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h4><p><a href="https://man.ilovefishc.com/pageCSS3/clear.html">clear</a>、<a href="https://man.ilovefishc.com/pageCSS3/clip.html">clip</a>、<a href="https://man.ilovefishc.com/pageCSS3/cursor.html">cursor</a>、<a href="https://man.ilovefishc.com/pageCSS3/display.html">display</a>、<a href="https://man.ilovefishc.com/pageCSS3/float.html">float</a>、<a href="https://man.ilovefishc.com/pageCSS3/top.html">top</a>、<a href="https://man.ilovefishc.com/pageCSS3/right.html">right</a>、<a href="https://man.ilovefishc.com/pageCSS3/bottom.html">bottom</a>、<a href="https://man.ilovefishc.com/pageCSS3/left.html">left</a></p>
+<p><a href="https://man.ilovefishc.com/pageCSS3/overflow.html">overflow</a>、<a href="https://man.ilovefishc.com/pageCSS3/position.html">position</a>、<a href="https://man.ilovefishc.com/pageCSS3/visibility.html">visibility</a>、<a href="https://man.ilovefishc.com/pageCSS3/z-index.html">z-index</a></p>
+<h4 id="外边距"><a href="#外边距" class="headerlink" title="外边距"></a>外边距</h4><p><a href="https://man.ilovefishc.com/pageCSS3/margin-top.html">margin-top</a>、<a href="https://man.ilovefishc.com/pageCSS3/margin-right.html">margin-right</a>、<a href="https://man.ilovefishc.com/pageCSS3/margin-bottom.html">margin-bottom</a>、<a href="https://man.ilovefishc.com/pageCSS3/margin-left.html">margin-left</a></p>
+<h4 id="内边距"><a href="#内边距" class="headerlink" title="内边距"></a>内边距</h4><p><a href="https://man.ilovefishc.com/pageCSS3/padding-top.html">padding-top</a>、<a href="https://man.ilovefishc.com/pageCSS3/padding-right.html">padding-right</a>、<a href="https://man.ilovefishc.com/pageCSS3/padding-bottom.html">padding-bottom</a>、<a href="https://man.ilovefishc.com/pageCSS3/padding-left.html">padding-left</a></p>
+<h4 id="尺寸"><a href="#尺寸" class="headerlink" title="尺寸"></a>尺寸</h4><p><a href="https://man.ilovefishc.com/pageCSS3/height.html">height</a>、<a href="https://man.ilovefishc.com/pageCSS3/width.html">width</a>、<a href="https://man.ilovefishc.com/pageCSS3/max-height.html">max-height</a>、<a href="https://man.ilovefishc.com/pageCSS3/max-width.html">max-width</a>、<a href="https://man.ilovefishc.com/pageCSS3/min-height.html">min-height</a>、<a href="https://man.ilovefishc.com/pageCSS3/min-width.html">min-width</a></p>
+</li>
+<li><p>同一选择器中多个属性用;隔开</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">​	color: red;</span><br><span class="line"></span><br><span class="line">​	<span class="selector-tag">width</span>: 500<span class="selector-tag">px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<p>   相同选择器使用同一属性用，隔开</p>
+   <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span>,<span class="selector-tag">h1</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>: red;</span><br><span class="line"></span><br><span class="line">	<span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h4><p>1.基本结构</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">alert:(<span class="string">&#x27;hello world&#x27;</span>)</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>2.声明变量</p>
+<figure class="highlight nix"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">a</span> = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>或者使用var<br>3.JS对大小写敏感<br>4.数据类型<br><a href="https://imgchr.com/i/DXkvcT"><img src="https://s3.ax1x.com/2020/12/06/DXkvcT.md.png" alt="DXkvcT.md.png"></a></p>
+<p>5.常用运算符</p>
+<p><a href="https://imgchr.com/i/DXkj3V"><img src="https://s3.ax1x.com/2020/12/06/DXkj3V.md.png" alt="DXkj3V.md.png"></a></p>
+<p>6.简单的点击交互</p>
+<p><code>document.querySelector(&#39;html&#39;).onclick= function() &#123;     alert(&#39;啊就这...&#39;);</code></p>
+<ul>
+<li>使用函数alert( )可在浏览器窗口内弹出<strong>警告框</strong></li>
+<li>本例使用匿名函数赋值给标签<code>&lt;html&gt;</code>的onclick属性</li>
+</ul>
+<p>7.js中条件语句与C类似</p>
+<hr>
+<p>简单的就这些，感谢阅读😎</p>
+<p>参考教程&lt;<a href="https://www.bilibili.com/video/BV1QW411N762?p=1">【Web前端开发】《零基础入门学习Web开发》（HTML5&amp;CSS3）（小甲鱼）_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</a>&gt;</p>
+<p>​                &lt;<a href="https://man.ilovefishc.com/">鱼C-Web-速查宝典 (ilovefishc.com)</a>&gt;</p>
+<p>​                &lt;<a href="https://www.w3cschool.cn/minicourse/play/wsfnp">Web入门微课_编程实战微课_w3cschool</a>&gt;</p>
+]]></content>
+      <tags>
+        <tag>Web</tag>
       </tags>
   </entry>
 </search>
