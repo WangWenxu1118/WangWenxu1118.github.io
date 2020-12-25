@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>BugKu靶场之图片隐写(持续更新中)</title>
-    <url>/2020/11/01/Bugku%E9%9D%B6%E5%9C%BA%E4%B9%8B%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <title>BugKu靶场wp(持续更新中)</title>
+    <url>/2020/11/01/Bugku%E9%9D%B6%E5%9C%BAwp(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
     <content><![CDATA[<h2 id="01"><a href="#01" class="headerlink" title="01."></a>01.</h2><ul>
 <li><p>题目为这是一张单纯的图片<a href="https://imgchr.com/i/B058hQ"><img src="https://s1.ax1x.com/2020/11/01/B058hQ.md.png" alt="B058hQ.md.png"></a></p>
 </li>
@@ -282,6 +282,67 @@
 <h2 id="5-top"><a href="#5-top" class="headerlink" title="5.#top"></a>5.#<code>top</code></h2><ul>
 <li>查看进程占用资源(动态显示)，按q退出</li>
 </ul>
+<p>m4</p>
+<p>m5</p>
+<p>三种内存释义</p>
+<p>m6</p>
+<ul>
+<li><p>top运行中按下<code>M</code>(MEM)结果按内存降序排列</p>
+<p>​                          <code>P</code>结果按CPU使用率降序排列</p>
+<p>​                         <code>1</code>展开或收起各个CPU的详细信息</p>
+</li>
+</ul>
+<h2 id="6-du-sh"><a href="#6-du-sh" class="headerlink" title="6.#du -sh"></a>6.#<code>du -sh</code></h2><ul>
+<li>查看目录的真实大小</li>
+</ul>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">du- <span class="keyword">sh</span> /路径</span><br></pre></td></tr></table></figure>
+
+<p> -s  : summaries,只显示汇总的大小<br> -h : 表示以较高可读性的形式显示</p>
+<p>m7</p>
+<h2 id="7-find"><a href="#7-find" class="headerlink" title="7.#find"></a>7.#<code>find</code></h2><ul>
+<li>用于查找文件(参数55个之多)</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="builtin-name">find</span> 路径范围 选项 选项的值</span><br></pre></td></tr></table></figure>
+
+<p>选项：</p>
+<p>​        -name：按照文档名称进行搜索（支持模糊搜索）</p>
+<p>​        -type：按照文档类型进行搜索</p>
+<p>​                    文档类型：“-”表示文件（find中用f替换），“d”表示文件夹</p>
+<h2 id="8-service"><a href="#8-service" class="headerlink" title="8.#service"></a>8.#<code>service</code></h2><p>用于控制一些软件服务的启动 /停止/重启</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">service 服务名 start<span class="regexp">/stop/</span>restart</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p>Linux命令大全<a href="https://man.linuxde.net/">https://man.linuxde.net</a></p>
 ]]></content>
       <tags>
@@ -469,89 +530,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux安装</title>
-    <url>/2020/10/23/Linux%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><ul>
-<li><p>linux下载</p>
-<ul>
-<li>Kali Linux 官⽹下载：<a href="https://www.kali.org/downloads/">https://www.kali.org/downloads/</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="虚拟机安装过程"><a href="#虚拟机安装过程" class="headerlink" title="虚拟机安装过程"></a>虚拟机安装过程</h2><ol>
-<li><p>创建新的虚拟机：<a href="https://imgchr.com/i/BVb0zV"><img src="https://s1.ax1x.com/2020/10/24/BVb0zV.png" alt="BVb0zV.png"></a></p>
-</li>
-<li><p>选择典型即推荐：<a href="https://imgchr.com/i/BVbwR0"><img src="https://s1.ax1x.com/2020/10/24/BVbwR0.png" alt="BVbwR0.png"></a></p>
-<a id="more"></a>
-</li>
-<li><p>安装程序光盘映像<a href="%E5%85%88%E4%B8%8B%E8%BD%BD%E7%9A%84Linux%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%9C%B0%E5%9D%80">^文件</a></p>
-</li>
-</ol>
-<p><a href="https://imgchr.com/i/BVbdGq"><img src="https://s1.ax1x.com/2020/10/24/BVbdGq.png" alt="BVbdGq.png"></a></p>
-<ul>
-<li>下方提示无法检测忽略</li>
-</ul>
-<ol start="4">
-<li><p>选择操作系统“linux”，版本是“Debian”：<a href="https://imgchr.com/i/BVbain"><img src="https://s1.ax1x.com/2020/10/24/BVbain.png" alt="BVbain.png"></a></p>
-</li>
-<li><p>取名，选择虚拟机文件存放位置：</p>
-<ul>
-<li><code>注意选择合适位置，这里需要存放几十G的虚拟磁盘文件</code></li>
-</ul>
-</li>
-</ol>
-<p><a href="https://imgchr.com/i/BVbNIs"><img src="https://s1.ax1x.com/2020/10/24/BVbNIs.png" alt="BVbNIs.png"></a></p>
-<ol start="6">
-<li><p>设置虚拟磁盘的大小，一般不能低于默认值，下面一般选择单个文件，方便后续使用：<a href="https://imgchr.com/i/BVbDMT"><img src="https://s1.ax1x.com/2020/10/24/BVbDMT.png" alt="BVbDMT.png"></a></p>
-<p><a href="https://imgchr.com/i/BVbrsU"><img src="https://s1.ax1x.com/2020/10/24/BVbrsU.png" alt="BVbrsU.png"></a></p>
-<ul>
-<li><p>还可进行硬件自定义<a href="https://imgchr.com/i/BVb6Z4"><img src="https://s1.ax1x.com/2020/10/24/BVb6Z4.png" alt="BVb6Z4.png"></a></p>
-<p><a href="https://imgchr.com/i/BVbsLF"><img src="https://s1.ax1x.com/2020/10/24/BVbsLF.png" alt="BVbsLF.png"></a></p>
-<p><strong>至此完成创建</strong></p>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="Kali系统安装与配置"><a href="#Kali系统安装与配置" class="headerlink" title="Kali系统安装与配置"></a>Kali系统安装与配置</h2><ol>
-<li><p>点击开启此虚拟机进入安装界面</p>
-<p><code>Live</code> 开头的不是系统安装，类似于Windows PE，用于恢复系统，其他选项可以不用管，也暂时用不着。<br><strong>这里我们选择简单的图形化安装</strong> <code>Graphical install</code><br>此时鼠标无法操作，退出虚拟机操作界面将鼠标移出界面或使用 <code>ctrl + alt</code> 键。</p>
-<p><a href="https://imgchr.com/i/BVbcdJ"><img src="https://s1.ax1x.com/2020/10/24/BVbcdJ.png" alt="BVbcdJ.png"></a></p>
-<ol start="2">
-<li><p>选择简体中文<a href="https://imgchr.com/i/BZ0j6f"><img src="https://s1.ax1x.com/2020/10/24/BZ0j6f.png" alt="BZ0j6f.png"></a>         区域中国<a href="https://imgchr.com/i/BZ0qfI"><img src="https://s1.ax1x.com/2020/10/24/BZ0qfI.png" alt="BZ0qfI.png"></a>汉语<a href="https://imgchr.com/i/BZBS0g"><img src="https://s1.ax1x.com/2020/10/24/BZBS0g.png" alt="BZBS0g.png"></a>然后设置主机名<a href="https://imgchr.com/i/BZ0o0e"><img src="https://s1.ax1x.com/2020/10/24/BZ0o0e.png" alt="BZ0o0e.png"></a><a href="https://imgchr.com/i/BZBihn"><img src="https://s1.ax1x.com/2020/10/24/BZBihn.png" alt="BZBihn.png"></a></p>
-</li>
-<li><p>域名，可暂时跳过<a href="https://imgchr.com/i/BZBkpq"><img src="https://s1.ax1x.com/2020/10/24/BZBkpq.png" alt="BZBkpq.png"></a></p>
-</li>
-<li><p>设置用户和密码（<em>注意大小写</em>😂）<a href="https://imgchr.com/i/BZ0X1P"><img src="https://s1.ax1x.com/2020/10/24/BZ0X1P.png" alt="BZ0X1P.png"></a><a href="https://imgchr.com/i/BZ0znS"><img src="https://s1.ax1x.com/2020/10/24/BZ0znS.png" alt="BZ0znS.png"></a></p>
-</li>
-<li><p><strong>LVM</strong></p>
-<p>建议使用<a href="https://baike.baidu.com/item/LVM/6571177?fr=aladdin">LVM</a>(百度百科)，LVM是 Logical Volume Manager（逻辑<a href="https://baike.baidu.com/item/%E5%8D%B7%E7%AE%A1%E7%90%86">卷管理</a>）的简写，它是Linux环境下对<a href="https://baike.baidu.com/item/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/1521981">磁盘分区</a>进行管理的一种机制，它由Heinz Mauelshagen在Linux 2.4<a href="https://baike.baidu.com/item/%E5%86%85%E6%A0%B8/108410">内核</a>上实现，目前最新版本为：稳定版1.0.5，开发版 1.1.0-rc2，以及LVM2开发版。Linux用户安装<a href="https://baike.baidu.com/item/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">Linux操作系统</a>时遇到的一个常见的难以决定的问题就是如何正确地评估各分区大小，以分配合适的硬盘空间。</p>
-<p><a href="https://imgchr.com/i/BZBA10"><img src="https://s1.ax1x.com/2020/10/24/BZBA10.png" alt="BZBA10.png"></a><br><a href="https://imgchr.com/i/BZBEcV"><img src="https://s1.ax1x.com/2020/10/24/BZBEcV.png" alt="BZBEcV.png"></a>使用推荐<br><a href="https://imgchr.com/i/BZBVXT"><img src="https://s1.ax1x.com/2020/10/24/BZBVXT.png" alt="BZBVXT.png">s</a><br><a href="https://imgchr.com/i/BZBenU"><img src="https://s1.ax1x.com/2020/10/24/BZBenU.png" alt="BZBenU.png"></a><br><a href="https://imgchr.com/i/BZBmBF"><img src="https://s1.ax1x.com/2020/10/24/BZBmBF.png" alt="BZBmBF.png"></a><br><a href="https://imgchr.com/i/BZBn74"><img src="https://s1.ax1x.com/2020/10/24/BZBn74.png" alt="BZBn74.png"></a></p>
-</li>
-<li><p>等待一会······<a href="https://imgchr.com/i/BZBKAJ"><img src="https://s1.ax1x.com/2020/10/24/BZBKAJ.png" alt="BZBKAJ.png"></a><br><a href="https://imgchr.com/i/BZBMN9"><img src="https://s1.ax1x.com/2020/10/24/BZBMN9.png" alt="BZBMN9.png"></a><br><a href="https://imgchr.com/i/BZBQhR"><img src="https://s1.ax1x.com/2020/10/24/BZBQhR.png" alt="BZBQhR.png"></a>配置GRUB：<br><a href="https://imgchr.com/i/BZB191"><img src="https://s1.ax1x.com/2020/10/24/BZB191.png" alt="BZB191.png"></a><br><a href="https://imgchr.com/i/BZB31x"><img src="https://s1.ax1x.com/2020/10/24/BZB31x.png" alt="BZB31x.png"></a><br><a href="https://imgchr.com/i/BZB8c6"><img src="https://s1.ax1x.com/2020/10/24/BZB8c6.png" alt="BZB8c6.png"></a></p>
-</li>
-</ol>
-<ul>
-<li>到这里就完成了。</li>
-</ul>
-</li>
-</ol>
-<p>   选择启动，第二个选项是恢复模式：</p>
-<p>   <a href="https://imgchr.com/i/BZBGjK"><img src="https://s1.ax1x.com/2020/10/24/BZBGjK.jpg" alt="BZBGjK.jpg"></a><br>   输入账号密码<a href="https://imgchr.com/i/BZBaAH"><img src="https://s1.ax1x.com/2020/10/24/BZBaAH.png" alt="BZBaAH.png"></a><br>   <a href="https://imgchr.com/i/BZBYnO"><img src="https://s1.ax1x.com/2020/10/24/BZBYnO.png" alt="BZBYnO.png"></a><br>   <a href="https://imgchr.com/i/BZBNHe"><img src="https://s1.ax1x.com/2020/10/24/BZBNHe.png" alt="BZBNHe.png"></a></p>
-<hr>
-<h3 id="记个笔记："><a href="#记个笔记：" class="headerlink" title="记个笔记："></a>记个笔记：</h3><ul>
-<li><p>capcha code/代码       验证码</p>
-<hr>
-<p>感谢阅读☕☕☕~</p>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>bandit靶场(持续更新中)</title>
-    <url>/2020/10/31/bandit%E9%9D%B6%E5%9C%BA(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <title>bandit靶场wp(持续更新中)</title>
+    <url>/2020/10/31/bandit%E9%9D%B6%E5%9C%BAwp(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
     <content><![CDATA[<h2 id="Level-0"><a href="#Level-0" class="headerlink" title="Level 0"></a>Level 0</h2><ul>
 <li>连接</li>
 </ul>
@@ -662,6 +642,8 @@
     <url>/2020/11/25/%E7%AE%80%E6%98%93%E9%82%AE%E7%AE%B1%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2HCJ/</url>
     <content><![CDATA[<h3 id="为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！"><a href="#为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！" class="headerlink" title="为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！"></a>为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！</h3><p><a href="https://imgchr.com/i/DXASuF"><img src="https://s3.ax1x.com/2020/12/06/DXASuF.md.png" alt="DXASuF.md.png"></a></p>
 <hr>
+<a id="more"></a>
+
 <p>源码如下：</p>
 <ul>
 <li>Html：</li>
@@ -787,6 +769,87 @@
 ]]></content>
       <tags>
         <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux安装</title>
+    <url>/2020/10/23/Linux%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><ul>
+<li><p>linux下载</p>
+<ul>
+<li>Kali Linux 官⽹下载：<a href="https://www.kali.org/downloads/">https://www.kali.org/downloads/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="虚拟机安装过程"><a href="#虚拟机安装过程" class="headerlink" title="虚拟机安装过程"></a>虚拟机安装过程</h2><ol>
+<li><p>创建新的虚拟机：<a href="https://imgchr.com/i/BVb0zV"><img src="https://s1.ax1x.com/2020/10/24/BVb0zV.png" alt="BVb0zV.png"></a></p>
+</li>
+<li><p>选择典型即推荐：<a href="https://imgchr.com/i/BVbwR0"><img src="https://s1.ax1x.com/2020/10/24/BVbwR0.png" alt="BVbwR0.png"></a></p>
+<a id="more"></a>
+</li>
+<li><p>安装程序光盘映像<a href="%E5%85%88%E4%B8%8B%E8%BD%BD%E7%9A%84Linux%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%9C%B0%E5%9D%80">^文件</a></p>
+</li>
+</ol>
+<p><a href="https://imgchr.com/i/BVbdGq"><img src="https://s1.ax1x.com/2020/10/24/BVbdGq.png" alt="BVbdGq.png"></a></p>
+<ul>
+<li>下方提示无法检测忽略</li>
+</ul>
+<ol start="4">
+<li><p>选择操作系统“linux”，版本是“Debian”：<a href="https://imgchr.com/i/BVbain"><img src="https://s1.ax1x.com/2020/10/24/BVbain.png" alt="BVbain.png"></a></p>
+</li>
+<li><p>取名，选择虚拟机文件存放位置：</p>
+<ul>
+<li><code>注意选择合适位置，这里需要存放几十G的虚拟磁盘文件</code></li>
+</ul>
+</li>
+</ol>
+<p><a href="https://imgchr.com/i/BVbNIs"><img src="https://s1.ax1x.com/2020/10/24/BVbNIs.png" alt="BVbNIs.png"></a></p>
+<ol start="6">
+<li><p>设置虚拟磁盘的大小，一般不能低于默认值，下面一般选择单个文件，方便后续使用：<a href="https://imgchr.com/i/BVbDMT"><img src="https://s1.ax1x.com/2020/10/24/BVbDMT.png" alt="BVbDMT.png"></a></p>
+<p><a href="https://imgchr.com/i/BVbrsU"><img src="https://s1.ax1x.com/2020/10/24/BVbrsU.png" alt="BVbrsU.png"></a></p>
+<ul>
+<li><p>还可进行硬件自定义<a href="https://imgchr.com/i/BVb6Z4"><img src="https://s1.ax1x.com/2020/10/24/BVb6Z4.png" alt="BVb6Z4.png"></a></p>
+<p><a href="https://imgchr.com/i/BVbsLF"><img src="https://s1.ax1x.com/2020/10/24/BVbsLF.png" alt="BVbsLF.png"></a></p>
+<p><strong>至此完成创建</strong></p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="Kali系统安装与配置"><a href="#Kali系统安装与配置" class="headerlink" title="Kali系统安装与配置"></a>Kali系统安装与配置</h2><ol>
+<li><p>点击开启此虚拟机进入安装界面</p>
+<p><code>Live</code> 开头的不是系统安装，类似于Windows PE，用于恢复系统，其他选项可以不用管，也暂时用不着。<br><strong>这里我们选择简单的图形化安装</strong> <code>Graphical install</code><br>此时鼠标无法操作，退出虚拟机操作界面将鼠标移出界面或使用 <code>ctrl + alt</code> 键。</p>
+<p><a href="https://imgchr.com/i/BVbcdJ"><img src="https://s1.ax1x.com/2020/10/24/BVbcdJ.png" alt="BVbcdJ.png"></a></p>
+<ol start="2">
+<li><p>选择简体中文<a href="https://imgchr.com/i/BZ0j6f"><img src="https://s1.ax1x.com/2020/10/24/BZ0j6f.png" alt="BZ0j6f.png"></a>         区域中国<a href="https://imgchr.com/i/BZ0qfI"><img src="https://s1.ax1x.com/2020/10/24/BZ0qfI.png" alt="BZ0qfI.png"></a>汉语<a href="https://imgchr.com/i/BZBS0g"><img src="https://s1.ax1x.com/2020/10/24/BZBS0g.png" alt="BZBS0g.png"></a>然后设置主机名<a href="https://imgchr.com/i/BZ0o0e"><img src="https://s1.ax1x.com/2020/10/24/BZ0o0e.png" alt="BZ0o0e.png"></a><a href="https://imgchr.com/i/BZBihn"><img src="https://s1.ax1x.com/2020/10/24/BZBihn.png" alt="BZBihn.png"></a></p>
+</li>
+<li><p>域名，可暂时跳过<a href="https://imgchr.com/i/BZBkpq"><img src="https://s1.ax1x.com/2020/10/24/BZBkpq.png" alt="BZBkpq.png"></a></p>
+</li>
+<li><p>设置用户和密码（<em>注意大小写</em>😂）<a href="https://imgchr.com/i/BZ0X1P"><img src="https://s1.ax1x.com/2020/10/24/BZ0X1P.png" alt="BZ0X1P.png"></a><a href="https://imgchr.com/i/BZ0znS"><img src="https://s1.ax1x.com/2020/10/24/BZ0znS.png" alt="BZ0znS.png"></a></p>
+</li>
+<li><p><strong>LVM</strong></p>
+<p>建议使用<a href="https://baike.baidu.com/item/LVM/6571177?fr=aladdin">LVM</a>(百度百科)，LVM是 Logical Volume Manager（逻辑<a href="https://baike.baidu.com/item/%E5%8D%B7%E7%AE%A1%E7%90%86">卷管理</a>）的简写，它是Linux环境下对<a href="https://baike.baidu.com/item/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/1521981">磁盘分区</a>进行管理的一种机制，它由Heinz Mauelshagen在Linux 2.4<a href="https://baike.baidu.com/item/%E5%86%85%E6%A0%B8/108410">内核</a>上实现，目前最新版本为：稳定版1.0.5，开发版 1.1.0-rc2，以及LVM2开发版。Linux用户安装<a href="https://baike.baidu.com/item/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">Linux操作系统</a>时遇到的一个常见的难以决定的问题就是如何正确地评估各分区大小，以分配合适的硬盘空间。</p>
+<p><a href="https://imgchr.com/i/BZBA10"><img src="https://s1.ax1x.com/2020/10/24/BZBA10.png" alt="BZBA10.png"></a><br><a href="https://imgchr.com/i/BZBEcV"><img src="https://s1.ax1x.com/2020/10/24/BZBEcV.png" alt="BZBEcV.png"></a>使用推荐<br><a href="https://imgchr.com/i/BZBVXT"><img src="https://s1.ax1x.com/2020/10/24/BZBVXT.png" alt="BZBVXT.png">s</a><br><a href="https://imgchr.com/i/BZBenU"><img src="https://s1.ax1x.com/2020/10/24/BZBenU.png" alt="BZBenU.png"></a><br><a href="https://imgchr.com/i/BZBmBF"><img src="https://s1.ax1x.com/2020/10/24/BZBmBF.png" alt="BZBmBF.png"></a><br><a href="https://imgchr.com/i/BZBn74"><img src="https://s1.ax1x.com/2020/10/24/BZBn74.png" alt="BZBn74.png"></a></p>
+</li>
+<li><p>等待一会······<a href="https://imgchr.com/i/BZBKAJ"><img src="https://s1.ax1x.com/2020/10/24/BZBKAJ.png" alt="BZBKAJ.png"></a><br><a href="https://imgchr.com/i/BZBMN9"><img src="https://s1.ax1x.com/2020/10/24/BZBMN9.png" alt="BZBMN9.png"></a><br><a href="https://imgchr.com/i/BZBQhR"><img src="https://s1.ax1x.com/2020/10/24/BZBQhR.png" alt="BZBQhR.png"></a>配置GRUB：<br><a href="https://imgchr.com/i/BZB191"><img src="https://s1.ax1x.com/2020/10/24/BZB191.png" alt="BZB191.png"></a><br><a href="https://imgchr.com/i/BZB31x"><img src="https://s1.ax1x.com/2020/10/24/BZB31x.png" alt="BZB31x.png"></a><br><a href="https://imgchr.com/i/BZB8c6"><img src="https://s1.ax1x.com/2020/10/24/BZB8c6.png" alt="BZB8c6.png"></a></p>
+</li>
+</ol>
+<ul>
+<li>到这里就完成了。</li>
+</ul>
+</li>
+</ol>
+<p>   选择启动，第二个选项是恢复模式：</p>
+<p>   <a href="https://imgchr.com/i/BZBGjK"><img src="https://s1.ax1x.com/2020/10/24/BZBGjK.jpg" alt="BZBGjK.jpg"></a><br>   输入账号密码<a href="https://imgchr.com/i/BZBaAH"><img src="https://s1.ax1x.com/2020/10/24/BZBaAH.png" alt="BZBaAH.png"></a><br>   <a href="https://imgchr.com/i/BZBYnO"><img src="https://s1.ax1x.com/2020/10/24/BZBYnO.png" alt="BZBYnO.png"></a><br>   <a href="https://imgchr.com/i/BZBNHe"><img src="https://s1.ax1x.com/2020/10/24/BZBNHe.png" alt="BZBNHe.png"></a></p>
+<hr>
+<h3 id="记个笔记："><a href="#记个笔记：" class="headerlink" title="记个笔记："></a>记个笔记：</h3><ul>
+<li><p>capcha code/代码       验证码</p>
+<hr>
+<p>感谢阅读☕☕☕~</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
 </search>
