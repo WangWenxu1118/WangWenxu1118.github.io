@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    BugKu靶场wp(持续更新中) |  9_天羿
+    BugKu-wp(持续更新中) |  9_天羿
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -58,7 +58,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  BugKu靶场wp(持续更新中)
+  BugKu-wp(持续更新中)
 </h1>
  
 
@@ -73,7 +73,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">128</span>
+            <span class="post-count">617</span>
         </span>
     </span>
 
@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">2 分钟</span>
         </span>
     </span>
 </div>
@@ -97,8 +97,8 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="01"><a href="#01" class="headerlink" title="01."></a>01.</h2><ul>
-<li><p>题目为这是一张单纯的图片<a target="_blank" rel="noopener" href="https://imgchr.com/i/B058hQ"><img src="https://s1.ax1x.com/2020/11/01/B058hQ.md.png" alt="B058hQ.md.png"></a></p>
+  <h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="01"><a href="#01" class="headerlink" title="01."></a>01.</h2><ul>
+<li><p>题目为这是一张单纯的图片<a target="_blank" rel="noopener" href="https://imgchr.com/i/B058hQ"><img src="https://s1.ax1x.com/2020/11/01/B058hQ.md.png" alt="B058hQ.md.png"></a><a id="more"></a></p>
 </li>
 <li><p>下载图片打开后找不出什么线索<a target="_blank" rel="noopener" href="https://imgchr.com/i/B05xUS"><img src="https://s1.ax1x.com/2020/11/01/B05xUS.png" alt="B05xUS.png"></a></p>
 </li>
@@ -107,10 +107,7 @@
 </ul>
 <p><a target="_blank" rel="noopener" href="https://imgchr.com/i/B053tg"><img src="https://s1.ax1x.com/2020/11/01/B053tg.md.png" alt="B053tg.md.png"></a></p>
 <ul>
-<li><p>拷贝到<a target="_blank" rel="noopener" href="http://tool.chinaz.com/tools/unicode.aspx">在线转换器</a>,Unicode 转 ASCII得到flag</p>
-<a id="more"></a>
-
-</li>
+<li>拷贝到<a target="_blank" rel="noopener" href="http://tool.chinaz.com/tools/unicode.aspx">在线转换器</a>,Unicode 转 ASCII得到flag</li>
 </ul>
 <hr>
 <h2 id="02"><a href="#02" class="headerlink" title="02."></a>02.</h2><ul>
@@ -130,6 +127,74 @@
 <hr>
 <h2 id="n"><a href="#n" class="headerlink" title="n."></a>n.</h2><p>······</p>
 <p>······</p>
+<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><ul>
+<li>bugku更新后,靶机启动一次3金币/3h，把握好每次机会🤣</li>
+</ul>
+<h2 id="web1"><a href="#web1" class="headerlink" title="web1."></a>web1.</h2><ul>
+<li><p>题目为连续穿梭的表情包，F12或右击检查元素</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhHq9P"><img src="https://s3.ax1x.com/2020/12/26/rhHq9P.png" alt="rhHq9P.png"></a>发现flag被注释到源码中，并且该网页不支持，直接查看源码</p>
+</li>
+</ul>
+<hr>
+<h2 id="web2"><a href="#web2" class="headerlink" title="web2."></a>web2.</h2><figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">描　　述: 输入验证码即可得到<span class="built_in">flag</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhHOc8"><img src="https://s3.ax1x.com/2020/12/26/rhHOc8.md.png" alt="rhHOc8.md.png"></a>简单的加法（竟然真是随机），尝试后发现只能输入一位数字</p>
+</li>
+<li><p>按F12，使用鼠标选中元素</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhHL1f"><img src="https://s3.ax1x.com/2020/12/26/rhHL1f.png" alt="rhHL1f.png"></a></p>
+</li>
+<li><p>得到<a target="_blank" rel="noopener" href="https://imgchr.com/i/rhHXjS"><img src="https://s3.ax1x.com/2020/12/26/rhHXjS.md.png" alt="rhHXjS.md.png"></a></p>
+</li>
+<li><p>更改<code>maxlength=&quot;1&quot;</code>为<code>maxlength=&quot;3&quot;</code>或更大</p>
+</li>
+<li><p>再次输入验证码即可得到flag</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhHvng"><img src="https://s3.ax1x.com/2020/12/26/rhHvng.md.png" alt="rhHvng.md.png"></a></p>
+<h2 id="web3-（get）"><a href="#web3-（get）" class="headerlink" title="web3.（get）"></a>web3.（get）</h2><p>网页内容：</p>
+<p><code>$what=$_GET[&#39;what&#39;]; echo $what; if($what==&#39;flag&#39;) echo &#39;flag&#123;****&#125;&#39;;</code></p>
+<ul>
+<li><p>$_GET 传参时请求的参数是在URL中，直接在URL中赋值what变量，找到flag</p>
+</li>
+<li><p>url传参，<code>?what=flag</code>，打印即可</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhHxBQ"><img src="https://s3.ax1x.com/2020/12/26/rhHxBQ.md.png" alt="rhHxBQ.md.png"></a></p>
+<h2 id="web4-（post）"><a href="#web4-（post）" class="headerlink" title="web4.（post）"></a>web4.（post）</h2><p>网页内容：</p>
+<p><code>$what=$_POST[&#39;what&#39;];  echo $what;  if($what==&#39;flag&#39;)  echo &#39;flag&#123;****&#125;&#39;;</code></p>
+<p>这里利用Firefox插件[Hackbar][<a target="_blank" rel="noopener" href="https://addons.mozilla.org/zh-CN/firefox/addon/hackbar-free/?utm_source=addons.mozilla.org&amp;utm_medium=referral&amp;utm_content=search%5D%E5%8F%91%E9%80%81post%E8%AF%B7%E6%B1%82%EF%BC%8C%E5%A6%82%E5%9B%BE">https://addons.mozilla.org/zh-CN/firefox/addon/hackbar-free/?utm_source=addons.mozilla.org&amp;utm_medium=referral&amp;utm_content=search]发送post请求，如图</a></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhHz7j"><img src="https://s3.ax1x.com/2020/12/26/rhHz7j.md.png" alt="rhHz7j.md.png"></a></p>
+<h2 id="web5"><a href="#web5" class="headerlink" title="web5."></a>web5.</h2><p>内容：</p>
+<p><code>$num=$_GET[&#39;num&#39;]; if(!is_numeric($num)) &#123; echo $num; if($num==1) echo &#39;flag&#123;**********&#125;&#39;; &#125;</code></p>
+<ul>
+<li><em>is_numeric()</em> 函数用于检测变量是否为数字或数字字符串。</li>
+<li>题目要求num不能为数字但要为1</li>
+<li>因此url传参，<code>?num=1a</code>或者``?num=1%00`PHP漏洞截断[-&gt;大佬详解传送门&lt;-][<a target="_blank" rel="noopener" href="https://blog.csdn.net/changer_WE/article/details/85067139]">https://blog.csdn.net/changer_WE/article/details/85067139]</a></li>
+</ul>
+<hr>
+<h2 id="web6"><a href="#web6" class="headerlink" title="web6."></a>web6.</h2><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhbpAs"><img src="https://s3.ax1x.com/2020/12/26/rhbpAs.md.png" alt="rhbpAs.md.png"></a><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhb9Nn"><img src="https://s3.ax1x.com/2020/12/26/rhb9Nn.md.png" alt="rhb9Nn.md.png"></a>网页不断出现弹窗</p>
+<ul>
+<li>按F12后接F1进入settings，勾选<code>Disable JS</code>禁用js(douyin中经常作为跳过付费界面技巧讲解)</li>
+<li>有时不是很好用，用Firefox自带禁止恶意弹窗功能</li>
+<li>查看源码有一段url编码，利用工具解码或写一个html文件解码后得到flag</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhbChq"><img src="https://s3.ax1x.com/2020/12/26/rhbChq.png" alt="rhbChq.png"></a><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhbi90"><img src="https://s3.ax1x.com/2020/12/26/rhbi90.md.png" alt="rhbi90.md.png"></a></p>
+<hr>
+<h2 id="web7"><a href="#web7" class="headerlink" title="web7."></a>web7.</h2><ul>
+<li>网页不断刷新，当img src=“10.jpg”时，禁用js就可以看到flag，方法比较笨，运气好一次就中</li>
+<li>chrome中也可先禁用js，再多次刷新，直到img src=“10.jpg”时，copy the flag</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhbF3V"><img src="https://s3.ax1x.com/2020/12/26/rhbF3V.md.png" alt="rhbF3V.md.png"></a></p>
+<hr>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
 <p>[^特殊序列]: Unicode 编码</p>
  
       <!-- reward -->
@@ -200,7 +265,7 @@
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Misc/" rel="tag">Misc</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Range/" rel="tag">Range</a></li></ul>
 
     </footer>
   </div>

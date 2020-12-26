@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>BugKu靶场wp(持续更新中)</title>
+    <title>BugKu-wp(持续更新中)</title>
     <url>/2020/11/01/Bugku%E9%9D%B6%E5%9C%BAwp(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
-    <content><![CDATA[<h2 id="01"><a href="#01" class="headerlink" title="01."></a>01.</h2><ul>
-<li><p>题目为这是一张单纯的图片<a href="https://imgchr.com/i/B058hQ"><img src="https://s1.ax1x.com/2020/11/01/B058hQ.md.png" alt="B058hQ.md.png"></a></p>
+    <content><![CDATA[<h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="01"><a href="#01" class="headerlink" title="01."></a>01.</h2><ul>
+<li><p>题目为这是一张单纯的图片<a href="https://imgchr.com/i/B058hQ"><img src="https://s1.ax1x.com/2020/11/01/B058hQ.md.png" alt="B058hQ.md.png"></a><a id="more"></a></p>
 </li>
 <li><p>下载图片打开后找不出什么线索<a href="https://imgchr.com/i/B05xUS"><img src="https://s1.ax1x.com/2020/11/01/B05xUS.png" alt="B05xUS.png"></a></p>
 </li>
@@ -13,10 +13,7 @@
 </ul>
 <p><a href="https://imgchr.com/i/B053tg"><img src="https://s1.ax1x.com/2020/11/01/B053tg.md.png" alt="B053tg.md.png"></a></p>
 <ul>
-<li><p>拷贝到<a href="http://tool.chinaz.com/tools/unicode.aspx">在线转换器</a>,Unicode 转 ASCII得到flag</p>
-<a id="more"></a>
-
-</li>
+<li>拷贝到<a href="http://tool.chinaz.com/tools/unicode.aspx">在线转换器</a>,Unicode 转 ASCII得到flag</li>
 </ul>
 <hr>
 <h2 id="02"><a href="#02" class="headerlink" title="02."></a>02.</h2><ul>
@@ -36,10 +33,78 @@
 <hr>
 <h2 id="n"><a href="#n" class="headerlink" title="n."></a>n.</h2><p>······</p>
 <p>······</p>
+<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><ul>
+<li>bugku更新后,靶机启动一次3金币/3h，把握好每次机会🤣</li>
+</ul>
+<h2 id="web1"><a href="#web1" class="headerlink" title="web1."></a>web1.</h2><ul>
+<li><p>题目为连续穿梭的表情包，F12或右击检查元素</p>
+</li>
+<li><p><a href="https://imgchr.com/i/rhHq9P"><img src="https://s3.ax1x.com/2020/12/26/rhHq9P.png" alt="rhHq9P.png"></a>发现flag被注释到源码中，并且该网页不支持，直接查看源码</p>
+</li>
+</ul>
+<hr>
+<h2 id="web2"><a href="#web2" class="headerlink" title="web2."></a>web2.</h2><figure class="highlight sqf"><table><tr><td class="code"><pre><span class="line">描　　述: 输入验证码即可得到<span class="built_in">flag</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><a href="https://imgchr.com/i/rhHOc8"><img src="https://s3.ax1x.com/2020/12/26/rhHOc8.md.png" alt="rhHOc8.md.png"></a>简单的加法（竟然真是随机），尝试后发现只能输入一位数字</p>
+</li>
+<li><p>按F12，使用鼠标选中元素</p>
+</li>
+<li><p><a href="https://imgchr.com/i/rhHL1f"><img src="https://s3.ax1x.com/2020/12/26/rhHL1f.png" alt="rhHL1f.png"></a></p>
+</li>
+<li><p>得到<a href="https://imgchr.com/i/rhHXjS"><img src="https://s3.ax1x.com/2020/12/26/rhHXjS.md.png" alt="rhHXjS.md.png"></a></p>
+</li>
+<li><p>更改<code>maxlength=&quot;1&quot;</code>为<code>maxlength=&quot;3&quot;</code>或更大</p>
+</li>
+<li><p>再次输入验证码即可得到flag</p>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/rhHvng"><img src="https://s3.ax1x.com/2020/12/26/rhHvng.md.png" alt="rhHvng.md.png"></a></p>
+<h2 id="web3-（get）"><a href="#web3-（get）" class="headerlink" title="web3.（get）"></a>web3.（get）</h2><p>网页内容：</p>
+<p><code>$what=$_GET[&#39;what&#39;]; echo $what; if($what==&#39;flag&#39;) echo &#39;flag&#123;****&#125;&#39;;</code></p>
+<ul>
+<li><p>$_GET 传参时请求的参数是在URL中，直接在URL中赋值what变量，找到flag</p>
+</li>
+<li><p>url传参，<code>?what=flag</code>，打印即可</p>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/rhHxBQ"><img src="https://s3.ax1x.com/2020/12/26/rhHxBQ.md.png" alt="rhHxBQ.md.png"></a></p>
+<h2 id="web4-（post）"><a href="#web4-（post）" class="headerlink" title="web4.（post）"></a>web4.（post）</h2><p>网页内容：</p>
+<p><code>$what=$_POST[&#39;what&#39;];  echo $what;  if($what==&#39;flag&#39;)  echo &#39;flag&#123;****&#125;&#39;;</code></p>
+<p>这里利用Firefox插件[Hackbar][<a href="https://addons.mozilla.org/zh-CN/firefox/addon/hackbar-free/?utm_source=addons.mozilla.org&amp;utm_medium=referral&amp;utm_content=search%5D%E5%8F%91%E9%80%81post%E8%AF%B7%E6%B1%82%EF%BC%8C%E5%A6%82%E5%9B%BE">https://addons.mozilla.org/zh-CN/firefox/addon/hackbar-free/?utm_source=addons.mozilla.org&amp;utm_medium=referral&amp;utm_content=search]发送post请求，如图</a></p>
+<p><a href="https://imgchr.com/i/rhHz7j"><img src="https://s3.ax1x.com/2020/12/26/rhHz7j.md.png" alt="rhHz7j.md.png"></a></p>
+<h2 id="web5"><a href="#web5" class="headerlink" title="web5."></a>web5.</h2><p>内容：</p>
+<p><code>$num=$_GET[&#39;num&#39;]; if(!is_numeric($num)) &#123; echo $num; if($num==1) echo &#39;flag&#123;**********&#125;&#39;; &#125;</code></p>
+<ul>
+<li><em>is_numeric()</em> 函数用于检测变量是否为数字或数字字符串。</li>
+<li>题目要求num不能为数字但要为1</li>
+<li>因此url传参，<code>?num=1a</code>或者``?num=1%00`PHP漏洞截断[-&gt;大佬详解传送门&lt;-][<a href="https://blog.csdn.net/changer_WE/article/details/85067139]">https://blog.csdn.net/changer_WE/article/details/85067139]</a></li>
+</ul>
+<hr>
+<h2 id="web6"><a href="#web6" class="headerlink" title="web6."></a>web6.</h2><p><a href="https://imgchr.com/i/rhbpAs"><img src="https://s3.ax1x.com/2020/12/26/rhbpAs.md.png" alt="rhbpAs.md.png"></a><a href="https://imgchr.com/i/rhb9Nn"><img src="https://s3.ax1x.com/2020/12/26/rhb9Nn.md.png" alt="rhb9Nn.md.png"></a>网页不断出现弹窗</p>
+<ul>
+<li>按F12后接F1进入settings，勾选<code>Disable JS</code>禁用js(douyin中经常作为跳过付费界面技巧讲解)</li>
+<li>有时不是很好用，用Firefox自带禁止恶意弹窗功能</li>
+<li>查看源码有一段url编码，利用工具解码或写一个html文件解码后得到flag</li>
+</ul>
+<p><a href="https://imgchr.com/i/rhbChq"><img src="https://s3.ax1x.com/2020/12/26/rhbChq.png" alt="rhbChq.png"></a><a href="https://imgchr.com/i/rhbi90"><img src="https://s3.ax1x.com/2020/12/26/rhbi90.md.png" alt="rhbi90.md.png"></a></p>
+<hr>
+<h2 id="web7"><a href="#web7" class="headerlink" title="web7."></a>web7.</h2><ul>
+<li>网页不断刷新，当img src=“10.jpg”时，禁用js就可以看到flag，方法比较笨，运气好一次就中</li>
+<li>chrome中也可先禁用js，再多次刷新，直到img src=“10.jpg”时，copy the flag</li>
+</ul>
+<p><a href="https://imgchr.com/i/rhbF3V"><img src="https://s3.ax1x.com/2020/12/26/rhbF3V.md.png" alt="rhbF3V.md.png"></a></p>
+<hr>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
 <p>[^特殊序列]: Unicode 编码</p>
 ]]></content>
       <tags>
-        <tag>Misc</tag>
+        <tag>Range</tag>
       </tags>
   </entry>
   <entry>
@@ -282,10 +347,10 @@
 <h2 id="5-top"><a href="#5-top" class="headerlink" title="5.#top"></a>5.#<code>top</code></h2><ul>
 <li>查看进程占用资源(动态显示)，按q退出</li>
 </ul>
-<p>m4</p>
-<p>m5</p>
+<p><a href="https://imgchr.com/i/rhHR1K"><img src="https://s3.ax1x.com/2020/12/26/rhHR1K.md.png" alt="rhHR1K.md.png"></a></p>
+<p><a href="https://imgchr.com/i/rhHfXD"><img src="https://s3.ax1x.com/2020/12/26/rhHfXD.md.png" alt="rhHfXD.md.png"></a></p>
 <p>三种内存释义</p>
-<p>m6</p>
+<p><a href="https://imgchr.com/i/rhH4ne"><img src="https://s3.ax1x.com/2020/12/26/rhH4ne.md.png" alt="rhH4ne.md.png"></a></p>
 <ul>
 <li><p>top运行中按下<code>M</code>(MEM)结果按内存降序排列</p>
 <p>​                          <code>P</code>结果按CPU使用率降序排列</p>
@@ -298,7 +363,7 @@
 <figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">du- <span class="keyword">sh</span> /路径</span><br></pre></td></tr></table></figure>
 
 <p> -s  : summaries,只显示汇总的大小<br> -h : 表示以较高可读性的形式显示</p>
-<p>m7</p>
+<p><a href="https://imgchr.com/i/rhH2p6"><img src="https://s3.ax1x.com/2020/12/26/rhH2p6.png" alt="rhH2p6.png"></a></p>
 <h2 id="7-find"><a href="#7-find" class="headerlink" title="7.#find"></a>7.#<code>find</code></h2><ul>
 <li>用于查找文件(参数55个之多)</li>
 </ul>
@@ -850,6 +915,72 @@
 ]]></content>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BUUCTF wp(持续更新中)</title>
+    <url>/2020/12/25/BUUCTF-wp-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/</url>
+    <content><![CDATA[<h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="1-基础破解"><a href="#1-基础破解" class="headerlink" title="1. 基础破解"></a>1. 基础破解</h2><p><a href="https://imgchr.com/i/rhH7tI"><img src="https://s3.ax1x.com/2020/12/26/rhH7tI.md.png" alt="rhH7tI.md.png" style="zoom: 80%;" /></a></p>
+<ul>
+<li>题目中给出提示rar密码为<strong>四位数字</strong>(2563)，故可使用4位数字字典暴力破解，参考<a href="%E6%9D%A5%E8%87%AA%5B%E5%90%BE%E7%88%B1%E7%A0%B4%E8%A7%A3%5D%5Bhttps://www.52pojie.cn/thread-932984-1-1.html%5D">^软件</a><strong>链接: <a href="https://pan.baidu.com/s/14JJYOXIUTaZIpfx38KUp9w">https://pan.baidu.com/s/14JJYOXIUTaZIpfx38KUp9w</a> 提取码: by2s 复制这段内容后打开百度网盘手机App，操作更方便哦</strong></li>
+</ul>
+<p>打开后为一个txt文件，包含一个Base64码</p>
+<p><a href="https://imgchr.com/i/rhHTAA"><img src="https://s3.ax1x.com/2020/12/26/rhHTAA.md.png" alt="rhHTAA.md.png"></a></p>
+<p>解码后得到flag</p>
+<a id="more"></a>
+
+<hr>
+<h2 id="2-zip伪加密"><a href="#2-zip伪加密" class="headerlink" title="2. zip伪加密"></a>2. zip伪加密</h2><ul>
+<li><p><a href="https://imgchr.com/i/rhHHht"><img src="https://s3.ax1x.com/2020/12/26/rhHHht.md.png" alt="rhHHht.md.png"></a>首先看提示，zip伪加密，暴力破解是没用的，可以考虑使用winRAR修复人（基本没用😢）</p>
+</li>
+<li><p>主要用winhex或010 Editor修改文件头的加密标志位</p>
+</li>
+<li><ul>
+<li><pre><code>一个zip文件有三个部分组成：
+
+压缩源文件数据区+压缩源文件目录区+压缩源文件目录结束标志 （详解链接）
+
+这是三个头标记，主要看第二个
+
+压缩源文件数据区：50 4B 03 04：这是头文件标记
+
+压缩源文件目录区：
+
+50 4B 01 02：目录中文件文件头标记
+
+3F 00：压缩使用的 pkware
+
+版本 
+
+14 00：解压文件所需 pkware 版本 
+
+00 00：全局方式位标记（有无加密，这个更改这里进行伪加密，改为09 00打开就会提示有密码了）
+
+压缩源文件目录结束标志 ：50
+
+4B 05 06：目录结束标记        </code></pre>
+<p>来源<a href="https://www.jianshu.com/p/05c81a2b4dd9">https://www.jianshu.com/p/05c81a2b4dd9</a></p>
+</li>
+</ul>
+</li>
+<li><p><code>00 00：全局方式位标记（有无加密，这个更改这里进行伪加密，改为09 00打开就会提示有密码了</code></p>
+<p><a href="https://imgchr.com/i/rhHI7d"><img src="https://s3.ax1x.com/2020/12/26/rhHI7d.md.png" alt="rhHI7d.md.png"></a></p>
+</li>
+<li><p>再次打开9即可得到flag</p>
+</li>
+</ul>
+<hr>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<hr>
+<hr>
+<h1 id="Web"><a href="#Web" class="headerlink" title="//Web"></a>//Web</h1><h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2>]]></content>
+      <tags>
+        <tag>Range</tag>
       </tags>
   </entry>
 </search>
