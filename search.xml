@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>BUUCTF wp(持续更新中)</title>
+    <url>/2020/12/25/BUUCTF-wp-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/</url>
+    <content><![CDATA[<h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="1-基础破解"><a href="#1-基础破解" class="headerlink" title="1. 基础破解"></a>1. 基础破解</h2><p><a href="https://imgchr.com/i/rhH7tI"><img src="https://s3.ax1x.com/2020/12/26/rhH7tI.md.png" alt="rhH7tI.md.png" style="zoom: 80%;" /></a></p>
+<ul>
+<li>题目中给出提示rar密码为<strong>四位数字</strong>(2563)，故可使用4位数字字典暴力破解，参考<a href="%E6%9D%A5%E8%87%AA%5B%E5%90%BE%E7%88%B1%E7%A0%B4%E8%A7%A3%5D%5Bhttps://www.52pojie.cn/thread-932984-1-1.html%5D">^软件</a><strong>链接: <a href="https://pan.baidu.com/s/14JJYOXIUTaZIpfx38KUp9w">https://pan.baidu.com/s/14JJYOXIUTaZIpfx38KUp9w</a> 提取码: by2s 复制这段内容后打开百度网盘手机App，操作更方便哦</strong></li>
+</ul>
+<p>打开后为一个txt文件，包含一个Base64码</p>
+<p><a href="https://imgchr.com/i/rhHTAA"><img src="https://s3.ax1x.com/2020/12/26/rhHTAA.md.png" alt="rhHTAA.md.png"></a></p>
+<p>解码后得到flag</p>
+<a id="more"></a>
+
+<hr>
+<h2 id="2-zip伪加密"><a href="#2-zip伪加密" class="headerlink" title="2. zip伪加密"></a>2. zip伪加密</h2><ul>
+<li><p><a href="https://imgchr.com/i/rhHHht"><img src="https://s3.ax1x.com/2020/12/26/rhHHht.md.png" alt="rhHHht.md.png"></a>首先看提示，zip伪加密，暴力破解是没用的，可以考虑使用winRAR修复人（基本没用😢）</p>
+</li>
+<li><p>主要用winhex或010 Editor修改文件头的加密标志位</p>
+</li>
+<li><ul>
+<li><pre><code>一个zip文件有三个部分组成：
+
+压缩源文件数据区+压缩源文件目录区+压缩源文件目录结束标志 （详解链接）
+
+这是三个头标记，主要看第二个
+
+压缩源文件数据区：50 4B 03 04：这是头文件标记
+
+压缩源文件目录区：
+
+50 4B 01 02：目录中文件文件头标记
+
+3F 00：压缩使用的 pkware
+
+版本 
+
+14 00：解压文件所需 pkware 版本 
+
+00 00：全局方式位标记（有无加密，这个更改这里进行伪加密，改为09 00打开就会提示有密码了）
+
+压缩源文件目录结束标志 ：50
+
+4B 05 06：目录结束标记        </code></pre>
+<p>来源<a href="https://www.jianshu.com/p/05c81a2b4dd9">https://www.jianshu.com/p/05c81a2b4dd9</a></p>
+</li>
+</ul>
+</li>
+<li><p><code>00 00：全局方式位标记（有无加密，这个更改这里进行伪加密，改为09 00打开就会提示有密码了</code></p>
+<p><a href="https://imgchr.com/i/rhHI7d"><img src="https://s3.ax1x.com/2020/12/26/rhHI7d.md.png" alt="rhHI7d.md.png"></a></p>
+</li>
+<li><p>再次打开9即可得到flag</p>
+</li>
+</ul>
+<hr>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<hr>
+<hr>
+<h1 id="Web"><a href="#Web" class="headerlink" title="//Web"></a>//Web</h1><h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2>]]></content>
+      <tags>
+        <tag>Range</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux安装</title>
     <url>/2020/10/23/Linux%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><ul>
@@ -566,72 +632,6 @@
 ]]></content>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>BUUCTF wp(持续更新中)</title>
-    <url>/2020/12/25/BUUCTF-wp-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/</url>
-    <content><![CDATA[<h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="1-基础破解"><a href="#1-基础破解" class="headerlink" title="1. 基础破解"></a>1. 基础破解</h2><p><a href="https://imgchr.com/i/rhH7tI"><img src="https://s3.ax1x.com/2020/12/26/rhH7tI.md.png" alt="rhH7tI.md.png" style="zoom: 80%;" /></a></p>
-<ul>
-<li>题目中给出提示rar密码为<strong>四位数字</strong>(2563)，故可使用4位数字字典暴力破解，参考<a href="%E6%9D%A5%E8%87%AA%5B%E5%90%BE%E7%88%B1%E7%A0%B4%E8%A7%A3%5D%5Bhttps://www.52pojie.cn/thread-932984-1-1.html%5D">^软件</a><strong>链接: <a href="https://pan.baidu.com/s/14JJYOXIUTaZIpfx38KUp9w">https://pan.baidu.com/s/14JJYOXIUTaZIpfx38KUp9w</a> 提取码: by2s 复制这段内容后打开百度网盘手机App，操作更方便哦</strong></li>
-</ul>
-<p>打开后为一个txt文件，包含一个Base64码</p>
-<p><a href="https://imgchr.com/i/rhHTAA"><img src="https://s3.ax1x.com/2020/12/26/rhHTAA.md.png" alt="rhHTAA.md.png"></a></p>
-<p>解码后得到flag</p>
-<a id="more"></a>
-
-<hr>
-<h2 id="2-zip伪加密"><a href="#2-zip伪加密" class="headerlink" title="2. zip伪加密"></a>2. zip伪加密</h2><ul>
-<li><p><a href="https://imgchr.com/i/rhHHht"><img src="https://s3.ax1x.com/2020/12/26/rhHHht.md.png" alt="rhHHht.md.png"></a>首先看提示，zip伪加密，暴力破解是没用的，可以考虑使用winRAR修复人（基本没用😢）</p>
-</li>
-<li><p>主要用winhex或010 Editor修改文件头的加密标志位</p>
-</li>
-<li><ul>
-<li><pre><code>一个zip文件有三个部分组成：
-
-压缩源文件数据区+压缩源文件目录区+压缩源文件目录结束标志 （详解链接）
-
-这是三个头标记，主要看第二个
-
-压缩源文件数据区：50 4B 03 04：这是头文件标记
-
-压缩源文件目录区：
-
-50 4B 01 02：目录中文件文件头标记
-
-3F 00：压缩使用的 pkware
-
-版本 
-
-14 00：解压文件所需 pkware 版本 
-
-00 00：全局方式位标记（有无加密，这个更改这里进行伪加密，改为09 00打开就会提示有密码了）
-
-压缩源文件目录结束标志 ：50
-
-4B 05 06：目录结束标记        </code></pre>
-<p>来源<a href="https://www.jianshu.com/p/05c81a2b4dd9">https://www.jianshu.com/p/05c81a2b4dd9</a></p>
-</li>
-</ul>
-</li>
-<li><p><code>00 00：全局方式位标记（有无加密，这个更改这里进行伪加密，改为09 00打开就会提示有密码了</code></p>
-<p><a href="https://imgchr.com/i/rhHI7d"><img src="https://s3.ax1x.com/2020/12/26/rhHI7d.md.png" alt="rhHI7d.md.png"></a></p>
-</li>
-<li><p>再次打开9即可得到flag</p>
-</li>
-</ul>
-<hr>
-<p>​                                                                            <strong>·</strong></p>
-<p>​                                                                            <strong>·</strong></p>
-<p>​                                                                            <strong>·</strong></p>
-<p>​                                                                            <strong>·</strong></p>
-<p>​                                                                            <strong>·</strong></p>
-<p>​                                                                            <strong>·</strong></p>
-<hr>
-<hr>
-<h1 id="Web"><a href="#Web" class="headerlink" title="//Web"></a>//Web</h1><h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2>]]></content>
-      <tags>
-        <tag>Range</tag>
       </tags>
   </entry>
   <entry>
