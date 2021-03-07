@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/waf%20web%E5%BA%94%E7%94%A8%E9%98%B2%E7%81%AB%E5%A2%99%20(1).png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/waf%20web%E5%BA%94%E7%94%A8%E9%98%B2%E7%81%AB%E5%A2%99%20(1).png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/waf%20web%E5%BA%94%E7%94%A8%E9%98%B2%E7%81%AB%E5%A2%99%20(1).png">
+  <link rel="mask-icon" href="/images/waf%20web%E5%BA%94%E7%94%A8%E9%98%B2%E7%81%AB%E5%A2%99%20(1).svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-circle.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kerosene_w.gitee.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="基础指令1.#ls12345ls #列出当前工作目录下的所有文件&#x2F;文件夹的名称ls 路径 #列出指定路径下的所有文件&#x2F;文件夹的名称ls -l 路径 #以详细列表形式展示指定路径下文件&#x2F;文件夹ls -la 路径 #&quot;-l&quot;显示所有文件&#x2F;文件夹,包含隐藏文件(.xxx)ls -lh 路径 #列出指定路径下文件&#x2F;文件夹，以可读性较高的文件大小单位显示   相对路径：当前工作路径 #”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux指令">
+<meta property="og:url" content="http://kerosene_w.gitee.io/wangwenxu1118.github.io/2020/10/28/Linux%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="9_天羿">
+<meta property="og:description" content="基础指令1.#ls12345ls #列出当前工作目录下的所有文件&#x2F;文件夹的名称ls 路径 #列出指定路径下的所有文件&#x2F;文件夹的名称ls -l 路径 #以详细列表形式展示指定路径下文件&#x2F;文件夹ls -la 路径 #&quot;-l&quot;显示所有文件&#x2F;文件夹,包含隐藏文件(.xxx)ls -lh 路径 #列出指定路径下文件&#x2F;文件夹，以可读性较高的文件大小单位显示   相对路径：当前工作路径 #”">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/BafxZ4.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/BafjLF.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/BafXsU.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/Bah9iR.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/BahCJ1.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/BahPRx.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/Bahiz6.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/BahkQK.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/BahAsO.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/BahELD.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/BahZee.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/BahedH.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/Bahmod.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/BahuFA.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/BahMWt.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/BahlSP.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/Bah1Qf.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/31/Bah8OS.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/20/DMHqij.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/20/DMH7dg.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/20/DMHHoQ.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/20/DMHTeS.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/20/DMHIL8.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/20/DMHLJs.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/20/DMHOWn.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/20/DMHXzq.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/20/DMHxyV.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/20/DMHvQ0.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/20/DMHzLT.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/20/DMbpeU.md.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/20/DMbiFJ.md.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/26/rhHR1K.md.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/26/rhHfXD.md.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/26/rhH4ne.md.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/26/rhH2p6.png">
+<meta property="article:published_time" content="2020-10-27T21:54:11.000Z">
+<meta property="article:modified_time" content="2020-12-26T09:03:45.859Z">
+<meta property="article:author" content="kerosene.W">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/10/31/BafxZ4.png">
+
+<link rel="canonical" href="http://kerosene_w.gitee.io/wangwenxu1118.github.io/2020/10/28/Linux%E5%91%BD%E4%BB%A4/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Linux指令 | 9_天羿</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="9_天羿" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">9_天羿</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">追求源于热爱</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">7</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/WangWenxu1118" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://kerosene_w.gitee.io/wangwenxu1118.github.io/2020/10/28/Linux%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/mmexport1602423440735.jpg">
+      <meta itemprop="name" content="kerosene.W">
+      <meta itemprop="description" content="我们努力奔跑，只为追上那个曾被寄予厚望的自己。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="9_天羿">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux指令
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-28 05:54:11" itemprop="dateCreated datePublished" datetime="2020-10-28T05:54:11+08:00">2020-10-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-26 17:03:45" itemprop="dateModified" datetime="2020-12-26T17:03:45+08:00">2020-12-26</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/10/28/Linux%E5%91%BD%E4%BB%A4/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/28/Linux%E5%91%BD%E4%BB%A4/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.1k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="基础指令"><a href="#基础指令" class="headerlink" title="基础指令"></a>基础指令</h1><h2 id="1-ls"><a href="#1-ls" class="headerlink" title="1.#ls"></a>1.<code>#ls</code></h2><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ls</span> <span class="comment">#列出当前工作目录下的所有文件/文件夹的名称</span></span><br><span class="line"><span class="keyword">ls</span> 路径 <span class="comment">#列出指定路径下的所有文件/文件夹的名称</span></span><br><span class="line"><span class="keyword">ls</span> -l 路径 <span class="comment">#以详细列表形式展示指定路径下文件/文件夹</span></span><br><span class="line"><span class="keyword">ls</span> -la 路径 <span class="comment">#&quot;-l&quot;显示所有文件/文件夹,包含隐藏文件(.xxx)</span></span><br><span class="line"><span class="keyword">ls</span> -lh 路径 <span class="comment">#列出指定路径下文件/文件夹，以可读性较高的文件大小单位显示</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>相对路径：当前工作路径 #”./“:当前目录下    “../“:上一级目录下</li>
+<li>绝对路径：直接从根路径”/“开始寻找相应路径</li>
+<li>ls列出结果颜色说明:蓝色表示文件夹/黑色表示文件/绿色表示拥有所有权限</li>
+</ul>
+<a id="more"></a>
+
+<p><strong><code>-l</code></strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BafxZ4"><img src="https://s1.ax1x.com/2020/10/31/BafxZ4.png" alt="BafxZ4.png"></a></p>
+<p><strong><code>-la</code></strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BafjLF"><img src="https://s1.ax1x.com/2020/10/31/BafjLF.png" alt="BafjLF.png"></a></p>
+<ul>
+<li>上述列表第一列指文档类型，”<code>-</code>“表示文件；”<code>d</code>“表示文件夹</li>
+<li>隐藏文件格式为.xxx</li>
+</ul>
+<p><strong><code>-l(a)h</code></strong></p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BafXsU"><img src="https://s1.ax1x.com/2020/10/31/BafXsU.png" alt="BafXsU.png"></a> </p>
+<p>初始大小4.0 k</p>
+</li>
+</ul>
+<hr>
+<h2 id="2-pwd"><a href="#2-pwd" class="headerlink" title="2.#pwd"></a>2.<code>#pwd</code></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pwd</span> <span class="comment">#打印当前目录</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><p>(print working directory)打印当前工作目录</p>
+<p>图5</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-cd"><a href="#3-cd" class="headerlink" title="3.#cd"></a>3.<code>#cd</code></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span>或者<span class="built_in">cd</span> ~ <span class="comment">#切换至当前用户家目录</span></span><br><span class="line"><span class="built_in">cd</span> 路径 <span class="comment">#切换至路径目录</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(change directory)改变目录</li>
+</ul>
+<p><code>cd/cd ~</code></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/Bah9iR"><img src="https://s1.ax1x.com/2020/10/31/Bah9iR.png" alt="Bah9iR.png"></a></p>
+<p><code>cd 路径</code></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BahCJ1"><img src="https://s1.ax1x.com/2020/10/31/BahCJ1.png" alt="BahCJ1.png"></a></p>
+<hr>
+<h2 id="4-mkdir"><a href="#4-mkdir" class="headerlink" title="4.#mkdir"></a>4.<code>#mkdir</code></h2><figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mkdir</span> 路径 <span class="meta">#路径可以为新文件夹名称，也可包含新文件夹的完整路径</span></span><br><span class="line"><span class="keyword">mkdir</span> -p 路径 <span class="meta">#一次性创建多层新文件夹</span></span><br><span class="line"><span class="keyword">mkdir</span> 路径<span class="number">1</span> 路径<span class="number">2</span> 路径<span class="number">3</span> <span class="meta">#一次性创建多个新文件夹</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>(make directory)创建目录</p>
+</li>
+<li><ul>
+<li>建成功无提示,可用<code>ls</code>查看</li>
+</ul>
+</li>
+</ul>
+<p><code>mkdir  路径</code></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BahPRx"><img src="https://s1.ax1x.com/2020/10/31/BahPRx.png" alt="BahPRx.png"></a><code>mkdir -p 路径</code></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/Bahiz6"><img src="https://s1.ax1x.com/2020/10/31/Bahiz6.png" alt="Bahiz6.png"></a></p>
+<p><code>mkdir 路径1 路径2 路径3</code></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BahkQK"><img src="https://s1.ax1x.com/2020/10/31/BahkQK.png" alt="BahkQK.png"></a></p>
+<hr>
+<h2 id="5-touch"><a href="#5-touch" class="headerlink" title="5.#touch"></a>5.<code>#touch</code></h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">touch</span> 文件路径 #创建文件</span><br><span class="line"><span class="section">touch</span> 路径<span class="number">1</span> 路径<span class="number">2</span> 路径<span class="number">3</span> #一次性创建多个文件(同mkdir)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建文件</li>
+</ul>
+<p><code>touch 路径1 路径2 路径3</code></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BahAsO"><img src="https://s1.ax1x.com/2020/10/31/BahAsO.png" alt="BahAsO.png"></a></p>
+<hr>
+<h2 id="6-cp"><a href="#6-cp" class="headerlink" title="6.#cp"></a>6.<code>#cp</code></h2><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cp</span> 被复制文档路径 目标路径 <span class="meta">#复制过程可对新文档重命名</span></span><br><span class="line"><span class="keyword">cp</span> -r 被复制文档路径 目标路径 <span class="meta">#递归复制(赋值文件夹时使用,复制整个文件夹)，否则文件夹将被略过</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(copy复制文件/文件夹)</li>
+</ul>
+<p><code>cp 被复制文档路径 目标路径</code></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BahELD"><img src="https://s1.ax1x.com/2020/10/31/BahELD.png" alt="BahELD.png"></a></p>
+<p><code>cp -r 被复制文档路径 目标路径</code></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BahZee"><img src="https://s1.ax1x.com/2020/10/31/BahZee.png" alt="BahZee.png"></a></p>
+<hr>
+<h2 id="7-mv"><a href="#7-mv" class="headerlink" title="7.#mv"></a>7.<code>#mv</code></h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> 待移动文档路径 目标路径 <span class="comment">#移动文档到新位置  移动文件夹同，无需-r</span></span><br><span class="line"><span class="built_in">mv</span> 原文件路径 重命名后路径（原地移动） <span class="comment">#重命名</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(move移动/剪切)</li>
+</ul>
+<p><code>mv 待移动文档路径 目标路径</code></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BahedH"><img src="https://s1.ax1x.com/2020/10/31/BahedH.png" alt="BahedH.png"></a></p>
+<hr>
+<h2 id="8-rm"><a href="#8-rm" class="headerlink" title="8.#rm"></a>8.<code>#rm</code></h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> 需移除文档路径 <span class="comment">#移除/删除文档 提示是否删除</span></span><br><span class="line"><span class="built_in">rm</span> <span class="literal">-rf</span> 需移除文档路径 <span class="comment">#(force强制)无提示 -r同指递归</span></span><br><span class="line"><span class="built_in">rm</span> <span class="literal">-rf</span> 路径<span class="number">1</span> 路径<span class="number">2</span> <span class="comment">#同时删除多个文档    同类名*（通配符，可表示任意字符，一次性删除相同开头的名称）</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(remove,移除、删除)</li>
+</ul>
+<p><code>rm 需移除文件路径</code></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/Bahmod"><img src="https://s1.ax1x.com/2020/10/31/Bahmod.png" alt="Bahmod.png"></a></p>
+<p><code>rm -rf 需移除文档路径</code></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BahuFA"><img src="https://s1.ax1x.com/2020/10/31/BahuFA.png" alt="BahuFA.png"></a></p>
+<hr>
+<h2 id="9-vim"><a href="#9-vim" class="headerlink" title="9.#vim"></a>9.<code>#vim</code></h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">vim</span> 文件路径 <span class="comment">#打开一个文件（可以是不存在的文件）</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>文本编辑器</p>
+</li>
+<li><p>退出文件：按shift+英文冒号<code>:</code>+<code>q</code>+<code>Enter</code></p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BahMWt"><img src="https://s1.ax1x.com/2020/10/31/BahMWt.png" alt="BahMWt.png"></a><a target="_blank" rel="noopener" href="https://imgchr.com/i/BahlSP"><img src="https://s1.ax1x.com/2020/10/31/BahlSP.png" alt="BahlSP.png"></a></p>
+<hr>
+<h2 id="10-gt-gt-gt"><a href="#10-gt-gt-gt" class="headerlink" title="10.#&gt;/&gt;&gt;"></a>10.<code>#&gt;/&gt;&gt;</code></h2><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">指令 &gt;/&gt;&gt; 保存到文件路径 <span class="meta">#输出重定向 </span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>&gt;</code>:覆盖输出，覆盖原文内容</li>
+<li><code>&gt;&gt;</code>:追加输出，在原始内容末尾继续添加</li>
+</ul>
+<ul>
+<li>保存命令执行结果到文件，文件可以不存在，不存在则新建</li>
+</ul>
+<p><code>&gt;/&gt;&gt;</code></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/Bah1Qf"><img src="https://s1.ax1x.com/2020/10/31/Bah1Qf.png" alt="Bah1Qf.png"></a><a target="_blank" rel="noopener" href="https://imgchr.com/i/Bah8OS"><img src="https://s1.ax1x.com/2020/10/31/Bah8OS.png" alt="Bah8OS.png"></a></p>
+<h2 id="11-cat"><a href="#11-cat" class="headerlink" title="11.#cat"></a>11.<code>#cat</code></h2><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat 文件路径</span><br><span class="line">cat 待合并的文件<span class="number">1</span> 待合并的文件<span class="number">2.</span>.. &gt;合并后文件路径</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>直接打开一个文件(无需退出)</li>
+<li>对文件进行合并【配合输出重定向使用】,源文件不会删除</li>
+</ul>
+<p>····································································································································································</p>
+<ul>
+<li>选项均可连用，例：-la、 -rf 、-lah</li>
+</ul>
+<h1 id="进阶指令"><a href="#进阶指令" class="headerlink" title="进阶指令"></a>进阶指令</h1><h2 id="1-df"><a href="#1-df" class="headerlink" title="1.#df"></a>1.<code>#df</code></h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">df</span> -h <span class="comment">#以较高可读性查看</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看磁盘空间</li>
+</ul>
+<p><code>df -h</code></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/DMHqij"><img src="https://s3.ax1x.com/2020/11/20/DMHqij.png" alt="DMHqij.png"></a></p>
+<h2 id="2-free"><a href="#2-free" class="headerlink" title="2.#free"></a>2.<code>#free</code></h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">free</span> -m <span class="comment">#以MB为单位进行查看</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看内存使用情况</li>
+</ul>
+<p><code>free -n</code></p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/DMH7dg"><img src="https://s3.ax1x.com/2020/11/20/DMH7dg.png" alt="DMH7dg.png"></a>剩余真是可用为available</p>
+</li>
+<li><p>swap用于临时内存，当系统真是内存不够用时可以临时使用磁盘空间来充当内存</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-head"><a href="#3-head" class="headerlink" title="3.#head"></a>3.<code>#head</code></h2><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head -<span class="built_in">n</span> 文件路径 #查看一个文件的前<span class="built_in">n</span>行，默认<span class="number">10</span>行 [<span class="built_in">n</span>表示数字]</span><br></pre></td></tr></table></figure>
+
+<h2 id=""><a href="#" class="headerlink" title=""></a><a target="_blank" rel="noopener" href="https://imgchr.com/i/DMHHoQ"><img src="https://s3.ax1x.com/2020/11/20/DMHHoQ.png" alt="DMHHoQ.png"></a></h2><h2 id="4-tail"><a href="#4-tail" class="headerlink" title="4.#tail"></a>4.<code>#tail</code></h2><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tail -<span class="built_in">n</span> 文件路径 #查看一个文件的末<span class="built_in">n</span>行，默认<span class="number">10</span>行 [<span class="built_in">n</span>表示数字]</span><br><span class="line">tail -f 文件路径 #查看一个文件的动态变化，配合输出重定向，按q键退出</span><br></pre></td></tr></table></figure>
+
+<h2 id="-1"><a href="#-1" class="headerlink" title=""></a><a target="_blank" rel="noopener" href="https://imgchr.com/i/DMHTeS"><img src="https://s3.ax1x.com/2020/11/20/DMHTeS.png" alt="DMHTeS.png"></a></h2><h2 id="5-less"><a href="#5-less" class="headerlink" title="5.#less"></a>5.<code>#less</code></h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">less</span> 文件路径 <span class="comment">#，查看文件,以较少内容输出，配合辅助功能键(数字+回车,空格翻页，上下键或回车换行)查看更多，q退出</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-wc"><a href="#6-wc" class="headerlink" title="6.#wc"></a>6.<code>#wc</code></h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wc -<span class="keyword">lwcm </span>文件路径 <span class="comment">#统计文件信息(-l行数，-w单词数，-c字节数,-m字符数)</span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/DMHIL8"><img src="https://s3.ax1x.com/2020/11/20/DMHIL8.png" alt="DMHIL8.png"></a></p>
+<hr>
+<h2 id="7-date"><a href="#7-date" class="headerlink" title="7.#date"></a>7.<code>#date</code></h2><ul>
+<li>获取当前时间</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">date</span> #Tue Nov <span class="number">10</span> <span class="number">00</span>:<span class="number">02</span>:<span class="number">57</span> CST <span class="number">2020</span> 显示时间CST(当地时间) </span><br><span class="line"><span class="attribute">date</span> +%F #<span class="number">2020</span>-<span class="number">11</span>-<span class="number">10</span>(等价于#date <span class="string">&quot;%Y-%m-%d&quot;</span>)</span><br><span class="line"><span class="attribute">date</span> <span class="string">&quot;+%F %T&quot;</span> #<span class="number">2020</span>-<span class="number">11</span>-<span class="number">10</span> <span class="number">00</span>:<span class="number">02</span>:<span class="number">57</span>(等价于#date <span class="string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>)     </span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/DMHLJs"><img src="https://s3.ax1x.com/2020/11/20/DMHLJs.png" alt="DMHLJs.png"></a></p>
+<ul>
+<li>获取之前或之后时间</li>
+</ul>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">date -d <span class="string">&quot;-1year&quot;</span> <span class="string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>一年前时间</span><br><span class="line">date -d <span class="string">&quot;+1year&quot;</span> <span class="string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>一年后时间</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/DMHOWn"><img src="https://s3.ax1x.com/2020/11/20/DMHOWn.png" alt="DMHOWn.png"></a></p>
+<ul>
+<li><p>单位的可选值：day、month、year无需考虑复数</p>
+<ul>
+<li>%m、%d、%H、%M、%S均带前导0</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="8-cal"><a href="#8-cal" class="headerlink" title="8.#cal"></a>8.#<code>cal</code></h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cal <span class="comment">#直接输出当前月份日历(等价于#cal -1)</span></span><br><span class="line">cal -<span class="number">3</span> <span class="comment">#上月+本月+下月</span></span><br><span class="line">cal -y2020 <span class="comment">#输出某年日历</span></span><br><span class="line">*cal -s<span class="regexp">/-m #周日为第一天/</span>周一为第一天</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>操作日历</p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/DMHXzq"><img src="https://s3.ax1x.com/2020/11/20/DMHXzq.png" alt="DMHXzq.png" style="zoom:80%;" /></a><a target="_blank" rel="noopener" href="https://imgchr.com/i/DMHxyV"><img src="https://s3.ax1x.com/2020/11/20/DMHxyV.png" alt="DMHxyV.png" style="zoom:80%;" /></a></p>
+</li>
+</ul>
+<hr>
+<h2 id="9-clear-ctrl-L"><a href="#9-clear-ctrl-L" class="headerlink" title="9.#clear/ctrl + L"></a>9.#<code>clear/ctrl + L</code></h2><figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">clear</span></span><br><span class="line"><span class="variable">ctrl</span>+<span class="function"><span class="title">L</span>(快捷键)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>清除终端中已经存在的命令和结果</li>
+<li>并非清除信息，而是隐藏至上方，可滚动查看(不同于Windows中<code>cls</code>清屏)</li>
+</ul>
+<hr>
+<h2 id="10-管道"><a href="#10-管道" class="headerlink" title="10.管道"></a>10.管道</h2><ul>
+<li><p>管道符：<code>|</code></p>
+</li>
+<li><p>用于”过滤”，”特殊”，”扩展处理”,不能单独使用，配合其他命令，起辅助作用</p>
+</li>
+</ul>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">命令* | grep 过滤内容 <span class="comment">#过滤：所配合的命令必须有输出来作为管道的输入</span></span><br><span class="line"><span class="keyword">ls</span> |wc -l <span class="comment">#统计文档总个数(扩展处理)</span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/DMHvQ0"><img src="https://s3.ax1x.com/2020/11/20/DMHvQ0.png" alt="DMHvQ0.png"></a></p>
+<hr>
+<h1 id="高级指令"><a href="#高级指令" class="headerlink" title="高级指令"></a>高级指令</h1><h2 id="1-hostname"><a href="#1-hostname" class="headerlink" title="1.#hostname"></a>1.#<code>hostname</code></h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hostname</span> <span class="comment">#输出主机名</span></span><br><span class="line">hostname -f <span class="comment">#输出当前主机名中的FQDN(全限定域名)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>操作服务器的主机名</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/DMHzLT"><img src="https://s3.ax1x.com/2020/11/20/DMHzLT.png" alt="DMHzLT.png"></a></p>
+<h2 id="2-id"><a href="#2-id" class="headerlink" title="2.#id"></a>2.#<code>id</code></h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">id</span></span><br><span class="line"><span class="built_in">id</span> 用户名 <span class="comment">#指定用户</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看用户基本信息(用户id、用户组id、附加组id)，不指定默认当前用户</li>
+</ul>
+<hr>
+<h2 id="3-whoami"><a href="#3-whoami" class="headerlink" title="3.#whoami"></a>3.#<code>whoami</code></h2><ul>
+<li>“我是谁?”显示当前登录的用户名，一般用于shell脚本</li>
+</ul>
+<hr>
+<h2 id="4-ps-ef"><a href="#4-ps-ef" class="headerlink" title="4.#ps -ef"></a>4.#<code>ps -ef</code></h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef<span class="regexp">/-e/</span>-f</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看服务器进程信息</li>
+<li><code>-e</code>列出全部进程</li>
+<li><code>-f</code>列出全部的列(显示全字段)</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/DMbpeU"><img src="https://s3.ax1x.com/2020/11/20/DMbpeU.md.png" alt="DMbpeU.md.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/DMbiFJ"><img src="https://s3.ax1x.com/2020/11/20/DMbiFJ.md.png" alt="DMbiFJ.md.png"></a></p>
+<ul>
+<li>常配合过滤使用,搜索结果为两个才是有在运行的目标进程</li>
+</ul>
+<p><code>ps -ef|grep 进行名称</code></p>
+<hr>
+<h2 id="5-top"><a href="#5-top" class="headerlink" title="5.#top"></a>5.#<code>top</code></h2><ul>
+<li>查看进程占用资源(动态显示)，按q退出</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhHR1K"><img src="https://s3.ax1x.com/2020/12/26/rhHR1K.md.png" alt="rhHR1K.md.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhHfXD"><img src="https://s3.ax1x.com/2020/12/26/rhHfXD.md.png" alt="rhHfXD.md.png"></a></p>
+<p>三种内存释义</p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhH4ne"><img src="https://s3.ax1x.com/2020/12/26/rhH4ne.md.png" alt="rhH4ne.md.png"></a></p>
+<ul>
+<li><p>top运行中按下<code>M</code>(MEM)结果按内存降序排列</p>
+<p>​                          <code>P</code>结果按CPU使用率降序排列</p>
+<p>​                         <code>1</code>展开或收起各个CPU的详细信息</p>
+</li>
+</ul>
+<h2 id="6-du-sh"><a href="#6-du-sh" class="headerlink" title="6.#du -sh"></a>6.#<code>du -sh</code></h2><ul>
+<li>查看目录的真实大小</li>
+</ul>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du- <span class="keyword">sh</span> /路径</span><br></pre></td></tr></table></figure>
+
+<p> -s  : summaries,只显示汇总的大小<br> -h : 表示以较高可读性的形式显示</p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/rhH2p6"><img src="https://s3.ax1x.com/2020/12/26/rhH2p6.png" alt="rhH2p6.png"></a></p>
+<h2 id="7-find"><a href="#7-find" class="headerlink" title="7.#find"></a>7.#<code>find</code></h2><ul>
+<li>用于查找文件(参数55个之多)</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">find</span> 路径范围 选项 选项的值</span><br></pre></td></tr></table></figure>
+
+<p>选项：</p>
+<p>​        -name：按照文档名称进行搜索（支持模糊搜索）</p>
+<p>​        -type：按照文档类型进行搜索</p>
+<p>​                    文档类型：“-”表示文件（find中用f替换），“d”表示文件夹</p>
+<h2 id="8-service"><a href="#8-service" class="headerlink" title="8.#service"></a>8.#<code>service</code></h2><p>用于控制一些软件服务的启动 /停止/重启</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service 服务名 start<span class="regexp">/stop/</span>restart</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Linux命令大全<a target="_blank" rel="noopener" href="https://man.linuxde.net/">https://man.linuxde.net</a></p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>kerosene.W
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://kerosene_w.gitee.io/wangwenxu1118.github.io/2020/10/28/Linux%E5%91%BD%E4%BB%A4/" title="Linux指令">http://kerosene_w.gitee.io/wangwenxu1118.github.io/2020/10/28/Linux命令/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/10/23/Linux%E5%AE%89%E8%A3%85/" rel="prev" title="Linux安装">
+      <i class="fa fa-chevron-left"></i> Linux安装
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/10/31/bandit%E9%9D%B6%E5%9C%BAwp(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/" rel="next" title="bandit靶场wp(持续更新中)">
+      bandit靶场wp(持续更新中) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4"><span class="nav-text">基础指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-ls"><span class="nav-text">1.#ls</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-pwd"><span class="nav-text">2.#pwd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-cd"><span class="nav-text">3.#cd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-mkdir"><span class="nav-text">4.#mkdir</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-touch"><span class="nav-text">5.#touch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-cp"><span class="nav-text">6.#cp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-mv"><span class="nav-text">7.#mv</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-rm"><span class="nav-text">8.#rm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-vim"><span class="nav-text">9.#vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-gt-gt-gt"><span class="nav-text">10.#&gt;&#x2F;&gt;&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-cat"><span class="nav-text">11.#cat</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6%E6%8C%87%E4%BB%A4"><span class="nav-text">进阶指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-df"><span class="nav-text">1.#df</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-free"><span class="nav-text">2.#free</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-head"><span class="nav-text">3.#head</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-tail"><span class="nav-text">4.#tail</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-1"><span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-less"><span class="nav-text">5.#less</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-wc"><span class="nav-text">6.#wc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-date"><span class="nav-text">7.#date</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-cal"><span class="nav-text">8.#cal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-clear-ctrl-L"><span class="nav-text">9.#clear&#x2F;ctrl + L</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E7%AE%A1%E9%81%93"><span class="nav-text">10.管道</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E6%8C%87%E4%BB%A4"><span class="nav-text">高级指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-hostname"><span class="nav-text">1.#hostname</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-id"><span class="nav-text">2.#id</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-whoami"><span class="nav-text">3.#whoami</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-ps-ef"><span class="nav-text">4.#ps -ef</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-top"><span class="nav-text">5.#top</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-du-sh"><span class="nav-text">6.#du -sh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-find"><span class="nav-text">7.#find</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-service"><span class="nav-text">8.#service</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="kerosene.W"
+      src="/images/mmexport1602423440735.jpg">
+  <p class="site-author-name" itemprop="name">kerosene.W</p>
+  <div class="site-description" itemprop="description">我们努力奔跑，只为追上那个曾被寄予厚望的自己。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/WangWenxu1118" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WangWenxu1118" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2313591383@qq.com" title="E-Mail → mailto:2313591383@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/6282868817" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;6282868817" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://real-simplicity.gitee.io/" title="https:&#x2F;&#x2F;real-simplicity.gitee.io&#x2F;" rel="noopener" target="_blank">Gitee</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">kerosene.W</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">17k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">16 分钟</span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>  Pursuit comes from love.
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("10/11/2020 13:14:21");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script color='0,0,0' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'qhcbDepJFI0ayjjASNA5tN7g-gzGzoHsz',
+      appKey     : 'Gz1Jk9D18Kv0Q8N7rToTyFh5',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>

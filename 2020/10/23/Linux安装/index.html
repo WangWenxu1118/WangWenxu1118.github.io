@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/waf%20web%E5%BA%94%E7%94%A8%E9%98%B2%E7%81%AB%E5%A2%99%20(1).png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/waf%20web%E5%BA%94%E7%94%A8%E9%98%B2%E7%81%AB%E5%A2%99%20(1).png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/waf%20web%E5%BA%94%E7%94%A8%E9%98%B2%E7%81%AB%E5%A2%99%20(1).png">
+  <link rel="mask-icon" href="/images/waf%20web%E5%BA%94%E7%94%A8%E9%98%B2%E7%81%AB%E5%A2%99%20(1).svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-circle.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kerosene_w.gitee.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="准备阶段 linux下载  Kali Linux 官⽹下载：https:&#x2F;&#x2F;www.kali.org&#x2F;downloads&#x2F;    虚拟机安装过程 创建新的虚拟机：  选择典型即推荐：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux安装">
+<meta property="og:url" content="http://kerosene_w.gitee.io/wangwenxu1118.github.io/2020/10/23/Linux%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:site_name" content="9_天羿">
+<meta property="og:description" content="准备阶段 linux下载  Kali Linux 官⽹下载：https:&#x2F;&#x2F;www.kali.org&#x2F;downloads&#x2F;    虚拟机安装过程 创建新的虚拟机：  选择典型即推荐：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BVb0zV.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BVbwR0.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BVbdGq.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BVbain.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BVbNIs.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BVbDMT.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BVbrsU.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BVb6Z4.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BVbsLF.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BVbcdJ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZ0j6f.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZ0qfI.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBS0g.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZ0o0e.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBihn.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBkpq.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZ0X1P.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZ0znS.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBA10.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBEcV.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBVXT.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBenU.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBmBF.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBn74.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBKAJ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBMN9.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBQhR.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZB191.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZB31x.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZB8c6.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBGjK.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBaAH.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBYnO.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BZBNHe.png">
+<meta property="article:published_time" content="2020-10-23T09:24:16.000Z">
+<meta property="article:modified_time" content="2020-11-01T15:08:32.047Z">
+<meta property="article:author" content="kerosene.W">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/10/24/BVb0zV.png">
+
+<link rel="canonical" href="http://kerosene_w.gitee.io/wangwenxu1118.github.io/2020/10/23/Linux%E5%AE%89%E8%A3%85/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Linux安装 | 9_天羿</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="9_天羿" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">9_天羿</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">追求源于热爱</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">7</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/WangWenxu1118" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://kerosene_w.gitee.io/wangwenxu1118.github.io/2020/10/23/Linux%E5%AE%89%E8%A3%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/mmexport1602423440735.jpg">
+      <meta itemprop="name" content="kerosene.W">
+      <meta itemprop="description" content="我们努力奔跑，只为追上那个曾被寄予厚望的自己。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="9_天羿">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux安装
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-23 17:24:16" itemprop="dateCreated datePublished" datetime="2020-10-23T17:24:16+08:00">2020-10-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-01 23:08:32" itemprop="dateModified" datetime="2020-11-01T23:08:32+08:00">2020-11-01</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/10/23/Linux%E5%AE%89%E8%A3%85/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/23/Linux%E5%AE%89%E8%A3%85/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>697</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><ul>
+<li><p>linux下载</p>
+<ul>
+<li>Kali Linux 官⽹下载：<a target="_blank" rel="noopener" href="https://www.kali.org/downloads/">https://www.kali.org/downloads/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="虚拟机安装过程"><a href="#虚拟机安装过程" class="headerlink" title="虚拟机安装过程"></a>虚拟机安装过程</h2><ol>
+<li><p>创建新的虚拟机：<a target="_blank" rel="noopener" href="https://imgchr.com/i/BVb0zV"><img src="https://s1.ax1x.com/2020/10/24/BVb0zV.png" alt="BVb0zV.png"></a></p>
+</li>
+<li><p>选择典型即推荐：<a target="_blank" rel="noopener" href="https://imgchr.com/i/BVbwR0"><img src="https://s1.ax1x.com/2020/10/24/BVbwR0.png" alt="BVbwR0.png"></a></p>
+<a id="more"></a>
+</li>
+<li><p>安装程序光盘映像<a href="%E5%85%88%E4%B8%8B%E8%BD%BD%E7%9A%84Linux%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%9C%B0%E5%9D%80">^文件</a></p>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BVbdGq"><img src="https://s1.ax1x.com/2020/10/24/BVbdGq.png" alt="BVbdGq.png"></a></p>
+<ul>
+<li>下方提示无法检测忽略</li>
+</ul>
+<ol start="4">
+<li><p>选择操作系统“linux”，版本是“Debian”：<a target="_blank" rel="noopener" href="https://imgchr.com/i/BVbain"><img src="https://s1.ax1x.com/2020/10/24/BVbain.png" alt="BVbain.png"></a></p>
+</li>
+<li><p>取名，选择虚拟机文件存放位置：</p>
+<ul>
+<li><code>注意选择合适位置，这里需要存放几十G的虚拟磁盘文件</code></li>
+</ul>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BVbNIs"><img src="https://s1.ax1x.com/2020/10/24/BVbNIs.png" alt="BVbNIs.png"></a></p>
+<ol start="6">
+<li><p>设置虚拟磁盘的大小，一般不能低于默认值，下面一般选择单个文件，方便后续使用：<a target="_blank" rel="noopener" href="https://imgchr.com/i/BVbDMT"><img src="https://s1.ax1x.com/2020/10/24/BVbDMT.png" alt="BVbDMT.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BVbrsU"><img src="https://s1.ax1x.com/2020/10/24/BVbrsU.png" alt="BVbrsU.png"></a></p>
+<ul>
+<li><p>还可进行硬件自定义<a target="_blank" rel="noopener" href="https://imgchr.com/i/BVb6Z4"><img src="https://s1.ax1x.com/2020/10/24/BVb6Z4.png" alt="BVb6Z4.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BVbsLF"><img src="https://s1.ax1x.com/2020/10/24/BVbsLF.png" alt="BVbsLF.png"></a></p>
+<p><strong>至此完成创建</strong></p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="Kali系统安装与配置"><a href="#Kali系统安装与配置" class="headerlink" title="Kali系统安装与配置"></a>Kali系统安装与配置</h2><ol>
+<li><p>点击开启此虚拟机进入安装界面</p>
+<p><code>Live</code> 开头的不是系统安装，类似于Windows PE，用于恢复系统，其他选项可以不用管，也暂时用不着。<br><strong>这里我们选择简单的图形化安装</strong> <code>Graphical install</code><br>此时鼠标无法操作，退出虚拟机操作界面将鼠标移出界面或使用 <code>ctrl + alt</code> 键。</p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BVbcdJ"><img src="https://s1.ax1x.com/2020/10/24/BVbcdJ.png" alt="BVbcdJ.png"></a></p>
+<ol start="2">
+<li><p>选择简体中文<a target="_blank" rel="noopener" href="https://imgchr.com/i/BZ0j6f"><img src="https://s1.ax1x.com/2020/10/24/BZ0j6f.png" alt="BZ0j6f.png"></a>         区域中国<a target="_blank" rel="noopener" href="https://imgchr.com/i/BZ0qfI"><img src="https://s1.ax1x.com/2020/10/24/BZ0qfI.png" alt="BZ0qfI.png"></a>汉语<a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBS0g"><img src="https://s1.ax1x.com/2020/10/24/BZBS0g.png" alt="BZBS0g.png"></a>然后设置主机名<a target="_blank" rel="noopener" href="https://imgchr.com/i/BZ0o0e"><img src="https://s1.ax1x.com/2020/10/24/BZ0o0e.png" alt="BZ0o0e.png"></a><a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBihn"><img src="https://s1.ax1x.com/2020/10/24/BZBihn.png" alt="BZBihn.png"></a></p>
+</li>
+<li><p>域名，可暂时跳过<a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBkpq"><img src="https://s1.ax1x.com/2020/10/24/BZBkpq.png" alt="BZBkpq.png"></a></p>
+</li>
+<li><p>设置用户和密码（<em>注意大小写</em>😂）<a target="_blank" rel="noopener" href="https://imgchr.com/i/BZ0X1P"><img src="https://s1.ax1x.com/2020/10/24/BZ0X1P.png" alt="BZ0X1P.png"></a><a target="_blank" rel="noopener" href="https://imgchr.com/i/BZ0znS"><img src="https://s1.ax1x.com/2020/10/24/BZ0znS.png" alt="BZ0znS.png"></a></p>
+</li>
+<li><p><strong>LVM</strong></p>
+<p>建议使用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/LVM/6571177?fr=aladdin">LVM</a>(百度百科)，LVM是 Logical Volume Manager（逻辑<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8D%B7%E7%AE%A1%E7%90%86">卷管理</a>）的简写，它是Linux环境下对<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/1521981">磁盘分区</a>进行管理的一种机制，它由Heinz Mauelshagen在Linux 2.4<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%86%85%E6%A0%B8/108410">内核</a>上实现，目前最新版本为：稳定版1.0.5，开发版 1.1.0-rc2，以及LVM2开发版。Linux用户安装<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">Linux操作系统</a>时遇到的一个常见的难以决定的问题就是如何正确地评估各分区大小，以分配合适的硬盘空间。</p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBA10"><img src="https://s1.ax1x.com/2020/10/24/BZBA10.png" alt="BZBA10.png"></a><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBEcV"><img src="https://s1.ax1x.com/2020/10/24/BZBEcV.png" alt="BZBEcV.png"></a>使用推荐<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBVXT"><img src="https://s1.ax1x.com/2020/10/24/BZBVXT.png" alt="BZBVXT.png">s</a><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBenU"><img src="https://s1.ax1x.com/2020/10/24/BZBenU.png" alt="BZBenU.png"></a><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBmBF"><img src="https://s1.ax1x.com/2020/10/24/BZBmBF.png" alt="BZBmBF.png"></a><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBn74"><img src="https://s1.ax1x.com/2020/10/24/BZBn74.png" alt="BZBn74.png"></a></p>
+</li>
+<li><p>等待一会······<a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBKAJ"><img src="https://s1.ax1x.com/2020/10/24/BZBKAJ.png" alt="BZBKAJ.png"></a><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBMN9"><img src="https://s1.ax1x.com/2020/10/24/BZBMN9.png" alt="BZBMN9.png"></a><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBQhR"><img src="https://s1.ax1x.com/2020/10/24/BZBQhR.png" alt="BZBQhR.png"></a>配置GRUB：<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/BZB191"><img src="https://s1.ax1x.com/2020/10/24/BZB191.png" alt="BZB191.png"></a><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/BZB31x"><img src="https://s1.ax1x.com/2020/10/24/BZB31x.png" alt="BZB31x.png"></a><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/BZB8c6"><img src="https://s1.ax1x.com/2020/10/24/BZB8c6.png" alt="BZB8c6.png"></a></p>
+</li>
+</ol>
+<ul>
+<li>到这里就完成了。</li>
+</ul>
+</li>
+</ol>
+<p>   选择启动，第二个选项是恢复模式：</p>
+<p>   <a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBGjK"><img src="https://s1.ax1x.com/2020/10/24/BZBGjK.jpg" alt="BZBGjK.jpg"></a><br>   输入账号密码<a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBaAH"><img src="https://s1.ax1x.com/2020/10/24/BZBaAH.png" alt="BZBaAH.png"></a><br>   <a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBYnO"><img src="https://s1.ax1x.com/2020/10/24/BZBYnO.png" alt="BZBYnO.png"></a><br>   <a target="_blank" rel="noopener" href="https://imgchr.com/i/BZBNHe"><img src="https://s1.ax1x.com/2020/10/24/BZBNHe.png" alt="BZBNHe.png"></a></p>
+<hr>
+<h3 id="记个笔记："><a href="#记个笔记：" class="headerlink" title="记个笔记："></a>记个笔记：</h3><ul>
+<li><p>capcha code/代码       验证码</p>
+<hr>
+<p>感谢阅读☕☕☕~</p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>kerosene.W
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://kerosene_w.gitee.io/wangwenxu1118.github.io/2020/10/23/Linux%E5%AE%89%E8%A3%85/" title="Linux安装">http://kerosene_w.gitee.io/wangwenxu1118.github.io/2020/10/23/Linux安装/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/10/16/My-First-Blog/" rel="prev" title="My First Blog">
+      <i class="fa fa-chevron-left"></i> My First Blog
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/10/28/Linux%E5%91%BD%E4%BB%A4/" rel="next" title="Linux指令">
+      Linux指令 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E9%98%B6%E6%AE%B5"><span class="nav-text">准备阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B"><span class="nav-text">虚拟机安装过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kali%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="nav-text">Kali系统安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%B0%E4%B8%AA%E7%AC%94%E8%AE%B0%EF%BC%9A"><span class="nav-text">记个笔记：</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="kerosene.W"
+      src="/images/mmexport1602423440735.jpg">
+  <p class="site-author-name" itemprop="name">kerosene.W</p>
+  <div class="site-description" itemprop="description">我们努力奔跑，只为追上那个曾被寄予厚望的自己。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/WangWenxu1118" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WangWenxu1118" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2313591383@qq.com" title="E-Mail → mailto:2313591383@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/6282868817" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;6282868817" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://real-simplicity.gitee.io/" title="https:&#x2F;&#x2F;real-simplicity.gitee.io&#x2F;" rel="noopener" target="_blank">Gitee</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">kerosene.W</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">17k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">16 分钟</span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>  Pursuit comes from love.
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("10/11/2020 13:14:21");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script color='0,0,0' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'qhcbDepJFI0ayjjASNA5tN7g-gzGzoHsz',
+      appKey     : 'Gz1Jk9D18Kv0Q8N7rToTyFh5',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
