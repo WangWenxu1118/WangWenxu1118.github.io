@@ -1,179 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>BugKu-wp(持续更新中)</title>
-    <url>/2020/11/01/Bugku%E9%9D%B6%E5%9C%BAwp(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
-    <content><![CDATA[<h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="01"><a href="#01" class="headerlink" title="01."></a>01.</h2><ul>
-<li><p>题目为这是一张单纯的图片<a href="https://imgchr.com/i/B058hQ"><img src="https://s1.ax1x.com/2020/11/01/B058hQ.md.png" alt="B058hQ.md.png"></a><a id="more"></a></p>
-</li>
-<li><p>下载图片打开后找不出什么线索<a href="https://imgchr.com/i/B05xUS"><img src="https://s1.ax1x.com/2020/11/01/B05xUS.png" alt="B05xUS.png"></a></p>
-</li>
-<li><p>使用<code>010 Editor</code>打开，找到最后[^特殊序列]</p>
-</li>
-</ul>
-<p><a href="https://imgchr.com/i/B053tg"><img src="https://s1.ax1x.com/2020/11/01/B053tg.md.png" alt="B053tg.md.png"></a></p>
-<ul>
-<li>拷贝到<a href="http://tool.chinaz.com/tools/unicode.aspx">在线转换器</a>,Unicode 转 ASCII得到flag</li>
-</ul>
-<hr>
-<h2 id="02"><a href="#02" class="headerlink" title="02."></a>02.</h2><ul>
-<li><p>题目为隐写<a href="https://imgchr.com/i/B05M0f"><img src="https://s1.ax1x.com/2020/11/01/B05M0f.md.png" alt="B05M0f.md.png"></a></p>
-</li>
-<li><p>下载后打开，查看文件信息，尺寸为500✖420</p>
-</li>
-<li><p>这里需利用python脚本根据图片的crc校验计算图片真实的宽高，（暂时水平不够）</p>
-</li>
-</ul>
-<p><a href="https://imgchr.com/i/B05Q78"><img src="https://s1.ax1x.com/2020/11/01/B05Q78.md.png" alt="B05Q78.md.png"></a></p>
-<ul>
-<li>将高度中A4改为F4</li>
-</ul>
-<p><a href="https://imgchr.com/i/B05Jpj"><img src="https://s1.ax1x.com/2020/11/01/B05Jpj.md.png" alt="B05Jpj.md.png"></a></p>
-<p>这样就能看到flag</p>
-<hr>
-<h2 id="n"><a href="#n" class="headerlink" title="n."></a>n.</h2><p>······</p>
-<p>······</p>
-<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><ul>
-<li>bugku更新后,靶机启动一次3金币/3h，把握好每次机会🤣</li>
-</ul>
-<h2 id="web1"><a href="#web1" class="headerlink" title="web1."></a>web1.</h2><ul>
-<li><p>题目为连续穿梭的表情包，F12或右击检查元素</p>
-</li>
-<li><p><a href="https://imgchr.com/i/rhHq9P"><img src="https://s3.ax1x.com/2020/12/26/rhHq9P.png" alt="rhHq9P.png"></a>发现flag被注释到源码中，并且该网页不支持，直接查看源码</p>
-</li>
-</ul>
-<hr>
-<h2 id="web2"><a href="#web2" class="headerlink" title="web2."></a>web2.</h2><figure class="highlight sqf"><table><tr><td class="code"><pre><span class="line">描　　述: 输入验证码即可得到<span class="built_in">flag</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p><a href="https://imgchr.com/i/rhHOc8"><img src="https://s3.ax1x.com/2020/12/26/rhHOc8.md.png" alt="rhHOc8.md.png"></a>简单的加法（竟然真是随机），尝试后发现只能输入一位数字</p>
-</li>
-<li><p>按F12，使用鼠标选中元素</p>
-</li>
-<li><p><a href="https://imgchr.com/i/rhHL1f"><img src="https://s3.ax1x.com/2020/12/26/rhHL1f.png" alt="rhHL1f.png"></a></p>
-</li>
-<li><p>得到<a href="https://imgchr.com/i/rhHXjS"><img src="https://s3.ax1x.com/2020/12/26/rhHXjS.md.png" alt="rhHXjS.md.png"></a></p>
-</li>
-<li><p>更改<code>maxlength=&quot;1&quot;</code>为<code>maxlength=&quot;3&quot;</code>或更大</p>
-</li>
-<li><p>再次输入验证码即可得到flag</p>
-</li>
-</ul>
-<p><a href="https://imgchr.com/i/rhHvng"><img src="https://s3.ax1x.com/2020/12/26/rhHvng.md.png" alt="rhHvng.md.png"></a></p>
-<h2 id="web3-（get）"><a href="#web3-（get）" class="headerlink" title="web3.（get）"></a>web3.（get）</h2><p>网页内容：</p>
-<p><code>$what=$_GET[&#39;what&#39;]; echo $what; if($what==&#39;flag&#39;) echo &#39;flag&#123;****&#125;&#39;;</code></p>
-<ul>
-<li><p>$_GET 传参时请求的参数是在URL中，直接在URL中赋值what变量，找到flag</p>
-</li>
-<li><p>url传参，<code>?what=flag</code>，打印即可</p>
-</li>
-</ul>
-<p><a href="https://imgchr.com/i/rhHxBQ"><img src="https://s3.ax1x.com/2020/12/26/rhHxBQ.md.png" alt="rhHxBQ.md.png"></a></p>
-<h2 id="web4-（post）"><a href="#web4-（post）" class="headerlink" title="web4.（post）"></a>web4.（post）</h2><p>网页内容：</p>
-<p><code>$what=$_POST[&#39;what&#39;];  echo $what;  if($what==&#39;flag&#39;)  echo &#39;flag&#123;****&#125;&#39;;</code></p>
-<p>这里利用Firefox插件[Hackbar][<a href="https://addons.mozilla.org/zh-CN/firefox/addon/hackbar-free/?utm_source=addons.mozilla.org&amp;utm_medium=referral&amp;utm_content=search%5D%E5%8F%91%E9%80%81post%E8%AF%B7%E6%B1%82%EF%BC%8C%E5%A6%82%E5%9B%BE">https://addons.mozilla.org/zh-CN/firefox/addon/hackbar-free/?utm_source=addons.mozilla.org&amp;utm_medium=referral&amp;utm_content=search]发送post请求，如图</a></p>
-<p><a href="https://imgchr.com/i/rhHz7j"><img src="https://s3.ax1x.com/2020/12/26/rhHz7j.md.png" alt="rhHz7j.md.png"></a></p>
-<h2 id="web5"><a href="#web5" class="headerlink" title="web5."></a>web5.</h2><p>内容：</p>
-<p><code>$num=$_GET[&#39;num&#39;]; if(!is_numeric($num)) &#123; echo $num; if($num==1) echo &#39;flag&#123;**********&#125;&#39;; &#125;</code></p>
-<ul>
-<li><em>is_numeric()</em> 函数用于检测变量是否为数字或数字字符串。</li>
-<li>题目要求num不能为数字但要为1</li>
-<li>因此url传参，<code>?num=1a</code>或者``?num=1%00`PHP漏洞截断[-&gt;大佬详解传送门&lt;-][<a href="https://blog.csdn.net/changer_WE/article/details/85067139]">https://blog.csdn.net/changer_WE/article/details/85067139]</a></li>
-</ul>
-<hr>
-<h2 id="web6"><a href="#web6" class="headerlink" title="web6."></a>web6.</h2><p><a href="https://imgchr.com/i/rhbpAs"><img src="https://s3.ax1x.com/2020/12/26/rhbpAs.md.png" alt="rhbpAs.md.png"></a><a href="https://imgchr.com/i/rhb9Nn"><img src="https://s3.ax1x.com/2020/12/26/rhb9Nn.md.png" alt="rhb9Nn.md.png"></a>网页不断出现弹窗</p>
-<ul>
-<li>按F12后接F1进入settings，勾选<code>Disable JS</code>禁用js(douyin中经常作为跳过付费界面技巧讲解)</li>
-<li>有时不是很好用，用Firefox自带禁止恶意弹窗功能</li>
-<li>查看源码有一段url编码，利用工具解码或写一个html文件解码后得到flag</li>
-</ul>
-<p><a href="https://imgchr.com/i/rhbChq"><img src="https://s3.ax1x.com/2020/12/26/rhbChq.png" alt="rhbChq.png"></a><a href="https://imgchr.com/i/rhbi90"><img src="https://s3.ax1x.com/2020/12/26/rhbi90.md.png" alt="rhbi90.md.png"></a></p>
-<hr>
-<h2 id="web7"><a href="#web7" class="headerlink" title="web7."></a>web7.</h2><ul>
-<li>网页不断刷新，当img src=“10.jpg”时，禁用js就可以看到flag，方法比较笨，运气好一次就中</li>
-<li>chrome中也可先禁用js，再多次刷新，直到img src=“10.jpg”时，copy the flag</li>
-</ul>
-<p><a href="https://imgchr.com/i/rhbF3V"><img src="https://s3.ax1x.com/2020/12/26/rhbF3V.md.png" alt="rhbF3V.md.png"></a></p>
-<hr>
-<p>·</p>
-<p>·</p>
-<p>·</p>
-<p>·</p>
-<p>·</p>
-<p>·</p>
-<p>[^特殊序列]: Unicode 编码</p>
-]]></content>
-      <tags>
-        <tag>Range</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>BUUCTF wp(持续更新中)</title>
-    <url>/2020/12/25/BUUCTF-wp-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/</url>
-    <content><![CDATA[<h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="1-基础破解"><a href="#1-基础破解" class="headerlink" title="1. 基础破解"></a>1. 基础破解</h2><p><a href="https://imgchr.com/i/rhH7tI"><img src="https://s3.ax1x.com/2020/12/26/rhH7tI.md.png" alt="rhH7tI.md.png" style="zoom: 80%;" /></a></p>
-<ul>
-<li>题目中给出提示rar密码为<strong>四位数字</strong>(2563)，故可使用4位数字字典暴力破解，参考<a href="%E6%9D%A5%E8%87%AA%5B%E5%90%BE%E7%88%B1%E7%A0%B4%E8%A7%A3%5D%5Bhttps://www.52pojie.cn/thread-932984-1-1.html%5D">^软件</a><strong>链接: <a href="https://pan.baidu.com/s/14JJYOXIUTaZIpfx38KUp9w">https://pan.baidu.com/s/14JJYOXIUTaZIpfx38KUp9w</a> 提取码: by2s 复制这段内容后打开百度网盘手机App，操作更方便哦</strong></li>
-</ul>
-<p>打开后为一个txt文件，包含一个Base64码</p>
-<p><a href="https://imgchr.com/i/rhHTAA"><img src="https://s3.ax1x.com/2020/12/26/rhHTAA.md.png" alt="rhHTAA.md.png"></a></p>
-<p>解码后得到flag</p>
-<a id="more"></a>
-
-<hr>
-<h2 id="2-zip伪加密"><a href="#2-zip伪加密" class="headerlink" title="2. zip伪加密"></a>2. zip伪加密</h2><ul>
-<li><p><a href="https://imgchr.com/i/rhHHht"><img src="https://s3.ax1x.com/2020/12/26/rhHHht.md.png" alt="rhHHht.md.png"></a>首先看提示，zip伪加密，暴力破解是没用的，可以考虑使用winRAR修复人（基本没用😢）</p>
-</li>
-<li><p>主要用winhex或010 Editor修改文件头的加密标志位</p>
-</li>
-<li><ul>
-<li><pre><code>一个zip文件有三个部分组成：
-
-压缩源文件数据区+压缩源文件目录区+压缩源文件目录结束标志 （详解链接）
-
-这是三个头标记，主要看第二个
-
-压缩源文件数据区：50 4B 03 04：这是头文件标记
-
-压缩源文件目录区：
-
-50 4B 01 02：目录中文件文件头标记
-
-3F 00：压缩使用的 pkware
-
-版本 
-
-14 00：解压文件所需 pkware 版本 
-
-00 00：全局方式位标记（有无加密，这个更改这里进行伪加密，改为09 00打开就会提示有密码了）
-
-压缩源文件目录结束标志 ：50
-
-4B 05 06：目录结束标记        </code></pre>
-<p>来源<a href="https://www.jianshu.com/p/05c81a2b4dd9">https://www.jianshu.com/p/05c81a2b4dd9</a></p>
-</li>
-</ul>
-</li>
-<li><p><code>00 00：全局方式位标记（有无加密，这个更改这里进行伪加密，改为09 00打开就会提示有密码了</code></p>
-<p><a href="https://imgchr.com/i/rhHI7d"><img src="https://s3.ax1x.com/2020/12/26/rhHI7d.md.png" alt="rhHI7d.md.png"></a></p>
-</li>
-<li><p>再次打开9即可得到flag</p>
-</li>
-</ul>
-<hr>
-<p>​                                                                            <strong>·</strong></p>
-<p>​                                                                            <strong>·</strong></p>
-<p>​                                                                            <strong>·</strong></p>
-<p>​                                                                            <strong>·</strong></p>
-<p>​                                                                            <strong>·</strong></p>
-<p>​                                                                            <strong>·</strong></p>
-<hr>
-<hr>
-<h1 id="Web"><a href="#Web" class="headerlink" title="//Web"></a>//Web</h1><h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2>]]></content>
-      <tags>
-        <tag>Range</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux安装</title>
     <url>/2020/10/23/Linux%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><ul>
@@ -252,6 +79,186 @@
 ]]></content>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My First Blog</title>
+    <url>/2020/10/16/My-First-Blog/</url>
+    <content><![CDATA[<hr>
+<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><hr>
+<p>​        历时将近5天，小破站终于建成！😜只是跟随大佬的教程照抄的一些简单的功能，后续还会慢慢探索…..对于搭建过程网上教程很多 ,我的第一篇博客就简单记录搭建过程中遇到的一些问题还有近期笔记吧。。😂😂</p>
+<h1 id="Github搭建过程"><a href="#Github搭建过程" class="headerlink" title="Github搭建过程"></a>Github搭建过程</h1><ul>
+<li><p>安装nodeJS、git和Hexo，注册Github</p>
+</li>
+<li><p>配置SSH key</p>
+</li>
+<li><p>部署到Github</p>
+</li>
+<li><p>主题配置（next)</p>
+</li>
+<li><p>故障调试方法</p>
+<a id="more"></a>
+
+
+</li>
+</ul>
+<h2 id="安装nodeJS、git和Hexo，注册Github"><a href="#安装nodeJS、git和Hexo，注册Github" class="headerlink" title="安装nodeJS、git和Hexo，注册Github"></a>安装nodeJS、git和Hexo，注册Github</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
+<li>这里主要是Hexo安装时在CMD或Git Bash中执行以下指令：</li>
+</ul>
+<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">$npm</span> install -g hexo-cli</span></span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>但是可能会遇到卡住或安装慢的情况，可以先执行<a href="https://www.zhihu.com/question/57671550">淘宝镜像</a>：</li>
+</ul>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="variable">$npm</span> install -g cnpm --registry=https:<span class="regexp">//</span>registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>同样下面的所有安装步骤都可使用</p>
+<h3 id="注册Github"><a href="#注册Github" class="headerlink" title="注册Github"></a>注册Github</h3><ul>
+<li><p>注册后在邮箱中认证，点击Start project或者下面的 new repository 创建一个新的仓库<br><a href="https://imgchr.com/i/BC40Gn"><img src="https://s1.ax1x.com/2020/10/21/BC40Gn.jpg" alt="BC40Gn.jpg"></a></p>
+<ul>
+<li><p>特别注意！！Github 仅能使用一个同名仓库的代码托管一个静态站点</p>
+<p>[<img src="https://s1.ax1x.com/2020/10/21/BC4B2q.jpg" alt="BC4B2q.jpg"></p>
+</li>
+<li><p>然后打开仓库创建一个 index.html 文件，并随意先写点内容</p>
+<p><a href="https://imgchr.com/i/BC4Dx0"><img src="https://s1.ax1x.com/2020/10/21/BC4Dx0.jpg" alt="BC4Dx0.jpg"></a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/BC4a5j"><img src="https://s1.ax1x.com/2020/10/21/BC4a5j.jpg" alt="BC4a5j.jpg"></a></p>
+<hr>
+<h2 id="配置SSH-key"><a href="#配置SSH-key" class="headerlink" title="配置SSH key"></a>配置SSH key</h2><ul>
+<li><p>生成密钥 SSH key后，找到C盘个人账户文件夹/.ssh/id_rsa.pub,打开复制，登录 <a href="https://github.com/">Github</a> 上添加刚刚生成的SSH key，按以下步骤添加：</p>
+<p><a href="https://imgchr.com/i/BC4wPs"><img src="https://s1.ax1x.com/2020/10/21/BC4wPs.jpg" alt="BC4wPs.jpg"></a></p>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/BC4sMV"><img src="https://s1.ax1x.com/2020/10/21/BC4sMV.jpg" alt="BC4sMV.jpg"></a></p>
+<p>   这时会收到邮箱<strong>A new public key was added to your account</strong></p>
+<ul>
+<li>此外还需确认并添加主机到本机SSH可信列表</li>
+</ul>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">$ssh -T git<span class="symbol">@github</span>.com</span><br></pre></td></tr></table></figure>
+
+<p>如果提示<code>Are you sure you want to continue connecting (yes/no)?</code></p>
+<p>输入yes，若返回 Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access. 内容，则证明添加成功。</p>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><ul>
+<li>配置<code>_config.yml</code>中有关deploy的部分:</li>
+</ul>
+<p>正确写法：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:liuxianan/liuxianan.github.io.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
+
+<p>错误写法：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: github</span><br><span class="line">  <span class="attribute">repository</span>:<span class="attribute">https</span>:<span class="comment">//github.com/yourname/yourname.github.io.git</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
+
+<p>后面一种写法是hexo2.x的写法，现在已经不行了，无论是哪种写法，此时直接执行<code>hexo d</code>的话一般会报如下错误：</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">Deployer not <span class="attr">found:</span> github 或者 Deployer not <span class="attr">found:</span> git</span><br></pre></td></tr></table></figure>
+
+<p>原因是还需要安装一个插件：</p>
+<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">$npm</span> install hexo-deployer-git --save</span></span><br></pre></td></tr></table></figure>
+
+<p>Tip:这里可以用淘宝镜像，见上。</p>
+<p>部署这个命令一定要用git bash，否则会提示<code>Permission denied (publickey).</code></p>
+<ul>
+<li><p>必用”三步走”:</p>
+<ol>
+<li><p><code>hexo clean</code>    清除缓存文件 (db.json) 和已生成的静态文件</p>
+</li>
+<li><p><code>hexo g</code>             生成静态页面至public目录</p>
+</li>
+<li><p><code>hexo d</code>             部署到GitHub</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="主题配置（next"><a href="#主题配置（next" class="headerlink" title="主题配置（next)"></a>主题配置（next)</h2><ul>
+<li><p>我使用的是next中的Gemini,所以就简单记录一些功能</p>
+<p>站点配置文件<code> _config.yml</code>中theme改为next，默认landscape</p>
+<p>首先区分站点配置文件_config.yml指Blog下的 <code> _config.yml</code></p>
+<p>另一个在<code>theme</code>下，所有的主题配置几乎都在这两个文件中</p>
+</li>
+</ul>
+<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><ul>
+<li><p>站点配置文件<code> _config.yml</code>下</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line">  <span class="attr">title:</span> <span class="comment"># 标题</span></span><br><span class="line">  <span class="attr">subtitle:</span> <span class="comment">#副标</span></span><br><span class="line">  <span class="attr">description:</span> <span class="comment">#个人描述</span></span><br><span class="line">  <span class="attr">keywords:</span></span><br><span class="line">  <span class="attr">author:</span>   <span class="comment"># 作者</span></span><br><span class="line">  <span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 主题语言</span></span><br><span class="line">  <span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span> <span class="comment">#不要乱改城市，这里容易出故障，必要时可直接删除试试</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># URL</span></span><br><span class="line">  <span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">https://example。com</span> <span class="comment">#绑定域名</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">/</span>  <span class="comment">#默认根路径，指向实际的source</span></span><br><span class="line">  <span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line">  <span class="attr">permalink_defaults:</span></span><br><span class="line">  <span class="attr">pretty_urls:</span></span><br><span class="line">    <span class="attr">trailing_index:</span> <span class="literal">true</span> <span class="comment"># Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span></span><br><span class="line">    <span class="attr">trailing_html:</span> <span class="literal">true</span> <span class="comment"># Set to false to remove trailing &#x27;.html&#x27; from permalinks</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Directory</span></span><br><span class="line">  <span class="attr">source_dir:</span> <span class="string">source</span></span><br><span class="line">  <span class="attr">public_dir:</span> <span class="string">public</span></span><br><span class="line">  <span class="attr">tag_dir:</span> <span class="string">tags</span></span><br><span class="line">  <span class="attr">archive_dir:</span> <span class="string">archives</span></span><br><span class="line">  <span class="attr">category_dir:</span> <span class="string">categories</span></span><br><span class="line">  <span class="attr">code_dir:</span> <span class="string">downloads/code</span></span><br><span class="line">  <span class="attr">i18n_dir:</span> <span class="string">:lang</span></span><br><span class="line">  <span class="attr">skip_render:</span> <span class="string">README.md</span> <span class="comment">#部署的时候不包含的文件</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Writing</span></span><br><span class="line">  <span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment">#默认的新博文名称</span></span><br><span class="line">  <span class="attr">default_layout:</span> <span class="string">post</span> <span class="comment">#默认布局</span></span><br><span class="line">  <span class="attr">titlecase:</span> <span class="literal">false</span> <span class="comment">#Transform title into titlecase</span></span><br><span class="line">  <span class="attr">external_link:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#Open external links in new tab</span></span><br><span class="line">    <span class="attr">field:</span> <span class="string">site</span> <span class="comment">#Apply to the whole site</span></span><br><span class="line">    <span class="attr">exclude:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">filename_case:</span> <span class="number">0</span> <span class="comment">#把博客名称改成小写/大写（1,2）</span></span><br><span class="line">  <span class="attr">render_drafts:</span> <span class="literal">false</span> <span class="comment">#是否显示草稿</span></span><br><span class="line">  <span class="attr">post_asset_folder:</span> <span class="literal">false</span> <span class="comment">#是否启用资源文件夹（用来存放相对路径图片或文件）</span></span><br><span class="line">  <span class="attr">relative_link:</span> <span class="literal">false</span> <span class="comment"># 把链接改为与根目录的相对位址</span></span><br><span class="line">  <span class="attr">future:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">highlight:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否开启代码高亮</span></span><br><span class="line">    <span class="attr">line_number:</span> <span class="literal">true</span> <span class="comment">#是否增加代码行号</span></span><br><span class="line">    <span class="attr">auto_detect:</span> <span class="literal">true</span> <span class="comment">#自动判断代码语言</span></span><br><span class="line">    <span class="attr">tab_replace:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">wrap:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">hljs:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">prismjs:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">preprocess:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">line_number:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">tab_replace:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Home page setting</span></span><br><span class="line">  <span class="comment"># path: Root path for your blogs index page. (default = &#x27;&#x27;)</span></span><br><span class="line">  <span class="comment"># per_page: Posts displayed per page. (0 = disable pagination)</span></span><br><span class="line">  <span class="comment"># order_by: Posts order. (Order by date descending by default)</span></span><br><span class="line">  <span class="attr">index_generator:</span> <span class="comment">#首页博客分布</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">&#x27;&#x27;</span> <span class="comment">#博客的默认路径</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">10</span> <span class="comment">#每页博客数量上限</span></span><br><span class="line">    <span class="attr">order_by:</span> <span class="string">-date</span> <span class="comment">#博客排序</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Date / Time format</span></span><br><span class="line">  <span class="comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line">  <span class="comment">## You can customize the date format as defined in</span></span><br><span class="line">  <span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line">  <span class="attr">date_format:</span> <span class="string">YYYY-MM-DD</span> <span class="comment">#博客日期格式</span></span><br><span class="line">  <span class="attr">time_format:</span> <span class="string">HH:mm:ss</span> <span class="comment">#博客时间格式</span></span><br><span class="line">  <span class="comment">## updated_option supports &#x27;mtime&#x27;, &#x27;date&#x27;, &#x27;empty&#x27;</span></span><br><span class="line">  <span class="attr">updated_option:</span> <span class="string">&#x27;mtime&#x27;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Pagination</span></span><br><span class="line">  <span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="number">10</span> <span class="comment">#同上</span></span><br><span class="line">  <span class="attr">pagination_dir:</span> <span class="string">page</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">#归档页的分页设置</span></span><br><span class="line">  <span class="attr">archive_generator:</span> <span class="comment">#归档页的配置</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">30</span> <span class="comment">#归档页每页博客数</span></span><br><span class="line">    <span class="attr">yearly:</span> <span class="literal">true</span> <span class="comment">#按年归档</span></span><br><span class="line">    <span class="attr">monthly:</span> <span class="literal">true</span> <span class="comment">#按月归档</span></span><br><span class="line">  <span class="comment">#标签页的分页设置</span></span><br><span class="line">  <span class="attr">tag_generator:</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">20</span> <span class="comment">#标签页每页博客数</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Deployment</span></span><br><span class="line">  <span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">  <span class="attr">deploy:</span> <span class="comment">#博客部署</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="string">repo:git@github.com:yourname/yourname.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>next主题设置</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line">override：false <span class="meta">#表示是否将主题置为默认样式</span></span><br><span class="line"><span class="symbol">cache:</span></span><br><span class="line"><span class="symbol">	enable:</span>true <span class="meta">#表示添加缓存功能，这样浏览器后续打开我们的博客网站会更快</span></span><br><span class="line"><span class="symbol">menu:</span> <span class="meta">#设置博客各个页面的相对路径，默认根路径是blog/source</span></span><br><span class="line"><span class="symbol">  home:</span> / || home</span><br><span class="line"><span class="symbol">  about:</span> <span class="meta-keyword">/about/</span> || user</span><br><span class="line"><span class="symbol">  tags:</span> <span class="meta-keyword">/tags/</span> || tags</span><br><span class="line"><span class="symbol">  categories:</span> <span class="meta-keyword">/categories/</span> || th</span><br><span class="line"><span class="symbol">  archives:</span> <span class="meta-keyword">/archives/</span> || archive</span><br><span class="line">  <span class="meta">#schedule: /schedule/ || calendar #日历</span></span><br><span class="line">  <span class="meta">#sitemap: /sitemap.xml || sitemap #站点地图，供搜索引擎爬取</span></span><br><span class="line">  <span class="meta">#commonweal: /404/ || heartbeat # 腾讯公益404</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># Enable/Disable menu icons / item badges.</span></span><br><span class="line"><span class="symbol">menu_settings:</span></span><br><span class="line"><span class="symbol">  icons:</span> true <span class="meta"># 是否显示各个页面的图标</span></span><br><span class="line"><span class="symbol">  badges:</span> true <span class="meta"># 是否显示分类/标签/归档页的内容量</span></span><br><span class="line"><span class="meta"># Schemes</span></span><br><span class="line"><span class="symbol">scheme:</span> Gemini</span><br></pre></td></tr></table></figure>
+<p>语句前加<code>#</code>即为注释或按钮关闭，而加注释时也要先一个空格，用<code>Sublime Text 3</code>体验会比较明显，操作错误不会有对应颜色变化。</p>
+</li>
+</ul>
+<h3 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h3><ul>
+<li><p>主题配置文件中搜索<code>valine</code>,改为<code>ture</code></p>
+</li>
+<li><p>注册登录<a href="https://leancloud.cn/">LeanCloud</a>，创建应用-设置-应用Keys，分别复制AppID、AppKey到文件中对应位置即可    </p>
+</li>
+</ul>
+<h3 id="添加字数统计和阅读时长"><a href="#添加字数统计和阅读时长" class="headerlink" title="添加字数统计和阅读时长"></a>添加字数统计和阅读时长</h3><ul>
+<li><p>先安装插件（Bash耐心等待~）</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">$npm <span class="keyword">install</span> hexo-symbols-<span class="keyword">count</span>-<span class="built_in">time</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>站点配置文件下添加</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#字数统计</span></span><br><span class="line"> <span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment">#是否统计字数</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">false</span> <span class="comment">#是否统计阅读时长</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment">#是否统计总字数</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="string">ture</span> <span class="comment">#是否统计总阅读时长</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>主题的配置文件下开启 symbols_count_time 字段</p>
+<p>执行“三步走”就可以看到了。。。</p>
+</li>
+</ul>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>新版本的NexT将每月发布。可以通过以下命令更新 NexT。<br>安装最新版本的 npm：<br><code>$ cd hexo-site</code><br><code>$ npm update hexo-theme-next</code><br>或更新到最新的主分支：<br><code>$ cd themes/next</code><br><code>$ git pull</code></p>
+<h3 id="不显示全部内容"><a href="#不显示全部内容" class="headerlink" title="不显示全部内容"></a>不显示全部内容</h3><ul>
+<li>修改主题配置文件</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Automatically excerpt description in homepage as preamble text.</span></span><br><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span> <span class="comment">#自动截取摘要</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Read more button</span></span><br><span class="line"><span class="comment"># If true, the read more button would be displayed in excerpt section.</span></span><br><span class="line"><span class="attr">read_more_btn:</span> <span class="literal">true</span> <span class="comment">#显示阅读全文按钮</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>写文章时在合适的位置加上<code>&lt;!--more--&gt;</code>即可</li>
+</ul>
+<h3 id="添加博客自定义图标"><a href="#添加博客自定义图标" class="headerlink" title="添加博客自定义图标"></a>添加博客自定义图标</h3><p>默认为<code>Hexo</code>的标识，图标可以在<a href="https://www.easyicon.net/">easyicon</a>、<a href="http://www.bitbug.net/">bitbug</a>、<a href="https://www.iconfont.cn/plus/user/detail?uid=41718)">iconfont</a>等网站选择和制作，我是在<a href="https://www.iconfont.cn/plus/user/detail?uid=41718)">iconfont</a>上找的，下载放到blog/themes/next/sources/images目录下，并在主题配置文件更改：</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">favicon:</span></span><br><span class="line"><span class="symbol">  small:</span> <span class="meta-keyword">/images/</span>****.png <span class="meta">#对应一</span></span><br><span class="line"><span class="symbol">  medium:</span> <span class="meta-keyword">/images/</span>****.png <span class="meta">#二两个位置</span></span><br><span class="line"><span class="symbol">  apple_touch_icon:</span> <span class="meta-keyword">/images/</span><span class="number">128</span>x128.png</span><br><span class="line"><span class="symbol">  safari_pinned_tab:</span> <span class="meta-keyword">/images/</span>logo2.svg</span><br></pre></td></tr></table></figure>
+
+<h3 id="本地图片上传"><a href="#本地图片上传" class="headerlink" title="本地图片上传"></a>本地图片上传</h3><ul>
+<li><p>先将图片上传至<a href="https://imgchr.com/">路过图床</a>或其他图床</p>
+</li>
+<li><p>在name.md中使用<code>![名称](**)</code>      **拷贝图片链接</p>
+</li>
+</ul>
+<hr>
+<h2 id="故障调试方法"><a href="#故障调试方法" class="headerlink" title="故障调试方法"></a>故障调试方法</h2><ul>
+<li>我主要是使用很传统的方法，即下载一份原始主题，若出现Error（看不懂）可以对应退回几步，从原文件拷贝复原</li>
+<li>还有一个备份方法，还没学会·····在路上去😊</li>
+</ul>
+<hr>
+<p>等等等等，还有很多，当然主要参考[<a href="https://blog.csdn.net/nightmare_dimple/article/details/86661502]">https://blog.csdn.net/nightmare_dimple/article/details/86661502]</a></p>
+<p>[<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html]">https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html]</a></p>
+<p>[<a href="https://segmentfault.com/a/1190000017986794]">https://segmentfault.com/a/1190000017986794]</a></p>
+<p>感谢大佬细致的菜鸟教程，我get了好多干货<del>·</del>·~</p>
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><ul>
+<li><p>时间紧，任务重，能力有限，但一直没有停下的心，就想我的Subtitle一样，<strong>追求源于热爱！！</strong></p>
+</li>
+<li><p>My description：我们努力奔跑，只为追上那个曾被寄予厚望的自己。</p>
+</li>
+</ul>
+<p>另外左侧link推广大佬···😁</p>
+<p><strong>感谢光顾</strong>👏</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>博客搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -562,6 +569,287 @@
       </tags>
   </entry>
   <entry>
+    <title>BUUCTF wp(持续更新中)</title>
+    <url>/2020/12/25/BUUCTF-wp-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/</url>
+    <content><![CDATA[<h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="1-基础破解"><a href="#1-基础破解" class="headerlink" title="1. 基础破解"></a>1. 基础破解</h2><p><a href="https://imgchr.com/i/rhH7tI"><img src="https://s3.ax1x.com/2020/12/26/rhH7tI.md.png" alt="rhH7tI.md.png" style="zoom: 80%;" /></a></p>
+<ul>
+<li>题目中给出提示rar密码为<strong>四位数字</strong>(2563)，故可使用4位数字字典暴力破解，参考<a href="%E6%9D%A5%E8%87%AA%5B%E5%90%BE%E7%88%B1%E7%A0%B4%E8%A7%A3%5D%5Bhttps://www.52pojie.cn/thread-932984-1-1.html%5D">^软件</a><strong>链接: <a href="https://pan.baidu.com/s/14JJYOXIUTaZIpfx38KUp9w">https://pan.baidu.com/s/14JJYOXIUTaZIpfx38KUp9w</a> 提取码: by2s 复制这段内容后打开百度网盘手机App，操作更方便哦</strong></li>
+</ul>
+<p>打开后为一个txt文件，包含一个Base64码</p>
+<p><a href="https://imgchr.com/i/rhHTAA"><img src="https://s3.ax1x.com/2020/12/26/rhHTAA.md.png" alt="rhHTAA.md.png"></a></p>
+<p>解码后得到flag</p>
+<a id="more"></a>
+
+<hr>
+<h2 id="2-zip伪加密"><a href="#2-zip伪加密" class="headerlink" title="2. zip伪加密"></a>2. zip伪加密</h2><ul>
+<li><p><a href="https://imgchr.com/i/rhHHht"><img src="https://s3.ax1x.com/2020/12/26/rhHHht.md.png" alt="rhHHht.md.png"></a>首先看提示，zip伪加密，暴力破解是没用的，可以考虑使用winRAR修复人（基本没用😢）</p>
+</li>
+<li><p>主要用winhex或010 Editor修改文件头的加密标志位</p>
+</li>
+<li><ul>
+<li><pre><code>一个zip文件有三个部分组成：
+
+压缩源文件数据区+压缩源文件目录区+压缩源文件目录结束标志 （详解链接）
+
+这是三个头标记，主要看第二个
+
+压缩源文件数据区：50 4B 03 04：这是头文件标记
+
+压缩源文件目录区：
+
+50 4B 01 02：目录中文件文件头标记
+
+3F 00：压缩使用的 pkware
+
+版本 
+
+14 00：解压文件所需 pkware 版本 
+
+00 00：全局方式位标记（有无加密，这个更改这里进行伪加密，改为09 00打开就会提示有密码了）
+
+压缩源文件目录结束标志 ：50
+
+4B 05 06：目录结束标记        </code></pre>
+<p>来源<a href="https://www.jianshu.com/p/05c81a2b4dd9">https://www.jianshu.com/p/05c81a2b4dd9</a></p>
+</li>
+</ul>
+</li>
+<li><p><code>00 00：全局方式位标记（有无加密，这个更改这里进行伪加密，改为09 00打开就会提示有密码了</code></p>
+<p><a href="https://imgchr.com/i/rhHI7d"><img src="https://s3.ax1x.com/2020/12/26/rhHI7d.md.png" alt="rhHI7d.md.png"></a></p>
+</li>
+<li><p>再次打开9即可得到flag</p>
+</li>
+</ul>
+<hr>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<p>​                                                                            <strong>·</strong></p>
+<hr>
+<hr>
+<h1 id="Web"><a href="#Web" class="headerlink" title="//Web"></a>//Web</h1><h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2>]]></content>
+      <tags>
+        <tag>Range</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>bandit靶场wp(持续更新中)</title>
+    <url>/2020/10/31/bandit%E9%9D%B6%E5%9C%BAwp(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <content><![CDATA[<h2 id="Level-0"><a href="#Level-0" class="headerlink" title="Level 0"></a>Level 0</h2><ul>
+<li>连接</li>
+</ul>
+<p><a href="https://imgchr.com/i/BahJeg"><img src="https://s1.ax1x.com/2020/10/31/BahJeg.png" alt="BahJeg.png" style="zoom:50%;" /></a><a href="https://imgchr.com/i/BahYwQ"><img src="https://s1.ax1x.com/2020/10/31/BahYwQ.png" alt="BahYwQ.png" style="zoom:50%;" /></a></p>
+<hr>
+<a id="more"></a>
+
+<h2 id="Level-0-➡Level-1"><a href="#Level-0-➡Level-1" class="headerlink" title="Level 0 ➡Level 1"></a>Level 0 ➡Level 1</h2><ul>
+<li>先使用<code>ls</code>指令查看目录，再<code>cat</code>打开<code>readme</code>文件</li>
+</ul>
+<p><a href="https://imgchr.com/i/Bahtoj"><img src="https://s1.ax1x.com/2020/10/31/Bahtoj.png" alt="Bahtoj.png" style="zoom: 80%;" /></a></p>
+<hr>
+<h2 id="Level-1-➡Level-2"><a href="#Level-1-➡Level-2" class="headerlink" title="Level 1 ➡Level 2"></a>Level 1 ➡Level 2</h2><ul>
+<li>这里先查看当下目录，只有<code>-</code>文件，而如果直接使用<code>cat -</code>会涉及指令选项的歧义，因此使用<code>cat ./-</code></li>
+<li><ul>
+<li><code>./</code>相对路径的当前路径</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/BahUFs"><img src="https://s1.ax1x.com/2020/10/31/BahUFs.png" alt="BahUFs.png" style="zoom:80%;" /></a></p>
+<hr>
+<h2 id="Level-2-➡Level-3"><a href="#Level-2-➡Level-3" class="headerlink" title="Level 2 ➡Level 3"></a>Level 2 ➡Level 3</h2><ul>
+<li>同样是先查看，就是通关提示<code>spaces in this filename</code>文件，而直接<code>cat</code>+文件名则意味着打开4个文件，因此这里使用<code>cat</code>+<code>Tab</code>直接自动补齐文件名。</li>
+<li><ul>
+<li>这里Tab可直接用，原因是只有一个文件；若多个文件则需输入开头几个字母即可，懒人必会！！</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/BahdWq"><img src="https://s1.ax1x.com/2020/10/31/BahdWq.png" alt="BahdWq.png" style="zoom:80%;" /></a></p>
+<hr>
+<h2 id="Level-3-➡Level-4"><a href="#Level-3-➡Level-4" class="headerlink" title="Level 3 ➡Level 4"></a>Level 3 ➡Level 4</h2><p>The password for the next level is stored in a hidden file in the <strong>inhere</strong> directory.</p>
+<ul>
+<li>首先在<code>inhere</code>内的隐藏文件，使用<code>cd inhere</code>切换至<code>inhere</code>目录下,<code>ls -la</code>列出文件目录，</li>
+</ul>
+<p><code>cat .hidden</code>打开查看密码</p>
+<p><a href="https://imgchr.com/i/BahBlV"><img src="https://s1.ax1x.com/2020/10/31/BahBlV.png" alt="BahBlV.png" style="zoom:80%;" /></a><a href="https://imgchr.com/i/Bah0S0"><img src="https://s1.ax1x.com/2020/10/31/Bah0S0.png" alt="Bah0S0.png" style="zoom:80%;" /></a></p>
+<hr>
+<h2 id="Level-4-➡Level-5"><a href="#Level-4-➡Level-5" class="headerlink" title="Level 4 ➡Level 5"></a>Level 4 ➡Level 5</h2><ul>
+<li>同上一关到查看目录，发现很多文件，这时通过<code>file</code>查看文件类型，找出密码</li>
+</ul>
+<p><a href="https://imgchr.com/i/BahDyT"><img src="https://s1.ax1x.com/2020/10/31/BahDyT.png" alt="BahDyT.png" style="zoom:80%;" /></a></p>
+<hr>
+<h2 id="Level-5➡Level-6"><a href="#Level-5➡Level-6" class="headerlink" title="Level 5➡Level 6"></a>Level 5➡Level 6</h2><ul>
+<li><a href="https://imgchr.com/i/DMb9wF"><img src="https://s3.ax1x.com/2020/11/20/DMb9wF.md.png" alt="DMb9wF.md.png"></a></li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="built_in">find</span> 路径 -<span class="built_in">type</span> f -<span class="built_in">size</span> <span class="number">1033</span>c</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用<code>find</code>命令查找1033字节的文件</li>
+</ul>
+<p><a href="https://imgchr.com/i/DMbCo4"><img src="https://s3.ax1x.com/2020/11/20/DMbCo4.md.png" alt="DMbCo4.md.png"></a></p>
+<p>-type f：指定普通文件<br>-size 1033c：指定为1033字节</p>
+<p>附find参数解析<br>-size n[cwbkMG] : 档案大小 为 n 个由后缀决定的数据块。其中后缀含义为：<br>b: 代表 512 位元组的区块（如果用户没有指定后缀，则默认为 b）<br>c: 表示字节数<br>k: 表示 kilo bytes （1024字节）<br>w: 字 （2字节）<br>M:兆字节（1048576字节）<br>G: 千兆字节 （1073741824字节）<br>-type c : 档案类型是 c 。<br>d: 目录<br>c: 字型装置档案<br>b: 区块装置档案<br>p: 具名贮列<br>f: 一般档案<br>l: 符号连结<br>s: socket</p>
+<hr>
+<h2 id="Level-6-➡Level-7"><a href="#Level-6-➡Level-7" class="headerlink" title="Level 6 ➡Level 7"></a>Level 6 ➡Level 7</h2><ul>
+<li>The password for the next level is stored <strong>somewhere on the server</strong> and has all of the following properties:<ul>
+<li>owned by user bandit7</li>
+<li>owned by group bandit6</li>
+<li>33 bytes in size</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/DMbFY9"><img src="https://s3.ax1x.com/2020/11/20/DMbFY9.md.png" alt="DMbFY9.md.png"></a></p>
+<p>-user：指定user组<br>-group： 指定group组<br>-size：指定大小<br>后面的2&gt;/dev/null，是因为find命令在根目录下查找会经常有一些权限的报错信息所以通常使用这种方式将错误信息重定位。</p>
+<hr>
+<h2 id="Level-7-➡Level-8"><a href="#Level-7-➡Level-8" class="headerlink" title="Level 7 ➡Level 8"></a>Level 7 ➡Level 8</h2><p>The password for the next level is stored in the file <strong>data.txt</strong> next to the word <strong>millionth</strong></p>
+<ul>
+<li>当前目录下确实是<code>data.txt</code>,但直接用<code>cat</code>打开无法确定flag，使用<code>| grep</code>管道筛选关键词<code>millionth</code></li>
+</ul>
+<p><a href="https://imgchr.com/i/DMbkWR"><img src="https://s3.ax1x.com/2020/11/20/DMbkWR.png" alt="DMbkWR.png"></a></p>
+<hr>
+<h2 id="Level-8➡Level-9"><a href="#Level-8➡Level-9" class="headerlink" title="Level 8➡Level 9"></a>Level 8➡Level 9</h2><p>The password for the next level is stored in the file <strong>data.txt</strong> and is the only line of text that occurs only once</p>
+<ul>
+<li>本题flag只出现一行，使用<code>uniq -u</code>直接获取或<code>uniq -c</code>列出次数找到出现一次的line</li>
+</ul>
+<p><a href="https://imgchr.com/i/DMbVQx"><img src="https://s3.ax1x.com/2020/11/20/DMbVQx.png" alt="DMbVQx.png"></a></p>
+<p><a href="https://imgchr.com/i/DMbES1"><img src="https://s3.ax1x.com/2020/11/20/DMbES1.png" alt="DMbES1.png"></a></p>
+<hr>
+<h2 id="Level-9➡Level-10"><a href="#Level-9➡Level-10" class="headerlink" title="Level 9➡Level 10"></a>Level 9➡Level 10</h2><p>The password for the next level is stored in the file <strong>data.txt</strong> in one of the few human-readable strings, preceded by several ‘=’ characters.</p>
+<ul>
+<li>password是以若干个‘=’开头，使用<code>strings</code>命令查看文件字符串</li>
+</ul>
+<p><a href="https://imgchr.com/i/DMbZy6"><img src="https://s3.ax1x.com/2020/11/20/DMbZy6.png" alt="DMbZy6.png"></a></p>
+<p><a href="https://imgchr.com/i/DMbeOK"><img src="https://s3.ax1x.com/2020/11/20/DMbeOK.png" alt="DMbeOK.png"></a></p>
+<hr>
+<h2 id="Level-10➡Level-11"><a href="#Level-10➡Level-11" class="headerlink" title="Level 10➡Level 11"></a>Level 10➡Level 11</h2><p>The password for the next level is stored in the file <strong>data.txt</strong>, which contains base64 encoded data</p>
+<ul>
+<li>使用<code>base64</code>解码，<code>base64 -d data.txt</code></li>
+</ul>
+<p><a href="https://imgchr.com/i/DMbneO"><img src="https://s3.ax1x.com/2020/11/20/DMbneO.png" alt="DMbneO.png"></a></p>
+<hr>
+<h2 id="Level-11➡Level-12"><a href="#Level-11➡Level-12" class="headerlink" title="Level 11➡Level 12"></a>Level 11➡Level 12</h2><p>The password for the next level is stored in the file <strong>data.txt</strong>, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions</p>
+<ul>
+<li>本题为字符转换，a-z以及A-Z被后移了13个位置，即对应n-z a-m N-Z A-M.</li>
+</ul>
+<p>使用<code>tr</code>配合管道转换得到password</p>
+<p><a href="https://imgchr.com/i/DMbuwD"><img src="https://s3.ax1x.com/2020/11/20/DMbuwD.png" alt="DMbuwD.png"></a></p>
+<h2 id="Level-➡Level-1"><a href="#Level-➡Level-1" class="headerlink" title="Level * ➡Level * +1"></a>Level * ➡Level * +1</h2><p>···</p>
+<p>···</p>
+<p>···</p>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BugKu-wp(持续更新中)</title>
+    <url>/2020/11/01/Bugku%E9%9D%B6%E5%9C%BAwp(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <content><![CDATA[<h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="01"><a href="#01" class="headerlink" title="01."></a>01.</h2><ul>
+<li><p>题目为这是一张单纯的图片<a href="https://imgchr.com/i/B058hQ"><img src="https://s1.ax1x.com/2020/11/01/B058hQ.md.png" alt="B058hQ.md.png"></a><a id="more"></a></p>
+</li>
+<li><p>下载图片打开后找不出什么线索<a href="https://imgchr.com/i/B05xUS"><img src="https://s1.ax1x.com/2020/11/01/B05xUS.png" alt="B05xUS.png"></a></p>
+</li>
+<li><p>使用<code>010 Editor</code>打开，找到最后[^特殊序列]</p>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/B053tg"><img src="https://s1.ax1x.com/2020/11/01/B053tg.md.png" alt="B053tg.md.png"></a></p>
+<ul>
+<li>拷贝到<a href="http://tool.chinaz.com/tools/unicode.aspx">在线转换器</a>,Unicode 转 ASCII得到flag</li>
+</ul>
+<hr>
+<h2 id="02"><a href="#02" class="headerlink" title="02."></a>02.</h2><ul>
+<li><p>题目为隐写<a href="https://imgchr.com/i/B05M0f"><img src="https://s1.ax1x.com/2020/11/01/B05M0f.md.png" alt="B05M0f.md.png"></a></p>
+</li>
+<li><p>下载后打开，查看文件信息，尺寸为500✖420</p>
+</li>
+<li><p>这里需利用python脚本根据图片的crc校验计算图片真实的宽高，（暂时水平不够）</p>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/B05Q78"><img src="https://s1.ax1x.com/2020/11/01/B05Q78.md.png" alt="B05Q78.md.png"></a></p>
+<ul>
+<li>将高度中A4改为F4</li>
+</ul>
+<p><a href="https://imgchr.com/i/B05Jpj"><img src="https://s1.ax1x.com/2020/11/01/B05Jpj.md.png" alt="B05Jpj.md.png"></a></p>
+<p>这样就能看到flag</p>
+<hr>
+<h2 id="n"><a href="#n" class="headerlink" title="n."></a>n.</h2><p>······</p>
+<p>······</p>
+<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><ul>
+<li>bugku更新后,靶机启动一次3金币/3h，把握好每次机会🤣</li>
+</ul>
+<h2 id="web1"><a href="#web1" class="headerlink" title="web1."></a>web1.</h2><ul>
+<li><p>题目为连续穿梭的表情包，F12或右击检查元素</p>
+</li>
+<li><p><a href="https://imgchr.com/i/rhHq9P"><img src="https://s3.ax1x.com/2020/12/26/rhHq9P.png" alt="rhHq9P.png"></a>发现flag被注释到源码中，并且该网页不支持，直接查看源码</p>
+</li>
+</ul>
+<hr>
+<h2 id="web2"><a href="#web2" class="headerlink" title="web2."></a>web2.</h2><figure class="highlight sqf"><table><tr><td class="code"><pre><span class="line">描　　述: 输入验证码即可得到<span class="built_in">flag</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><a href="https://imgchr.com/i/rhHOc8"><img src="https://s3.ax1x.com/2020/12/26/rhHOc8.md.png" alt="rhHOc8.md.png"></a>简单的加法（竟然真是随机），尝试后发现只能输入一位数字</p>
+</li>
+<li><p>按F12，使用鼠标选中元素</p>
+</li>
+<li><p><a href="https://imgchr.com/i/rhHL1f"><img src="https://s3.ax1x.com/2020/12/26/rhHL1f.png" alt="rhHL1f.png"></a></p>
+</li>
+<li><p>得到<a href="https://imgchr.com/i/rhHXjS"><img src="https://s3.ax1x.com/2020/12/26/rhHXjS.md.png" alt="rhHXjS.md.png"></a></p>
+</li>
+<li><p>更改<code>maxlength=&quot;1&quot;</code>为<code>maxlength=&quot;3&quot;</code>或更大</p>
+</li>
+<li><p>再次输入验证码即可得到flag</p>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/rhHvng"><img src="https://s3.ax1x.com/2020/12/26/rhHvng.md.png" alt="rhHvng.md.png"></a></p>
+<h2 id="web3-（get）"><a href="#web3-（get）" class="headerlink" title="web3.（get）"></a>web3.（get）</h2><p>网页内容：</p>
+<p><code>$what=$_GET[&#39;what&#39;]; echo $what; if($what==&#39;flag&#39;) echo &#39;flag&#123;****&#125;&#39;;</code></p>
+<ul>
+<li><p>$_GET 传参时请求的参数是在URL中，直接在URL中赋值what变量，找到flag</p>
+</li>
+<li><p>url传参，<code>?what=flag</code>，打印即可</p>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/rhHxBQ"><img src="https://s3.ax1x.com/2020/12/26/rhHxBQ.md.png" alt="rhHxBQ.md.png"></a></p>
+<h2 id="web4-（post）"><a href="#web4-（post）" class="headerlink" title="web4.（post）"></a>web4.（post）</h2><p>网页内容：</p>
+<p><code>$what=$_POST[&#39;what&#39;];  echo $what;  if($what==&#39;flag&#39;)  echo &#39;flag&#123;****&#125;&#39;;</code></p>
+<p>这里利用Firefox插件[Hackbar][<a href="https://addons.mozilla.org/zh-CN/firefox/addon/hackbar-free/?utm_source=addons.mozilla.org&amp;utm_medium=referral&amp;utm_content=search%5D%E5%8F%91%E9%80%81post%E8%AF%B7%E6%B1%82%EF%BC%8C%E5%A6%82%E5%9B%BE">https://addons.mozilla.org/zh-CN/firefox/addon/hackbar-free/?utm_source=addons.mozilla.org&amp;utm_medium=referral&amp;utm_content=search]发送post请求，如图</a></p>
+<p><a href="https://imgchr.com/i/rhHz7j"><img src="https://s3.ax1x.com/2020/12/26/rhHz7j.md.png" alt="rhHz7j.md.png"></a></p>
+<h2 id="web5"><a href="#web5" class="headerlink" title="web5."></a>web5.</h2><p>内容：</p>
+<p><code>$num=$_GET[&#39;num&#39;]; if(!is_numeric($num)) &#123; echo $num; if($num==1) echo &#39;flag&#123;**********&#125;&#39;; &#125;</code></p>
+<ul>
+<li><em>is_numeric()</em> 函数用于检测变量是否为数字或数字字符串。</li>
+<li>题目要求num不能为数字但要为1</li>
+<li>因此url传参，<code>?num=1a</code>或者``?num=1%00`PHP漏洞截断[-&gt;大佬详解传送门&lt;-][<a href="https://blog.csdn.net/changer_WE/article/details/85067139]">https://blog.csdn.net/changer_WE/article/details/85067139]</a></li>
+</ul>
+<hr>
+<h2 id="web6"><a href="#web6" class="headerlink" title="web6."></a>web6.</h2><p><a href="https://imgchr.com/i/rhbpAs"><img src="https://s3.ax1x.com/2020/12/26/rhbpAs.md.png" alt="rhbpAs.md.png"></a><a href="https://imgchr.com/i/rhb9Nn"><img src="https://s3.ax1x.com/2020/12/26/rhb9Nn.md.png" alt="rhb9Nn.md.png"></a>网页不断出现弹窗</p>
+<ul>
+<li>按F12后接F1进入settings，勾选<code>Disable JS</code>禁用js(douyin中经常作为跳过付费界面技巧讲解)</li>
+<li>有时不是很好用，用Firefox自带禁止恶意弹窗功能</li>
+<li>查看源码有一段url编码，利用工具解码或写一个html文件解码后得到flag</li>
+</ul>
+<p><a href="https://imgchr.com/i/rhbChq"><img src="https://s3.ax1x.com/2020/12/26/rhbChq.png" alt="rhbChq.png"></a><a href="https://imgchr.com/i/rhbi90"><img src="https://s3.ax1x.com/2020/12/26/rhbi90.md.png" alt="rhbi90.md.png"></a></p>
+<hr>
+<h2 id="web7"><a href="#web7" class="headerlink" title="web7."></a>web7.</h2><ul>
+<li>网页不断刷新，当img src=“10.jpg”时，禁用js就可以看到flag，方法比较笨，运气好一次就中</li>
+<li>chrome中也可先禁用js，再多次刷新，直到img src=“10.jpg”时，copy the flag</li>
+</ul>
+<p><a href="https://imgchr.com/i/rhbF3V"><img src="https://s3.ax1x.com/2020/12/26/rhbF3V.md.png" alt="rhbF3V.md.png"></a></p>
+<hr>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>[^特殊序列]: Unicode 编码</p>
+]]></content>
+      <tags>
+        <tag>Range</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>简易邮箱登录界面HCJ</title>
     <url>/2020/11/25/%E7%AE%80%E6%98%93%E9%82%AE%E7%AE%B1%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2HCJ/</url>
     <content><![CDATA[<h3 id="为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！"><a href="#为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！" class="headerlink" title="为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！"></a>为简单了解、学习html、css、JavaScript三剑客，写了一个“极简主义”，绝对够简易，来吧，先展示！</h3><p><a href="https://imgchr.com/i/DXASuF"><img src="https://s3.ax1x.com/2020/12/06/DXASuF.md.png" alt="DXASuF.md.png"></a></p>
@@ -693,294 +981,6 @@
 ]]></content>
       <tags>
         <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>My First Blog</title>
-    <url>/2020/10/16/My-First-Blog/</url>
-    <content><![CDATA[<hr>
-<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><hr>
-<p>​        历时将近5天，小破站终于建成！😜只是跟随大佬的教程照抄的一些简单的功能，后续还会慢慢探索…..对于搭建过程网上教程很多 ,我的第一篇博客就简单记录搭建过程中遇到的一些问题还有近期笔记吧。。😂😂</p>
-<h1 id="Github搭建过程"><a href="#Github搭建过程" class="headerlink" title="Github搭建过程"></a>Github搭建过程</h1><ul>
-<li><p>安装nodeJS、git和Hexo，注册Github</p>
-</li>
-<li><p>配置SSH key</p>
-</li>
-<li><p>部署到Github</p>
-</li>
-<li><p>主题配置（next)</p>
-</li>
-<li><p>故障调试方法</p>
-<a id="more"></a>
-
-
-</li>
-</ul>
-<h2 id="安装nodeJS、git和Hexo，注册Github"><a href="#安装nodeJS、git和Hexo，注册Github" class="headerlink" title="安装nodeJS、git和Hexo，注册Github"></a>安装nodeJS、git和Hexo，注册Github</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
-<li>这里主要是Hexo安装时在CMD或Git Bash中执行以下指令：</li>
-</ul>
-<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">$npm</span> install -g hexo-cli</span></span><br></pre></td></tr></table></figure>
-
-
-<ul>
-<li>但是可能会遇到卡住或安装慢的情况，可以先执行<a href="https://www.zhihu.com/question/57671550">淘宝镜像</a>：</li>
-</ul>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="variable">$npm</span> install -g cnpm --registry=https:<span class="regexp">//</span>registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>同样下面的所有安装步骤都可使用</p>
-<h3 id="注册Github"><a href="#注册Github" class="headerlink" title="注册Github"></a>注册Github</h3><ul>
-<li><p>注册后在邮箱中认证，点击Start project或者下面的 new repository 创建一个新的仓库<br><a href="https://imgchr.com/i/BC40Gn"><img src="https://s1.ax1x.com/2020/10/21/BC40Gn.jpg" alt="BC40Gn.jpg"></a></p>
-<ul>
-<li><p>特别注意！！Github 仅能使用一个同名仓库的代码托管一个静态站点</p>
-<p>[<img src="https://s1.ax1x.com/2020/10/21/BC4B2q.jpg" alt="BC4B2q.jpg"></p>
-</li>
-<li><p>然后打开仓库创建一个 index.html 文件，并随意先写点内容</p>
-<p><a href="https://imgchr.com/i/BC4Dx0"><img src="https://s1.ax1x.com/2020/10/21/BC4Dx0.jpg" alt="BC4Dx0.jpg"></a></p>
-</li>
-</ul>
-</li>
-</ul>
-<p><a href="https://imgchr.com/i/BC4a5j"><img src="https://s1.ax1x.com/2020/10/21/BC4a5j.jpg" alt="BC4a5j.jpg"></a></p>
-<hr>
-<h2 id="配置SSH-key"><a href="#配置SSH-key" class="headerlink" title="配置SSH key"></a>配置SSH key</h2><ul>
-<li><p>生成密钥 SSH key后，找到C盘个人账户文件夹/.ssh/id_rsa.pub,打开复制，登录 <a href="https://github.com/">Github</a> 上添加刚刚生成的SSH key，按以下步骤添加：</p>
-<p><a href="https://imgchr.com/i/BC4wPs"><img src="https://s1.ax1x.com/2020/10/21/BC4wPs.jpg" alt="BC4wPs.jpg"></a></p>
-</li>
-</ul>
-<p><a href="https://imgchr.com/i/BC4sMV"><img src="https://s1.ax1x.com/2020/10/21/BC4sMV.jpg" alt="BC4sMV.jpg"></a></p>
-<p>   这时会收到邮箱<strong>A new public key was added to your account</strong></p>
-<ul>
-<li>此外还需确认并添加主机到本机SSH可信列表</li>
-</ul>
-<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">$ssh -T git<span class="symbol">@github</span>.com</span><br></pre></td></tr></table></figure>
-
-<p>如果提示<code>Are you sure you want to continue connecting (yes/no)?</code></p>
-<p>输入yes，若返回 Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access. 内容，则证明添加成功。</p>
-<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><ul>
-<li>配置<code>_config.yml</code>中有关deploy的部分:</li>
-</ul>
-<p>正确写法：</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:liuxianan/liuxianan.github.io.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
-
-<p>错误写法：</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: github</span><br><span class="line">  <span class="attribute">repository</span>:<span class="attribute">https</span>:<span class="comment">//github.com/yourname/yourname.github.io.git</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
-
-<p>后面一种写法是hexo2.x的写法，现在已经不行了，无论是哪种写法，此时直接执行<code>hexo d</code>的话一般会报如下错误：</p>
-<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">Deployer not <span class="attr">found:</span> github 或者 Deployer not <span class="attr">found:</span> git</span><br></pre></td></tr></table></figure>
-
-<p>原因是还需要安装一个插件：</p>
-<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">$npm</span> install hexo-deployer-git --save</span></span><br></pre></td></tr></table></figure>
-
-<p>Tip:这里可以用淘宝镜像，见上。</p>
-<p>部署这个命令一定要用git bash，否则会提示<code>Permission denied (publickey).</code></p>
-<ul>
-<li><p>必用”三步走”:</p>
-<ol>
-<li><p><code>hexo clean</code>    清除缓存文件 (db.json) 和已生成的静态文件</p>
-</li>
-<li><p><code>hexo g</code>             生成静态页面至public目录</p>
-</li>
-<li><p><code>hexo d</code>             部署到GitHub</p>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="主题配置（next"><a href="#主题配置（next" class="headerlink" title="主题配置（next)"></a>主题配置（next)</h2><ul>
-<li><p>我使用的是next中的Gemini,所以就简单记录一些功能</p>
-<p>站点配置文件<code> _config.yml</code>中theme改为next，默认landscape</p>
-<p>首先区分站点配置文件_config.yml指Blog下的 <code> _config.yml</code></p>
-<p>另一个在<code>theme</code>下，所有的主题配置几乎都在这两个文件中</p>
-</li>
-</ul>
-<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><ul>
-<li><p>站点配置文件<code> _config.yml</code>下</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line">  <span class="attr">title:</span> <span class="comment"># 标题</span></span><br><span class="line">  <span class="attr">subtitle:</span> <span class="comment">#副标</span></span><br><span class="line">  <span class="attr">description:</span> <span class="comment">#个人描述</span></span><br><span class="line">  <span class="attr">keywords:</span></span><br><span class="line">  <span class="attr">author:</span>   <span class="comment"># 作者</span></span><br><span class="line">  <span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 主题语言</span></span><br><span class="line">  <span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span> <span class="comment">#不要乱改城市，这里容易出故障，必要时可直接删除试试</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># URL</span></span><br><span class="line">  <span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">https://example。com</span> <span class="comment">#绑定域名</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">/</span>  <span class="comment">#默认根路径，指向实际的source</span></span><br><span class="line">  <span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line">  <span class="attr">permalink_defaults:</span></span><br><span class="line">  <span class="attr">pretty_urls:</span></span><br><span class="line">    <span class="attr">trailing_index:</span> <span class="literal">true</span> <span class="comment"># Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span></span><br><span class="line">    <span class="attr">trailing_html:</span> <span class="literal">true</span> <span class="comment"># Set to false to remove trailing &#x27;.html&#x27; from permalinks</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Directory</span></span><br><span class="line">  <span class="attr">source_dir:</span> <span class="string">source</span></span><br><span class="line">  <span class="attr">public_dir:</span> <span class="string">public</span></span><br><span class="line">  <span class="attr">tag_dir:</span> <span class="string">tags</span></span><br><span class="line">  <span class="attr">archive_dir:</span> <span class="string">archives</span></span><br><span class="line">  <span class="attr">category_dir:</span> <span class="string">categories</span></span><br><span class="line">  <span class="attr">code_dir:</span> <span class="string">downloads/code</span></span><br><span class="line">  <span class="attr">i18n_dir:</span> <span class="string">:lang</span></span><br><span class="line">  <span class="attr">skip_render:</span> <span class="string">README.md</span> <span class="comment">#部署的时候不包含的文件</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Writing</span></span><br><span class="line">  <span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment">#默认的新博文名称</span></span><br><span class="line">  <span class="attr">default_layout:</span> <span class="string">post</span> <span class="comment">#默认布局</span></span><br><span class="line">  <span class="attr">titlecase:</span> <span class="literal">false</span> <span class="comment">#Transform title into titlecase</span></span><br><span class="line">  <span class="attr">external_link:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#Open external links in new tab</span></span><br><span class="line">    <span class="attr">field:</span> <span class="string">site</span> <span class="comment">#Apply to the whole site</span></span><br><span class="line">    <span class="attr">exclude:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">filename_case:</span> <span class="number">0</span> <span class="comment">#把博客名称改成小写/大写（1,2）</span></span><br><span class="line">  <span class="attr">render_drafts:</span> <span class="literal">false</span> <span class="comment">#是否显示草稿</span></span><br><span class="line">  <span class="attr">post_asset_folder:</span> <span class="literal">false</span> <span class="comment">#是否启用资源文件夹（用来存放相对路径图片或文件）</span></span><br><span class="line">  <span class="attr">relative_link:</span> <span class="literal">false</span> <span class="comment"># 把链接改为与根目录的相对位址</span></span><br><span class="line">  <span class="attr">future:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">highlight:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否开启代码高亮</span></span><br><span class="line">    <span class="attr">line_number:</span> <span class="literal">true</span> <span class="comment">#是否增加代码行号</span></span><br><span class="line">    <span class="attr">auto_detect:</span> <span class="literal">true</span> <span class="comment">#自动判断代码语言</span></span><br><span class="line">    <span class="attr">tab_replace:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">wrap:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">hljs:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">prismjs:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">preprocess:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">line_number:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">tab_replace:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Home page setting</span></span><br><span class="line">  <span class="comment"># path: Root path for your blogs index page. (default = &#x27;&#x27;)</span></span><br><span class="line">  <span class="comment"># per_page: Posts displayed per page. (0 = disable pagination)</span></span><br><span class="line">  <span class="comment"># order_by: Posts order. (Order by date descending by default)</span></span><br><span class="line">  <span class="attr">index_generator:</span> <span class="comment">#首页博客分布</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">&#x27;&#x27;</span> <span class="comment">#博客的默认路径</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">10</span> <span class="comment">#每页博客数量上限</span></span><br><span class="line">    <span class="attr">order_by:</span> <span class="string">-date</span> <span class="comment">#博客排序</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Date / Time format</span></span><br><span class="line">  <span class="comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line">  <span class="comment">## You can customize the date format as defined in</span></span><br><span class="line">  <span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line">  <span class="attr">date_format:</span> <span class="string">YYYY-MM-DD</span> <span class="comment">#博客日期格式</span></span><br><span class="line">  <span class="attr">time_format:</span> <span class="string">HH:mm:ss</span> <span class="comment">#博客时间格式</span></span><br><span class="line">  <span class="comment">## updated_option supports &#x27;mtime&#x27;, &#x27;date&#x27;, &#x27;empty&#x27;</span></span><br><span class="line">  <span class="attr">updated_option:</span> <span class="string">&#x27;mtime&#x27;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Pagination</span></span><br><span class="line">  <span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="number">10</span> <span class="comment">#同上</span></span><br><span class="line">  <span class="attr">pagination_dir:</span> <span class="string">page</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">#归档页的分页设置</span></span><br><span class="line">  <span class="attr">archive_generator:</span> <span class="comment">#归档页的配置</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">30</span> <span class="comment">#归档页每页博客数</span></span><br><span class="line">    <span class="attr">yearly:</span> <span class="literal">true</span> <span class="comment">#按年归档</span></span><br><span class="line">    <span class="attr">monthly:</span> <span class="literal">true</span> <span class="comment">#按月归档</span></span><br><span class="line">  <span class="comment">#标签页的分页设置</span></span><br><span class="line">  <span class="attr">tag_generator:</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">20</span> <span class="comment">#标签页每页博客数</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Deployment</span></span><br><span class="line">  <span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">  <span class="attr">deploy:</span> <span class="comment">#博客部署</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="string">repo:git@github.com:yourname/yourname.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>next主题设置</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line">override：false <span class="meta">#表示是否将主题置为默认样式</span></span><br><span class="line"><span class="symbol">cache:</span></span><br><span class="line"><span class="symbol">	enable:</span>true <span class="meta">#表示添加缓存功能，这样浏览器后续打开我们的博客网站会更快</span></span><br><span class="line"><span class="symbol">menu:</span> <span class="meta">#设置博客各个页面的相对路径，默认根路径是blog/source</span></span><br><span class="line"><span class="symbol">  home:</span> / || home</span><br><span class="line"><span class="symbol">  about:</span> <span class="meta-keyword">/about/</span> || user</span><br><span class="line"><span class="symbol">  tags:</span> <span class="meta-keyword">/tags/</span> || tags</span><br><span class="line"><span class="symbol">  categories:</span> <span class="meta-keyword">/categories/</span> || th</span><br><span class="line"><span class="symbol">  archives:</span> <span class="meta-keyword">/archives/</span> || archive</span><br><span class="line">  <span class="meta">#schedule: /schedule/ || calendar #日历</span></span><br><span class="line">  <span class="meta">#sitemap: /sitemap.xml || sitemap #站点地图，供搜索引擎爬取</span></span><br><span class="line">  <span class="meta">#commonweal: /404/ || heartbeat # 腾讯公益404</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># Enable/Disable menu icons / item badges.</span></span><br><span class="line"><span class="symbol">menu_settings:</span></span><br><span class="line"><span class="symbol">  icons:</span> true <span class="meta"># 是否显示各个页面的图标</span></span><br><span class="line"><span class="symbol">  badges:</span> true <span class="meta"># 是否显示分类/标签/归档页的内容量</span></span><br><span class="line"><span class="meta"># Schemes</span></span><br><span class="line"><span class="symbol">scheme:</span> Gemini</span><br></pre></td></tr></table></figure>
-<p>语句前加<code>#</code>即为注释或按钮关闭，而加注释时也要先一个空格，用<code>Sublime Text 3</code>体验会比较明显，操作错误不会有对应颜色变化。</p>
-</li>
-</ul>
-<h3 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h3><ul>
-<li><p>主题配置文件中搜索<code>valine</code>,改为<code>ture</code></p>
-</li>
-<li><p>注册登录<a href="https://leancloud.cn/">LeanCloud</a>，创建应用-设置-应用Keys，分别复制AppID、AppKey到文件中对应位置即可    </p>
-</li>
-</ul>
-<h3 id="添加字数统计和阅读时长"><a href="#添加字数统计和阅读时长" class="headerlink" title="添加字数统计和阅读时长"></a>添加字数统计和阅读时长</h3><ul>
-<li><p>先安装插件（Bash耐心等待~）</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">$npm <span class="keyword">install</span> hexo-symbols-<span class="keyword">count</span>-<span class="built_in">time</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>站点配置文件下添加</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#字数统计</span></span><br><span class="line"> <span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment">#是否统计字数</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">false</span> <span class="comment">#是否统计阅读时长</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment">#是否统计总字数</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="string">ture</span> <span class="comment">#是否统计总阅读时长</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>主题的配置文件下开启 symbols_count_time 字段</p>
-<p>执行“三步走”就可以看到了。。。</p>
-</li>
-</ul>
-<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>新版本的NexT将每月发布。可以通过以下命令更新 NexT。<br>安装最新版本的 npm：<br><code>$ cd hexo-site</code><br><code>$ npm update hexo-theme-next</code><br>或更新到最新的主分支：<br><code>$ cd themes/next</code><br><code>$ git pull</code></p>
-<h3 id="不显示全部内容"><a href="#不显示全部内容" class="headerlink" title="不显示全部内容"></a>不显示全部内容</h3><ul>
-<li>修改主题配置文件</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Automatically excerpt description in homepage as preamble text.</span></span><br><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span> <span class="comment">#自动截取摘要</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Read more button</span></span><br><span class="line"><span class="comment"># If true, the read more button would be displayed in excerpt section.</span></span><br><span class="line"><span class="attr">read_more_btn:</span> <span class="literal">true</span> <span class="comment">#显示阅读全文按钮</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>写文章时在合适的位置加上<code>&lt;!--more--&gt;</code>即可</li>
-</ul>
-<h3 id="添加博客自定义图标"><a href="#添加博客自定义图标" class="headerlink" title="添加博客自定义图标"></a>添加博客自定义图标</h3><p>默认为<code>Hexo</code>的标识，图标可以在<a href="https://www.easyicon.net/">easyicon</a>、<a href="http://www.bitbug.net/">bitbug</a>、<a href="https://www.iconfont.cn/plus/user/detail?uid=41718)">iconfont</a>等网站选择和制作，我是在<a href="https://www.iconfont.cn/plus/user/detail?uid=41718)">iconfont</a>上找的，下载放到blog/themes/next/sources/images目录下，并在主题配置文件更改：</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">favicon:</span></span><br><span class="line"><span class="symbol">  small:</span> <span class="meta-keyword">/images/</span>****.png <span class="meta">#对应一</span></span><br><span class="line"><span class="symbol">  medium:</span> <span class="meta-keyword">/images/</span>****.png <span class="meta">#二两个位置</span></span><br><span class="line"><span class="symbol">  apple_touch_icon:</span> <span class="meta-keyword">/images/</span><span class="number">128</span>x128.png</span><br><span class="line"><span class="symbol">  safari_pinned_tab:</span> <span class="meta-keyword">/images/</span>logo2.svg</span><br></pre></td></tr></table></figure>
-
-<h3 id="本地图片上传"><a href="#本地图片上传" class="headerlink" title="本地图片上传"></a>本地图片上传</h3><ul>
-<li><p>先将图片上传至<a href="https://imgchr.com/">路过图床</a>或其他图床</p>
-</li>
-<li><p>在name.md中使用<code>![名称](**)</code>      **拷贝图片链接</p>
-</li>
-</ul>
-<hr>
-<h2 id="故障调试方法"><a href="#故障调试方法" class="headerlink" title="故障调试方法"></a>故障调试方法</h2><ul>
-<li>我主要是使用很传统的方法，即下载一份原始主题，若出现Error（看不懂）可以对应退回几步，从原文件拷贝复原</li>
-<li>还有一个备份方法，还没学会·····在路上去😊</li>
-</ul>
-<hr>
-<p>等等等等，还有很多，当然主要参考[<a href="https://blog.csdn.net/nightmare_dimple/article/details/86661502]">https://blog.csdn.net/nightmare_dimple/article/details/86661502]</a></p>
-<p>[<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html]">https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html]</a></p>
-<p>[<a href="https://segmentfault.com/a/1190000017986794]">https://segmentfault.com/a/1190000017986794]</a></p>
-<p>感谢大佬细致的菜鸟教程，我get了好多干货<del>·</del>·~</p>
-<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><ul>
-<li><p>时间紧，任务重，能力有限，但一直没有停下的心，就想我的Subtitle一样，<strong>追求源于热爱！！</strong></p>
-</li>
-<li><p>My description：我们努力奔跑，只为追上那个曾被寄予厚望的自己。</p>
-</li>
-</ul>
-<p>另外左侧link推广大佬···😁</p>
-<p><strong>感谢光顾</strong>👏</p>
-<hr>
-]]></content>
-      <tags>
-        <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>bandit靶场wp(持续更新中)</title>
-    <url>/2020/10/31/bandit%E9%9D%B6%E5%9C%BAwp(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
-    <content><![CDATA[<h2 id="Level-0"><a href="#Level-0" class="headerlink" title="Level 0"></a>Level 0</h2><ul>
-<li>连接</li>
-</ul>
-<p><a href="https://imgchr.com/i/BahJeg"><img src="https://s1.ax1x.com/2020/10/31/BahJeg.png" alt="BahJeg.png" style="zoom:50%;" /></a><a href="https://imgchr.com/i/BahYwQ"><img src="https://s1.ax1x.com/2020/10/31/BahYwQ.png" alt="BahYwQ.png" style="zoom:50%;" /></a></p>
-<hr>
-<a id="more"></a>
-
-<h2 id="Level-0-➡Level-1"><a href="#Level-0-➡Level-1" class="headerlink" title="Level 0 ➡Level 1"></a>Level 0 ➡Level 1</h2><ul>
-<li>先使用<code>ls</code>指令查看目录，再<code>cat</code>打开<code>readme</code>文件</li>
-</ul>
-<p><a href="https://imgchr.com/i/Bahtoj"><img src="https://s1.ax1x.com/2020/10/31/Bahtoj.png" alt="Bahtoj.png" style="zoom: 80%;" /></a></p>
-<hr>
-<h2 id="Level-1-➡Level-2"><a href="#Level-1-➡Level-2" class="headerlink" title="Level 1 ➡Level 2"></a>Level 1 ➡Level 2</h2><ul>
-<li>这里先查看当下目录，只有<code>-</code>文件，而如果直接使用<code>cat -</code>会涉及指令选项的歧义，因此使用<code>cat ./-</code></li>
-<li><ul>
-<li><code>./</code>相对路径的当前路径</li>
-</ul>
-</li>
-</ul>
-<p><a href="https://imgchr.com/i/BahUFs"><img src="https://s1.ax1x.com/2020/10/31/BahUFs.png" alt="BahUFs.png" style="zoom:80%;" /></a></p>
-<hr>
-<h2 id="Level-2-➡Level-3"><a href="#Level-2-➡Level-3" class="headerlink" title="Level 2 ➡Level 3"></a>Level 2 ➡Level 3</h2><ul>
-<li>同样是先查看，就是通关提示<code>spaces in this filename</code>文件，而直接<code>cat</code>+文件名则意味着打开4个文件，因此这里使用<code>cat</code>+<code>Tab</code>直接自动补齐文件名。</li>
-<li><ul>
-<li>这里Tab可直接用，原因是只有一个文件；若多个文件则需输入开头几个字母即可，懒人必会！！</li>
-</ul>
-</li>
-</ul>
-<p><a href="https://imgchr.com/i/BahdWq"><img src="https://s1.ax1x.com/2020/10/31/BahdWq.png" alt="BahdWq.png" style="zoom:80%;" /></a></p>
-<hr>
-<h2 id="Level-3-➡Level-4"><a href="#Level-3-➡Level-4" class="headerlink" title="Level 3 ➡Level 4"></a>Level 3 ➡Level 4</h2><p>The password for the next level is stored in a hidden file in the <strong>inhere</strong> directory.</p>
-<ul>
-<li>首先在<code>inhere</code>内的隐藏文件，使用<code>cd inhere</code>切换至<code>inhere</code>目录下,<code>ls -la</code>列出文件目录，</li>
-</ul>
-<p><code>cat .hidden</code>打开查看密码</p>
-<p><a href="https://imgchr.com/i/BahBlV"><img src="https://s1.ax1x.com/2020/10/31/BahBlV.png" alt="BahBlV.png" style="zoom:80%;" /></a><a href="https://imgchr.com/i/Bah0S0"><img src="https://s1.ax1x.com/2020/10/31/Bah0S0.png" alt="Bah0S0.png" style="zoom:80%;" /></a></p>
-<hr>
-<h2 id="Level-4-➡Level-5"><a href="#Level-4-➡Level-5" class="headerlink" title="Level 4 ➡Level 5"></a>Level 4 ➡Level 5</h2><ul>
-<li>同上一关到查看目录，发现很多文件，这时通过<code>file</code>查看文件类型，找出密码</li>
-</ul>
-<p><a href="https://imgchr.com/i/BahDyT"><img src="https://s1.ax1x.com/2020/10/31/BahDyT.png" alt="BahDyT.png" style="zoom:80%;" /></a></p>
-<hr>
-<h2 id="Level-5➡Level-6"><a href="#Level-5➡Level-6" class="headerlink" title="Level 5➡Level 6"></a>Level 5➡Level 6</h2><ul>
-<li><a href="https://imgchr.com/i/DMb9wF"><img src="https://s3.ax1x.com/2020/11/20/DMb9wF.md.png" alt="DMb9wF.md.png"></a></li>
-</ul>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="built_in">find</span> 路径 -<span class="built_in">type</span> f -<span class="built_in">size</span> <span class="number">1033</span>c</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>使用<code>find</code>命令查找1033字节的文件</li>
-</ul>
-<p><a href="https://imgchr.com/i/DMbCo4"><img src="https://s3.ax1x.com/2020/11/20/DMbCo4.md.png" alt="DMbCo4.md.png"></a></p>
-<p>-type f：指定普通文件<br>-size 1033c：指定为1033字节</p>
-<p>附find参数解析<br>-size n[cwbkMG] : 档案大小 为 n 个由后缀决定的数据块。其中后缀含义为：<br>b: 代表 512 位元组的区块（如果用户没有指定后缀，则默认为 b）<br>c: 表示字节数<br>k: 表示 kilo bytes （1024字节）<br>w: 字 （2字节）<br>M:兆字节（1048576字节）<br>G: 千兆字节 （1073741824字节）<br>-type c : 档案类型是 c 。<br>d: 目录<br>c: 字型装置档案<br>b: 区块装置档案<br>p: 具名贮列<br>f: 一般档案<br>l: 符号连结<br>s: socket</p>
-<hr>
-<h2 id="Level-6-➡Level-7"><a href="#Level-6-➡Level-7" class="headerlink" title="Level 6 ➡Level 7"></a>Level 6 ➡Level 7</h2><ul>
-<li>The password for the next level is stored <strong>somewhere on the server</strong> and has all of the following properties:<ul>
-<li>owned by user bandit7</li>
-<li>owned by group bandit6</li>
-<li>33 bytes in size</li>
-</ul>
-</li>
-</ul>
-<p><a href="https://imgchr.com/i/DMbFY9"><img src="https://s3.ax1x.com/2020/11/20/DMbFY9.md.png" alt="DMbFY9.md.png"></a></p>
-<p>-user：指定user组<br>-group： 指定group组<br>-size：指定大小<br>后面的2&gt;/dev/null，是因为find命令在根目录下查找会经常有一些权限的报错信息所以通常使用这种方式将错误信息重定位。</p>
-<hr>
-<h2 id="Level-7-➡Level-8"><a href="#Level-7-➡Level-8" class="headerlink" title="Level 7 ➡Level 8"></a>Level 7 ➡Level 8</h2><p>The password for the next level is stored in the file <strong>data.txt</strong> next to the word <strong>millionth</strong></p>
-<ul>
-<li>当前目录下确实是<code>data.txt</code>,但直接用<code>cat</code>打开无法确定flag，使用<code>| grep</code>管道筛选关键词<code>millionth</code></li>
-</ul>
-<p><a href="https://imgchr.com/i/DMbkWR"><img src="https://s3.ax1x.com/2020/11/20/DMbkWR.png" alt="DMbkWR.png"></a></p>
-<hr>
-<h2 id="Level-8➡Level-9"><a href="#Level-8➡Level-9" class="headerlink" title="Level 8➡Level 9"></a>Level 8➡Level 9</h2><p>The password for the next level is stored in the file <strong>data.txt</strong> and is the only line of text that occurs only once</p>
-<ul>
-<li>本题flag只出现一行，使用<code>uniq -u</code>直接获取或<code>uniq -c</code>列出次数找到出现一次的line</li>
-</ul>
-<p><a href="https://imgchr.com/i/DMbVQx"><img src="https://s3.ax1x.com/2020/11/20/DMbVQx.png" alt="DMbVQx.png"></a></p>
-<p><a href="https://imgchr.com/i/DMbES1"><img src="https://s3.ax1x.com/2020/11/20/DMbES1.png" alt="DMbES1.png"></a></p>
-<hr>
-<h2 id="Level-9➡Level-10"><a href="#Level-9➡Level-10" class="headerlink" title="Level 9➡Level 10"></a>Level 9➡Level 10</h2><p>The password for the next level is stored in the file <strong>data.txt</strong> in one of the few human-readable strings, preceded by several ‘=’ characters.</p>
-<ul>
-<li>password是以若干个‘=’开头，使用<code>strings</code>命令查看文件字符串</li>
-</ul>
-<p><a href="https://imgchr.com/i/DMbZy6"><img src="https://s3.ax1x.com/2020/11/20/DMbZy6.png" alt="DMbZy6.png"></a></p>
-<p><a href="https://imgchr.com/i/DMbeOK"><img src="https://s3.ax1x.com/2020/11/20/DMbeOK.png" alt="DMbeOK.png"></a></p>
-<hr>
-<h2 id="Level-10➡Level-11"><a href="#Level-10➡Level-11" class="headerlink" title="Level 10➡Level 11"></a>Level 10➡Level 11</h2><p>The password for the next level is stored in the file <strong>data.txt</strong>, which contains base64 encoded data</p>
-<ul>
-<li>使用<code>base64</code>解码，<code>base64 -d data.txt</code></li>
-</ul>
-<p><a href="https://imgchr.com/i/DMbneO"><img src="https://s3.ax1x.com/2020/11/20/DMbneO.png" alt="DMbneO.png"></a></p>
-<hr>
-<h2 id="Level-11➡Level-12"><a href="#Level-11➡Level-12" class="headerlink" title="Level 11➡Level 12"></a>Level 11➡Level 12</h2><p>The password for the next level is stored in the file <strong>data.txt</strong>, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions</p>
-<ul>
-<li>本题为字符转换，a-z以及A-Z被后移了13个位置，即对应n-z a-m N-Z A-M.</li>
-</ul>
-<p>使用<code>tr</code>配合管道转换得到password</p>
-<p><a href="https://imgchr.com/i/DMbuwD"><img src="https://s3.ax1x.com/2020/11/20/DMbuwD.png" alt="DMbuwD.png"></a></p>
-<h2 id="Level-➡Level-1"><a href="#Level-➡Level-1" class="headerlink" title="Level * ➡Level * +1"></a>Level * ➡Level * +1</h2><p>···</p>
-<p>···</p>
-<p>···</p>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
 </search>
