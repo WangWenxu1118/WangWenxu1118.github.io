@@ -1,2 +1,2 @@
-# WangWenxu1118.github.io
+# kerosene_w.github.io
 Hexo Blog
